@@ -7,7 +7,7 @@ permalink: /data.html
   display: flex;
 }
 .mycontainer > div {
-  width:33%;
+  width:80%;
 }
 </style>
 <div class="mycontainer">
