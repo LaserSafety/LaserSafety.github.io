@@ -9,7 +9,8 @@ permalink: /data.html
 .mycontainer > div {
   width:33%;
 }
-
+</style>
+<div class="mycontainer">
 <table>
     <tr>
         <td>Wellenlänge λ in </td>
@@ -291,4 +292,4 @@ permalink: /data.html
         <td>inside range</td>
     </tr>
 </table>
-</style>
+</div>
