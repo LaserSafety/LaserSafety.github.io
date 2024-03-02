@@ -1,4 +1,13 @@
+<style>
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+
 theme: jekyll-theme-minimal
 title: Home
 description: Use the calculator to find, use and solve formulae with given data
 <a href="http://LaserSafety.github.io/calculator.html">Calculator</a>:
+<style>
