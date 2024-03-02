@@ -1,3 +1,3 @@
 # LaserSafety.github.io
 test
-<a href="/calculator.html">Calculator</a>
+<a href="http://LaserSafety.github.io/calculator.html">Calculator</a>
