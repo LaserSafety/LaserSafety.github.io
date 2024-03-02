@@ -3,4 +3,4 @@ permalink: /calculator.html
 ---
 Input Values:
 <p>Wavelength:</p>
-<p><input type="text" id=wavelength></p>
+<br><input type="text" id=wavelength></br>
