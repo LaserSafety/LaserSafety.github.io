@@ -5,4 +5,4 @@ The calculator tool lets you input variables and will then determine which formu
 
 View all the data containg the formulae 
 <p>
-<b><a href="http://LaserSafety.github.io/dtat.html">Data</a></b> </p>
+<b><a href="http://LaserSafety.github.io/data.html">Data</a></b> </p>
