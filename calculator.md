@@ -1,45 +1,21 @@
 ---
 permalink: /calculator.html
 ---
-Input Values:
-<p>Wavelength:<br><input type="number" id=wavelength></p>
-<p>C<sub>e</sub><br><input type="text" id=C_e></p>
-<head>
-<style>
-.mycontainer {
-  display: flex;
-}
-.mycontainer > div {
-  width:33%;
-}
-</style>
-</head>
-<body>
-
-<h1>Flexbox Example</h1>
-
-<p>Align three DIV elements side by side.</p>
-
-<div class="mycontainer">
-
-  <div style="background-color:#FFF4A3;">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
-    <p>London has over 13 million inhabitants.</p>
-  </div>
-  
-  <div style="background-color:#FFC0C7;">
-    <h2>Oslo</h2>
-    <p>Oslo is the capital city of Norway.</p>
-    <p>Oslo has over 600.000 inhabitants.</p>
-  </div>
-  
-  <div style="background-color:#D9EEE1;">
-    <h2>Rome</h2>
-    <p>Rome is the capital city of Italy.</p>
-    <p>Rome has almost 3 million.</p>
-  </div>
-
+<div>
+  <h2>Wellenlaenge</h2>
+  <p><input type="number" id=wavelength></p>
+  <p>test</p>
 </div>
 
-</body>
+<div>
+  <h2>C<sub>e</sub></h2>
+  <p><input type="text" id=C_e></p>
+  <p>test 2</p>
+</div>
+
+<div>
+  <h2>Rome</h2>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has almost 3 million inhabitants.</p>
+</div>
+
