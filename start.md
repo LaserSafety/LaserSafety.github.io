@@ -56,6 +56,7 @@ section {
 nav {
   background: #ccc;
   padding: 25px;
+  width: 200px; /* Adjusted width */
 }
 
 /* Style the list inside the menu */
@@ -70,6 +71,7 @@ article {
   padding: 10px;
   width: 80%;
 }
+
 
 /* Style the footer */
 footer {
