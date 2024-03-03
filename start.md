@@ -45,18 +45,33 @@ header {
   color: white;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
 /* Container for flexboxes */
 section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  display: flex;
 }
 
 /* Style the navigation menu */
 nav {
+  width: 30%;
   background: #ccc;
-  padding: 25px;
-  width: 200px; /* Adjusted width */
+  padding: 20px;
 }
 
 /* Style the list inside the menu */
@@ -65,22 +80,31 @@ nav ul {
   padding: 0;
 }
 
-/* Style the content */
 article {
+  flex-grow: 1;
+  padding: 20px;
   background-color: #f1f1f1;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
   padding: 10px;
+  text-align: center;
+  color: white;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
-  nav {
-    width: 100%;
+  section {
+    flex-direction: column;
   }
 
-  article {
+  nav, article {
     width: 100%;
   }
 }
+
 
 /* Style the footer */
 footer {
