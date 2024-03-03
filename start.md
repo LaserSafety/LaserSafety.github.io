@@ -1,6 +1,9 @@
----
-permalink: /start.html
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser Safety</title>
 <style>
 a:link {
   color: blue;
@@ -25,12 +28,7 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-</style>
-<head>
-<title>Laser Safety</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+
 * {
   box-sizing: border-box;
 }
@@ -117,21 +115,40 @@ footer {
   <article>
     <h1>Expositionsdauer</h1>
     <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id=expositionsdauer></p>
+    <br><input type="text" id="expositionsdauer"></p>
   </article>
   <article>
     <h1>Wellenlaenge</h1>
     <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id=wellenlaenge></p>
+    <br><input type="text" id="wellenlaenge"></p>
   </article>
   <article>
     <h1>C<sub>e</sub></h1>
     <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id=C_e></p>
+    <br><input type="text" id="C_e"></p>
   </article>
 </section>
 
 <footer>
+  <p><input type="submit" value="Submit" onclick="calculate()"><input type="reset" value="Reset"></p>
+  <p id="result"></p>
+</footer>
+
+<script>
+function calculate() {
+    var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
+    var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
+    var C_e = parseFloat(document.getElementById('C_e').value);
+    
+    var result = expositionsdauer * wellenlaenge * C_e;
+    
+    document.getElementById('result').innerHTML = "Result: " + result;
+}
+</script>
+
+</body>
+</html>
+
   <p><input type="submit" value="Submit"><input type="reset" value="Reset"></p>
 </footer>
 
