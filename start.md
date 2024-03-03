@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -111,27 +112,30 @@ footer {
     </ul>
   </nav>
   
-  <article>
-    <h1>Expositionsdauer</h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id="expositionsdauer"></p>
-  </article>
-  <article>
-    <h1>Wellenlaenge</h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id="wellenlaenge"></p>
-  </article>
-  <article>
-    <h1>C<sub>e</sub></h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id="C_e"></p>
-  </article>
+  <form id="myForm">
+    <article>
+      <h1>Expositionsdauer</h1>
+      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="expositionsdauer"></p>
+    </article>
+    <article>
+      <h1>Wellenlaenge</h1>
+      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="wellenlaenge"></p>
+    </article>
+    <article>
+      <h1>C<sub>e</sub></h1>
+      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="C_e"></p>
+    </article>
+
+    <footer>
+      <p><input type="submit" value="Submit" onclick="calculate()"><input type="reset" value="Reset"></p>
+      <p id="result"></p>
+    </footer>
+  </form>
 </section>
 
-<footer>
-  <p><input type="submit" value="Submit" onclick="calculate()"><input type="reset" value="Reset"></p>
-  <p id="result"></p>
-</footer>
 
 <script>
 function calculate() {
