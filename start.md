@@ -5,6 +5,20 @@
 <title>Laser Safety</title>
 <style>
 /* Your CSS styles here */
+  header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
 </style>
 </head>
 <body>
