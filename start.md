@@ -73,11 +73,6 @@ article {
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  section {
-    display: flex;
-    flex-direction: column;
-  }
-
   nav {
     width: 100%;
   }
@@ -86,8 +81,6 @@ article {
     width: 100%;
   }
 }
-
-
 
 /* Style the footer */
 footer {
