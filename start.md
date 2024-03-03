@@ -110,7 +110,7 @@ footer {
       <li><a href="#">C<sub>e</sub></a></li>
     </ul>
   </nav>
-  
+<form id="myForm">
   <article>
     <h1>Expositionsdauer</h1>
     <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
@@ -132,7 +132,7 @@ footer {
   <p><input type="submit" value="Submit" onclick="calculate()"><input type="reset" value="Reset"></p>
   <p id="result"></p>
 </footer>
-
+</form>
 <script>
 function calculate() {
     var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
