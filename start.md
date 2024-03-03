@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +25,23 @@ a:active {
   color: blue;
   background-color: transparent;
   text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
 
 * {
@@ -88,23 +104,14 @@ footer {
   }
 }
 
-/* Adjustments for larger screens */
-@media (min-width: 601px) {
-  section {
-    flex-wrap: wrap;
-  }
 
-  nav {
-    width: 30%;
-  }
-
-  article {
-    width: calc(70% / 3 - 20px); /* Adjust according to the number of articles and desired gap */
-    margin-right: 20px; /* Adjust the gap between articles */
-    margin-bottom: 20px; /* Adjust the gap between rows */
-  }
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
 }
-
 </style>
 </head>
 <body>
