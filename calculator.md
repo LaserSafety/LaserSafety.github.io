@@ -1,5 +1,7 @@
 ---
 permalink: /calculator.html
+---
+<style>
 div.mycontainer {
   width:100%;
   overflow:auto;
@@ -8,7 +10,6 @@ div.mycontainer div {
   width:33%;  
   float:left;
 }
----
 </style>
 <body>
 
