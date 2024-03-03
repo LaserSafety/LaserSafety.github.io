@@ -61,7 +61,7 @@ nav {
   -ms-flex: 1;
   flex: 1;
   background: #ccc;
-  padding: 20px;
+  padding: 10px;
   width:15%;
 }
 
