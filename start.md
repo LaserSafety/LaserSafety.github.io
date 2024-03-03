@@ -109,9 +109,9 @@ footer {
 <section>
   <nav>
     <ul>
-      <li><a href="expositionsdauer">Expositionsdauer</a></li>
-      <li><a href="wellenlaenge">Wellenlaenge</a></li>
-      <li><a href="C_e">C<sub>e</sub></a></li>
+      <li><a href="#expositionsdauer">Expositionsdauer</a></li>
+      <li><a href="#wellenlaenge">Wellenlaenge</a></li>
+      <li><a href="#C_e">C<sub>e</sub></a></li>
     </ul>
   </nav>
   
