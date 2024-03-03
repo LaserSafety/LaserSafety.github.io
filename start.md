@@ -61,15 +61,13 @@ nav {
   -ms-flex: 1;
   flex: 1;
   background: #ccc;
-  padding: 10px;
-  width:15%;
+  padding: 25px;
 }
 
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
   padding: 0;
-  width: 15%;
 }
 
 /* Style the content */
