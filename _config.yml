@@ -3,7 +3,7 @@ title: Home
 description: Use the calculator to find, use and solve formulae with given data
 <a href="http://LaserSafety.github.io/calculator.html">Calculator</a>:
 
-<div>
+:<div>
   <h2>Wellenlaenge</h2>
   <p><input type="number" id=wavelength></p>
   <p>test</p>
