@@ -56,7 +56,7 @@ section {
 nav {
   background: #ccc;
   padding: 25px;
-  width: 20%; /* Adjusted width */
+  width: 30%;
 }
 
 /* Style the list inside the menu */
