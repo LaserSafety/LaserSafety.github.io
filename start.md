@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -148,8 +147,3 @@ function calculate() {
 
 </body>
 </html>
-
-  <p><input type="submit" value="Submit"><input type="reset" value="Reset"></p>
-</footer>
-
-</body>
