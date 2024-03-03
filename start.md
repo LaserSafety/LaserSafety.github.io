@@ -88,6 +88,7 @@ article {
 }
 
 
+
 /* Style the footer */
 footer {
   background-color: #777;
