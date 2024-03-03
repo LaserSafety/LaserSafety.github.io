@@ -56,7 +56,7 @@ section {
 nav {
   background: #ccc;
   padding: 25px;
-  width: 30%;
+  width: 200px; /* Adjusted width */
 }
 
 /* Style the list inside the menu */
@@ -69,20 +69,18 @@ nav ul {
 article {
   background-color: #f1f1f1;
   padding: 10px;
-  width: 80%; /* Adjusted width */
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
   section {
-    display: block;
+    grid-template-columns: 1fr;
   }
-  
-  /* Adjust widths for small screens */
+
   nav {
     width: 100%;
   }
-  
+
   article {
     width: 100%;
   }
