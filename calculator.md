@@ -8,6 +8,10 @@ div.mycontainer div {
   display:inline-block;
 }
 </style>
+<aside>
+  <p style="font-size:50px;"><a href="Lasersafety.github.io/Start.html">Startseite</a></p>
+
+</aside>
 <body>
 
 <div class="mycontainer">
