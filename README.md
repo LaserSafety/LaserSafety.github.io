@@ -1,5 +1,5 @@
 ---
-theme:
+theme: null
 ---
 
 # Laser Safety
