@@ -45,23 +45,6 @@ header {
   color: white;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
 /* Container for flexboxes */
 section {
   display: flex;
@@ -105,14 +88,23 @@ footer {
   }
 }
 
+/* Adjustments for larger screens */
+@media (min-width: 601px) {
+  section {
+    flex-wrap: wrap;
+  }
 
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
+  nav {
+    width: 30%;
+  }
+
+  article {
+    width: calc(70% / 3 - 20px); /* Adjust according to the number of articles and desired gap */
+    margin-right: 20px; /* Adjust the gap between articles */
+    margin-bottom: 20px; /* Adjust the gap between rows */
+  }
 }
+
 </style>
 </head>
 <body>
