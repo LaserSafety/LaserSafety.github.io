@@ -47,15 +47,13 @@ header {
 
 /* Container for flexboxes */
 section {
-  display: -webkit-flex;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 /* Style the navigation menu */
 nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   background: #ccc;
   padding: 25px;
 }
@@ -68,9 +66,6 @@ nav ul {
 
 /* Style the content */
 article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
   background-color: #f1f1f1;
   padding: 10px;
 }
@@ -86,8 +81,7 @@ footer {
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
   section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    display: block;
   }
 }
 </style>
@@ -110,29 +104,30 @@ footer {
       <li><a href="#">C<sub>e</sub></a></li>
     </ul>
   </nav>
-<form id="myForm">
-  <article>
-    <h1>Expositionsdauer</h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id="expositionsdauer"></p>
-  </article>
-  <article>
-    <h1>Wellenlaenge</h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id="wellenlaenge"></p>
-  </article>
-  <article>
-    <h1>C<sub>e</sub></h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-    <br><input type="text" id="C_e"></p>
-  </article>
+  <form id="myForm">
+    <article>
+      <h1>Expositionsdauer</h1>
+      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="expositionsdauer"></p>
+    </article>
+    <article>
+      <h1>Wellenlaenge</h1>
+      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="wellenlaenge"></p>
+    </article>
+    <article>
+      <h1>C<sub>e</sub></h1>
+      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="C_e"></p>
+    </article>
+  </form>
 </section>
 
 <footer>
   <p><input type="submit" value="Submit" onclick="calculate()"><input type="reset" value="Reset"></p>
   <p id="result"></p>
 </footer>
-</form>
+
 <script>
 function calculate() {
     var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
@@ -147,4 +142,3 @@ function calculate() {
 
 </body>
 </html>
-
