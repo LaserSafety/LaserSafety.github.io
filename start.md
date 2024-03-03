@@ -18,7 +18,6 @@ a:hover {
   color: black;
   background-color: transparent;
   text-decoration: underline;
-  font-weight: bold;
 }
 
 a:active {
