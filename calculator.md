@@ -1,21 +1,37 @@
 ---
 permalink: /calculator.html
 ---
-<div>
-  <h2>Wellenlaenge</h2>
-  <p><input type="number" id=wavelength></p>
-  <p>test</p>
+div.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+div.mycontainer div {
+  width:33%;  
+  float:left;
+}
+</style>
+<body>
+
+<div class="mycontainer">
+
+  <div style="background-color:#FFF4A3;">
+    <h2>Wellenlaenge</h2>
+    <p><input type="number" id=wavelength></p>
+    <p>test1</p>
+  </div>
+  
+  <div style="background-color:#FFC0C7;">
+    <h2>C<sub>e</sub></h2>
+    <p><input type="text" id=C_e></p>
+    <p>test2</p>
+  </div>
+  
+  <div style="background-color:#D9EEE1;">
+    <h2>Expositionsdauer</h2>
+    <p><input type="number" id=expositionsdauer></p>
+    <p>test3</p>
+  </div>
+
 </div>
 
-<div>
-  <h2>C<sub>e</sub></h2>
-  <p><input type="text" id=C_e></p>
-  <p>test 2</p>
-</div>
-
-<div>
-  <h2>Rome</h2>
-  <p>Rome is the capital city of Italy.</p>
-  <p>Rome has almost 3 million inhabitants.</p>
-</div>
-
+</body>
