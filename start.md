@@ -132,7 +132,7 @@ footer {
 </section>
 
 <footer>
-  <p>Footer</p>
+  <p><input type="submit" value="Submit"><input type="reset" value="Reset"></p>
 </footer>
 
 </body>
