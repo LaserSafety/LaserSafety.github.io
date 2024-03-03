@@ -4,20 +4,3 @@ title: Home
 description: Use the calculator to find, use and solve formulae with given data
 <a href="http://LaserSafety.github.io/calculator.html">Calculator</a>:
 ---
-<div>
-  <h2>Wellenlaenge</h2>
-  <p><input type="number" id=wavelength></p>
-  <p>test</p>
-</div>
-
-<div>
-  <h2>C<sub>e</sub></h2>
-  <p><input type="text" id=C_e></p>
-  <p>test 2</p>
-</div>
-
-<div>
-  <h2>Rome</h2>
-  <p>Rome is the capital city of Italy.</p>
-  <p>Rome has almost 3 million inhabitants.</p>
-</div>
