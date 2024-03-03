@@ -4,41 +4,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laser Safety</title>
 <style>
-/* Your CSS styles here */
-  header {
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
   background-color: #666;
   padding: 30px;
   text-align: center;
   font-size: 35px;
   color: white;
 }
-article {
-  float: left;
-  padding: 20px;
-  width: 80%;
-  background-color: #f1f1f1;
+
+/* Container for flexboxes */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
-</style>
-</head>
-<body>
 
-<!-- Your HTML content here -->
-
-<h2>Startseite</h2>
-<p>bla bla bla text ausfuellen</p>
-<p>neue zeile, wenn noetig</p>
-
-<header>
-  <h2>Werteneingabe:</h2>
-</header>
-<style>
 /* Style the navigation menu */
 nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   background: #ccc;
-  padding: 10px; /* Adjusted padding */
+  padding: 25px;
 }
 
 /* Style the list inside the menu */
@@ -49,33 +66,37 @@ nav ul {
 
 /* Style the content */
 article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
   background-color: #f1f1f1;
   padding: 10px;
 }
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
+/* Style the footer */
 footer {
   background-color: #777;
   padding: 10px;
   text-align: center;
   color: white;
 }
-nav {
-  float: left;
-  width: 20%;
-  background: #ccc;
-  padding: 20px;
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    display: block;
+  }
 }
 </style>
+</head>
+<body>
+
+<h2>Startseite</h2>
+<p>bla bla bla text ausfuellen</p>
+<p>neue zeile, wenn noetig</p>
+
+<header>
+  <h2>Werteneingabe:</h2>
+</header>
+
 <section>
-    <!-- Your navigation menu here -->
-    <section>
   <nav>
     <ul>
       <li><a href="#">Expositionsdauer</a></li>
@@ -83,7 +104,6 @@ nav {
       <li><a href="#">C<sub>e</sub></a></li>
     </ul>
   </nav>
- 
   <form id="myForm">
     <article>
       <h1>Expositionsdauer</h1>
