@@ -83,26 +83,26 @@ footer {
 <section>
   <nav>
     <ul>
-      <li><a href="#">Expositionsdauer</a></li>
-      <li><a href="#">Wellenlaenge</a></li>
-      <li><a href="#">C<sub>e</sub></a></li>
+      <li><a href="expositionsdauer">Expositionsdauer</a></li>
+      <li><a href="wellenlaenge">Wellenlaenge</a></li>
+      <li><a href="C_e">C<sub>e</sub></a></li>
     </ul>
   </nav>
   
   <article>
-    <h1>Expositionsdauer</h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!</p>
-    <p><input type="text" id=expositionsdauer></p>
+    <h1 id="expositionsdauer">Expositionsdauer</h1>
+    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+    <br><input type="text" id=expositionsdauer></p>
   </article>
   <article>
-    <h1>Wellenlaenge</h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!</p>
-    <p><input type="text" id=wellenlaenge></p>
+    <h1 id="wellenlaenge">Wellenlaenge</h1>
+    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+    <br><input type="text" id=wellenlaenge></p>
   </article>
   <article>
-    <h1>C<sub>e</sub></h1>
-    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!</p>
-    <p><input type="text" id=C_e></p>
+    <h1 id="C_e">C<sub>e</sub></h1>
+    <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+    <br><input type="text" id=C_e></p>
   </article>
 </section>
 
