@@ -68,6 +68,7 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0;
+  width: 15%;
 }
 
 /* Style the content */
