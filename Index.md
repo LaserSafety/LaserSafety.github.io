@@ -18,11 +18,41 @@
 <header>
   <h2>Werteneingabe:</h2>
 </header>
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 10px; /* Adjusted padding */
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
 
 <section>
-  <nav>
     <!-- Your navigation menu here -->
+    <section>
+  <nav>
+    <ul>
+      <li><a href="#">Expositionsdauer</a></li>
+      <li><a href="#">Wellenlaenge</a></li>
+      <li><a href="#">C<sub>e</sub></a></li>
+    </ul>
   </nav>
+ 
   <form id="myForm">
     <article>
       <h1>Expositionsdauer</h1>
