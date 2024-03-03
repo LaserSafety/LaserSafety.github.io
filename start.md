@@ -18,6 +18,7 @@
 <header>
   <h2>Werteneingabe:</h2>
 </header>
+<style>
 /* Style the navigation menu */
 nav {
   -webkit-flex: 1;
@@ -41,7 +42,7 @@ article {
   background-color: #f1f1f1;
   padding: 10px;
 }
-
+</style>
 <section>
     <!-- Your navigation menu here -->
     <section>
