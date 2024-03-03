@@ -17,7 +17,6 @@ article {
   padding: 20px;
   width: 80%;
   background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
 }
 </style>
 </head>
@@ -55,6 +54,23 @@ article {
   flex: 3;
   background-color: #f1f1f1;
   padding: 10px;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+nav {
+  float: left;
+  width: 20%;
+  background: #ccc;
+  padding: 20px;
 }
 </style>
 <section>
@@ -94,6 +110,3 @@ article {
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
-
-</body>
-</html>
