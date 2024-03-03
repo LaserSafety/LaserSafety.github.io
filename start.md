@@ -4,58 +4,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laser Safety</title>
 <style>
-a:link {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
+/* Your CSS styles here */
+</style>
+</head>
+<body>
 
-a:visited {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
+<!-- Your HTML content here -->
 
-a:hover {
-  color: black;
-  background-color: transparent;
-  text-decoration: underline;
-}
+<h2>Startseite</h2>
+<p>bla bla bla text ausfuellen</p>
+<p>neue zeile, wenn noetig</p>
 
-a:active {
-  color: blue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Container for flexboxes */
-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
+<header>
+  <h2>Werteneingabe:</h2>
+</header>
 /* Style the navigation menu */
 nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   background: #ccc;
-  padding: 25px;
+  padding: 10px; /* Adjusted padding */
 }
 
 /* Style the list inside the menu */
@@ -66,37 +35,16 @@ nav ul {
 
 /* Style the content */
 article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
   background-color: #f1f1f1;
   padding: 10px;
 }
 
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    display: block;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Startseite</h2>
-<p>bla bla bla text ausfuellen</p>
-<p>neue zeile, wenn noetig</p>
-
-<header>
-  <h2>Werteneingabe:</h2>
-</header>
-
 <section>
+    <!-- Your navigation menu here -->
+    <section>
   <nav>
     <ul>
       <li><a href="#">Expositionsdauer</a></li>
@@ -104,6 +52,7 @@ footer {
       <li><a href="#">C<sub>e</sub></a></li>
     </ul>
   </nav>
+ 
   <form id="myForm">
     <article>
       <h1>Expositionsdauer</h1>
@@ -128,17 +77,8 @@ footer {
   <p id="result"></p>
 </footer>
 
-<script>
-function calculate() {
-    var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
-    var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
-    var C_e = parseFloat(document.getElementById('C_e').value);
-    
-    var result = expositionsdauer * wellenlaenge * C_e;
-    
-    document.getElementById('result').innerHTML = "Result: " + result;
-}
-</script>
+<!-- Link to the JavaScript file for calculations -->
+<script src="calculator.js"></script>
 
 </body>
 </html>
