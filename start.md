@@ -4,6 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laser Safety</title>
 <style>
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    display: block;
+  }
+}
 a:link {
   color: blue;
   background-color: transparent;
@@ -56,7 +62,6 @@ section {
 nav {
   background: #ccc;
   padding: 25px;
-  width: 20%;
 }
 
 /* Style the list inside the menu */
@@ -78,13 +83,6 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    display: block;
-  }
 }
 </style>
 </head>
