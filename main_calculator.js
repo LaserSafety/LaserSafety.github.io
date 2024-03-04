@@ -4,6 +4,7 @@ import { calculate_C_c } from './calculate_C_c.js';
 import { calculate_formula } from './calculate_formula.js';
 
 function calculate() {
+ document.getElementById('debug').textContent = "Calculate function called";
     // Retrieve input values
     const expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
     const expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
