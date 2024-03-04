@@ -35,14 +35,10 @@ a:active {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-/* Style the section */
-section {
-  display: flex;
-}
 
 /* Style the navigation menu */
 nav {
-  width: 30%;
+  width: 40%;
   background: #ccc;
   padding: 20px;
 }
@@ -71,7 +67,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   background-color: #f1f1f1;
-  width: 70%;
+  width: 100%;
 }
 
 /* Style the list inside the menu */
@@ -95,16 +91,18 @@ footer {
     flex-direction: column;
   }
   }
+  @media (min-width: 601px) {
+  section {
+    display: flex;
+    flex-direction: grid;
+  }
+  }
 </style>
 </head>
 <body>
 
-<h2>Startseite</h2>
-<p>bla bla bla text ausfuellen</p>
-<p>neue zeile, wenn noetig</p>
-
 <header>
-  <h2>Werteneingabe:</h2>
+  Werteneingabe:
 </header>
 <section>
   <nav>
