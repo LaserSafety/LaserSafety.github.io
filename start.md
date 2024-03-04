@@ -53,13 +53,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-/* Style the individual article */
-article {
-  flex-basis: calc(20% - 10px); /* Two articles per row with a gap of 20px */
   background-color: #f1f1f1;
-  padding: 20px;
 }
 
 /* Style the header */
@@ -84,11 +78,6 @@ nav ul {
   padding: 0;
 }
 
-article {
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-
 /* Style the footer */
 footer {
   background-color: #777;
@@ -103,11 +92,7 @@ footer {
     display: flex;
     flex-direction: column;
   }
-
-  nav, article {
-    width: 80%;
   }
-}
 </style>
 </head>
 <body>
