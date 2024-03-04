@@ -111,16 +111,31 @@ footer {
   </nav>
   <form id="myForm">
     <article>
-  <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
+article {
+  padding: 20px;
+  background-color: #f1f1f1;
+  flex: 1; 
+}
+<h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
   <p>Enter expositionsdauer in the format xE-y:
   <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup>- <input type="number" id="expositionsdauer_y"></sup> in <b>s</b></p>
     </article>
     <article>
+      article {
+  padding: 20px;
+  background-color: #f1f1f1;
+  flex: 1; 
+}
       <h1>Wellenlaenge</h1>
       <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
       <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
     </article>
       <article>
+        article {
+  padding: 20px;
+  background-color: #f1f1f1;
+  flex: 1; 
+}
       <h1>&#945;</h1>
       <p>eingabe <b>&#945;</b>
 in <b>mrad</b>      <br><input type="text" id="alpha"></p>
