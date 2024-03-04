@@ -38,18 +38,18 @@ body {
 
 /* Style the navigation menu */
 nav {
-  width: 100%;
+  width: 20%;
   background: #ccc;
   padding: 20px;
 }
 article {
-  flex-basis: calc(50% - 10px); /* Two articles per row with a gap of 20px */
+  flex-basis: 30%; /* Two articles per row with a gap of 20px */
   background-color: #f1f1f1;
   padding: 20px;
 }
 /* Style the articles */
 form {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
