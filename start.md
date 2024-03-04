@@ -38,7 +38,7 @@ body {
 
 /* Style the navigation menu */
 nav {
-  width: 300px;
+  max-width: 300px;
   background: #ccc;
   padding: 20px;
 }
