@@ -94,7 +94,7 @@ footer {
 <body>
 
 <h2>Startseite</h2>
-<p id="debug"></p>
+<p>bla bla bla text ausfuellen</p>
 <p>neue zeile, wenn noetig</p>
 
 <header>
@@ -138,6 +138,6 @@ footer {
 </footer>
 
 <!-- Link to the JavaScript file for calculations -->
-<script src="main_calculator.js"></script>
+<script src="calculator.js"></script>
 
 </body>
