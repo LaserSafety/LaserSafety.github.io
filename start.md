@@ -121,11 +121,11 @@ footer {
     </article>
       <article>
       <h1>&#945</h1>
-      <p>eingabe &#945
+      <p>eingabe &#945;
       <br><input type="text" id="alpha"></p>
-      <p>eingabe &#945<sub>max</sub>
+      <p>eingabe &#945;<sub>max</sub>
         <br><input type="text" id="alphamax"></p>
-      <p>eingabe &#945<sub>min</sub>
+      <p>eingabe &#945;<sub>min</sub>
         <br><input type="text" id="alphamin"></p>
     </article>
   </form>
