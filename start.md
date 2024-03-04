@@ -34,6 +34,10 @@ a:active {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the navigation menu */
@@ -42,18 +46,13 @@ nav {
   background: #ccc;
   padding: 20px;
 }
+
 article {
-  flex-basis: 100%; /* Two articles per row with a gap of 20px */
+  flex-grow: 1; /* Fill remaining space */
   background-color: #f1f1f1;
   padding: 20px;
 }
-/* Style the articles */
-form {
-  flex: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+
 /* Style the header */
 header {
   background-color: #666;
@@ -79,20 +78,13 @@ nav ul {
   nav {
     width: 100%; /* Cover the whole screen on small screens */
   }
-  }
-  @media (min-width: 601px) {
+}
+
+@media (min-width: 601px) {
   section {
     display: flex;
-    flex-direction: inherit;
+    flex-direction: row;
   }
-  }
-  /* Your existing styles here */
-
-/* Sticky footer */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 footer {
@@ -100,6 +92,7 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  margin-top: auto; /* Push the footer to the bottom */
 }
 </style>
 </head>
@@ -108,6 +101,7 @@ footer {
 <header>
   Werteneingabe:
 </header>
+
 <section>
   <nav>
     <ul>
@@ -116,33 +110,39 @@ footer {
       <li><a href="#">&#945;</a></li>
     </ul>
   </nav>
+  
   <form id="myForm">
     <section id="expositionsdauer">
       <article>
-      <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
-  <p>Enter expositionsdauer in the format xE-y:
-  <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup>- <input type="number" id="expositionsdauer_y"></sup> in <b>s</b></p>
-    </article>
-    <article id="wellenlaenge">
-      <h1>Wellenlaenge</h1>
-      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-      <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+        <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
+        <p>Enter expositionsdauer in the format xE-y:
+          <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup>- <input type="number" id="expositionsdauer_y"></sup> in <b>s</b></p>
       </article>
-    <article id="alpha">
-      <h1>&#945;</h1>
-      <p>eingabe <b>&#945;</b> in <b>mrad</b>    
-        <br><input type="text" id="alpha"></p>
-      <p>eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
-        <br><input type="text" id="alphamax"></p>
-      <p>eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
-        <br><input type="text" id="alphamin"></p>
-        </article>
-      </section>
+      <article id="wellenlaenge">
+        <h1>Wellenlaenge</h1>
+        <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+          <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+      </article>
+      <article id="alpha">
+        <h1>&#945;</h1>
+        <p>eingabe <b>&#945;</b> in <b>mrad</b>    
+          <br><input type="text" id="alpha"></p>
+        <p>eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
+          <br><input type="text" id="alphamax"></p>
+        <p>eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
+          <br><input type="text" id="alphamin"></p>
+      </article>
+    </section>
   </form>
+</section>
+
 <footer>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
 
 <!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>)
+<script src="calculator.js"></script>
+
+</body>
+</html>
