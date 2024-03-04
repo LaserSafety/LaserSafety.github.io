@@ -110,9 +110,9 @@ footer {
   </nav>
   <form id="myForm">
     <article>
-  <h1>Expositionsdauer (x*10<sup>-y</sup>)</h1>
+  <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
   <p>Enter expositionsdauer in the format xE-y:
-  <br><input type="text" id="expositionsdauer_x">*10<sup><input type="text" id="expositionsdauer_y"></sup></p>
+  <br><input type="text" id="expositionsdauer_x">&sdot;10<sup><input type="number" id="expositionsdauer_y"></sup></p>
     </article>
     <article>
       <h1>Wellenlaenge</h1>
