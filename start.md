@@ -42,7 +42,7 @@ section {
 
 /* Style the navigation menu */
 nav {
-  width: 20%;
+  width: 30%;
   background: #ccc;
   padding: 20px;
 }
@@ -57,7 +57,7 @@ form {
 
 /* Style the individual article */
 article {
-  flex-basis: calc(80% - 10px); /* Two articles per row with a gap of 20px */
+  flex-basis: calc(20% - 10px); /* Two articles per row with a gap of 20px */
   background-color: #f1f1f1;
   padding: 20px;
 }
