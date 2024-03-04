@@ -98,8 +98,6 @@ footer {
   color: white;
 }
 </style>
-
-</style>
 </head>
 <body>
 
