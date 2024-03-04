@@ -113,12 +113,12 @@ footer {
     <article>
   <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
   <p>Enter expositionsdauer in the format xE-y:
-  <br>t=<input type="text" id="expositionsdauer_x">&sdot;10<sup>-<input type="number" id="expositionsdauer_y"></sup> in s</p>
+  <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup>- <input type="number" id="expositionsdauer_y"></sup> in <b>s</b></p>
     </article>
     <article>
       <h1>Wellenlaenge</h1>
       <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-      <br>&lambda;=<input type="text" id="wellenlaenge"> in nm</p>
+      <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
     </article>
       <article>
       <h1>&#945;</h1>
