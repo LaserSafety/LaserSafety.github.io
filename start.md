@@ -91,11 +91,6 @@ html, body {
   padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 footer {
   background-color: #777;
   padding: 10px;
