@@ -92,7 +92,7 @@ function calculate() {
     }
 
     formula = formula.replace(/\*/g, "&sdot;"); // Replace asterisks with the dot symbol
-    result = result.toFixed(6) + " J·m^2";
+    result = result.toFixed(6) + " J&sdot;m<sup>2</sup>";
 
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result;
 }
