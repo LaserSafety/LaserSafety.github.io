@@ -47,6 +47,11 @@ function calculate() {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
+    } else if (expositionsdauer >= 1E-11 && expositionsdauer <= 1E-9 && wellenlaenge >= 700 && wellenlaenge <= 1050) {
+        var C_a = wellenlaenge <= 700 ? 1 : Math.pow(10, 0.02 * (wellenlaenge - 700));
+        var t = expositionsdauer / Math.pow(10, -9); // Convert to seconds
+        result = (2.7E-4) * Math.pow(t, 0.75) * C_a * C_e;
+        formula = "H = (2.7E-4) * t^0.75 * C_a * C_e";
     } else {
         document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
         return;
