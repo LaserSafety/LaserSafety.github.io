@@ -94,7 +94,7 @@ footer {
 <body>
 
 <h2>Startseite</h2>
-<p>bla bla bla text ausfuellen</p>
+<p id="debug"></p>
 <p>neue zeile, wenn noetig</p>
 
 <header>
