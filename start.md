@@ -122,18 +122,18 @@ footer {
     </article>
       <article>
       <h1>&#945;</h1>
-      <p>eingabe &#945;
-      <br><input type="text" id="alpha"></p>
-      <p>eingabe &#945;<sub>max</sub>
+      <p>eingabe <b>&#945;</b>
+in <b>mrad</b>      <br><input type="text" id="alpha"></p>
+      <p>eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
         <br><input type="text" id="alphamax"></p>
-      <p>eingabe &#945;<sub>min</sub>
+      <p>eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
         <br><input type="text" id="alphamin"></p>
     </article>
   </form>
 </section>
 
 <footer>
-  <p><input type="submit" value="Submit" onclick="calculate()"><input type="reset" value="Reset"></p>
+  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
 
