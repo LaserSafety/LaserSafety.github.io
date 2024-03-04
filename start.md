@@ -57,7 +57,7 @@ form {
 
 /* Style the individual article */
 article {
-  flex-basis: calc(50% - 10px); /* Two articles per row with a gap of 20px */
+  flex-basis: calc(80% - 10px); /* Two articles per row with a gap of 20px */
   background-color: #f1f1f1;
   padding: 20px;
 }
@@ -76,13 +76,6 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
-}
-
-/* Style the navigation menu */
-nav {
-  width: 30%;
-  background: #ccc;
-  padding: 20px;
 }
 
 /* Style the list inside the menu */
@@ -112,7 +105,7 @@ footer {
   }
 
   nav, article {
-    width: 100%;
+    width: 80%;
   }
 }
 </style>
