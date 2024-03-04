@@ -50,6 +50,8 @@ form {
   flex-wrap: wrap;
   gap: 20px;
   background-color: #f1f1f1;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 /* Style the header */
@@ -64,7 +66,6 @@ header {
 /* Container for flexboxes */
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   background-color: #f1f1f1;
   width: 100%;
