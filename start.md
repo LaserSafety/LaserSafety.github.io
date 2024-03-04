@@ -90,12 +90,12 @@ footer {
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
   section {
-    article: flex;
+    display: flex;
     flex-direction: column;
   }
   }
   @media (min-width: 601px) {
-  article {
+  section {
     display: flex;
     flex-direction: grid;
   }
