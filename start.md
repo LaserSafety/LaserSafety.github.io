@@ -51,7 +51,7 @@ article {
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 30px;
-  width: 100px;
+  width: 350px;
   
 }
 
