@@ -106,7 +106,6 @@ footer {
     <ul>
       <li><a href="#">Expositionsdauer</a></li>
       <li><a href="#">Wellenlaenge</a></li>
-      <li><a href="#">C<sub>e</sub></a></li>
     </ul>
   </nav>
   <form id="myForm">
@@ -119,11 +118,6 @@ footer {
       <h1>Wellenlaenge</h1>
       <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
       <br><input type="text" id="wellenlaenge"></p>
-    </article>
-    <article>
-      <h1>C<sub>e</sub></h1>
-      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-      <br><input type="text" id="C_e"></p>
     </article>
   </form>
 </section>
