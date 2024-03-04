@@ -90,6 +90,32 @@ footer {
     flex-direction: inherit;
   }
   }
+  /* Your existing styles here */
+
+/* Sticky footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+</style>
+
 </style>
 </head>
 <body>
