@@ -135,8 +135,8 @@ footer {
       <p>eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
         <br><input type="text" id="alphamin"></p>
         </article>
+      </section>
   </form>
-</section>
 <footer>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
@@ -144,5 +144,3 @@ footer {
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
-
-</body>
