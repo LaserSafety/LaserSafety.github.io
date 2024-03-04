@@ -95,7 +95,9 @@ article {
   }
    article {
     width: 33%;
-}
+  }
+  nav {
+  max-width: 300px;
 }
 footer {
   background-color: #777;
