@@ -35,7 +35,7 @@ input[type=text] {
   width: 20%;
 }
 input[type=number] {
-  width: 10%;
+  width: 13%;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
