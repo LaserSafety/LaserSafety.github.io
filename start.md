@@ -35,8 +35,8 @@ input[type=text] {
   width: 20%;
 }
 input[type=number] {
-  width = 10%
-  }
+  width: 10%;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
