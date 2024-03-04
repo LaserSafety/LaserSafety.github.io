@@ -111,9 +111,9 @@ footer {
   </nav>
   <form id="myForm">
     <article>
-      <h1>Expositionsdauer</h1>
-      <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-      <br><input type="text" id="expositionsdauer"></p>
+  <h1>Expositionsdauer (xE-y)</h1>
+  <p>Enter expositionsdauer in the format xE-y:
+  <br><input type="text" id="expositionsdauer_x">E<input type="text" id="expositionsdauer_y"></p>
     </article>
     <article>
       <h1>Wellenlaenge</h1>
