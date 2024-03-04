@@ -1,7 +1,10 @@
 function calculate() {
-    var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
+    var expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
+    var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var C_e = parseFloat(document.getElementById('C_e').value);
+    
+    var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
     
     var result1, result2;
     var formula1, formula2;
@@ -31,3 +34,4 @@ function calculate() {
         document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
     }
 }
+
