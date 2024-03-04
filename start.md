@@ -100,7 +100,6 @@ footer {
 <header>
   <h2>Werteneingabe:</h2>
 </header>
-
 <section>
   <nav>
     <ul>
@@ -110,41 +109,20 @@ footer {
     </ul>
   </nav>
   <form id="myForm">
-    <article>
-      <style>
-        article {
-          padding: 20px;
-          background-color: #f1f1f1;
-          flex: 1; 
-        }
-        </style>
-<h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
+    <article id="expositionsdauer">
+      <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
   <p>Enter expositionsdauer in the format xE-y:
   <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup>- <input type="number" id="expositionsdauer_y"></sup> in <b>s</b></p>
     </article>
-    <article>      
-      <style>
-        article {
-          padding: 20px;
-          background-color: #f1f1f1;
-          flex: 1; 
-        }
-        </style>
+    <article id="wellenlaenge">
       <h1>Wellenlaenge</h1>
       <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
       <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
     </article>
-      <article>
-        <style>
-          article {
-            padding: 20px;
-            background-color: #f1f1f1;
-            flex: 1; 
-          }
-        </style>
+    <article id="alpha">
       <h1>&#945;</h1>
-      <p>eingabe <b>&#945;</b>
-in <b>mrad</b>      <br><input type="text" id="alpha"></p>
+      <p>eingabe <b>&#945;</b> in <b>mrad</b>    
+        <br><input type="text" id="alpha"></p>
       <p>eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
         <br><input type="text" id="alphamax"></p>
       <p>eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
@@ -152,7 +130,6 @@ in <b>mrad</b>      <br><input type="text" id="alpha"></p>
     </article>
   </form>
 </section>
-
 <footer>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
