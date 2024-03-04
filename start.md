@@ -42,18 +42,18 @@ nav {
   background: #ccc;
   padding: 20px;
 }
-
+article {
+  flex-basis: calc(50% - 10px); /* Two articles per row with a gap of 20px */
+  background-color: #f1f1f1;
+  padding: 20px;
+}
 /* Style the articles */
 form {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: #f1f1f1;
-  column-gap: 20px;
-  row-gap: 20px;
 }
-
 /* Style the header */
 header {
   background-color: #666;
@@ -63,14 +63,13 @@ header {
   color: white;
 }
 
-/* Container for flexboxes */
 section {
-  display: grid;
-  grid-gap: 20px;
   background-color: #f1f1f1;
   width: 100%;
-  row-gap: 20px;
-  column-gap: 20px;
+  display: flex; /* Change display to flex */
+  flex-wrap: wrap;
+  gap: 20px; /* Define gap between flex items */
+  padding: 20px; /* Move padding from articles to section */
 }
 
 /* Style the list inside the menu */
