@@ -38,6 +38,7 @@ body {
 
 /* Style the navigation menu */
 nav {
+  max-width: 300px;
   background: #ccc;
   padding: 20px;
 }
@@ -78,13 +79,12 @@ nav ul {
   nav {
     width: 100%; /* Cover the whole screen on small screens */
   }
-@media (min-width: 601px) {
+  }
+  @media (min-width: 601px) {
   section {
     display: flex;
-    flex-direction: column;
+    flex-direction: inherit;
   }
-  nav {
-  max-width: 300px;
   }
   /* Your existing styles here */
 
@@ -145,4 +145,4 @@ footer {
 </footer>
 
 <!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>
+<script src="calculator.js"></script>)
