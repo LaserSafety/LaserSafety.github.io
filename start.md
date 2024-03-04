@@ -104,10 +104,6 @@ body {
   flex-direction: column;
 }
 
-section {
-  flex-grow: 1;
-}
-
 footer {
   background-color: #777;
   padding: 10px;
