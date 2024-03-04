@@ -79,20 +79,19 @@ nav ul {
   nav {
     width: 100%; /* Cover the whole screen on small screens */
   }
-  }
-  @media (min-width: 601px) {
-  section {
-    display: flex;
-    flex-direction: inherit;
-  }
-  }
   /* Your existing styles here */
 
 /* Sticky footer */
-html, body {
+html {
   height: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -100,7 +99,9 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  margin-top: auto; /* Push the footer to the bottom */
 }
+
 </style>
 </head>
 <body>
