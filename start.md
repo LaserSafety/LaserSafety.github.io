@@ -31,7 +31,9 @@ a:active {
 * {
   box-sizing: border-box;
 }
-
+input {
+  width: 20%;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
