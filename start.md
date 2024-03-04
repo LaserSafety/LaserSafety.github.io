@@ -38,7 +38,7 @@ body {
 
 /* Style the navigation menu */
 nav {
-  width: 40%;
+  width: 20%;
   background: #ccc;
   padding: 20px;
 }
@@ -68,6 +68,8 @@ section {
   grid-gap: 20px;
   background-color: #f1f1f1;
   width: 100%;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
 /* Style the list inside the menu */
