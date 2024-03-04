@@ -97,7 +97,7 @@ footer {
   @media (min-width: 601px) {
   section {
     display: flex;
-    flex-direction: grid;
+    flex-direction: inherit;
   }
   }
 </style>
