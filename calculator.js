@@ -43,5 +43,6 @@ function calculate() {
         return;
     }
 
-    document.getElementById('result').innerHTML = "Result: " + result.toFixed(6) + " J &sdot; m^2" + "<br>Formula: " + formula + ", C_e = " + C_e.toFixed(6);
+    document.getElementById('result').innerHTML = "<br>Formula: " + formula + ", C_e = " + C_e.toFixed(6);
+"Result: + result.toFixed(6) + " J &sdot; m2
 }
