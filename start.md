@@ -63,15 +63,6 @@ header {
   color: white;
 }
 
-section {
-  background-color: #f1f1f1;
-  width: 100%;
-  display: flex; /* Change display to flex */
-  flex-wrap: wrap;
-  gap: 20px; /* Define gap between flex items */
-  padding: 20px; /* Move padding from articles to section */
-}
-
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
