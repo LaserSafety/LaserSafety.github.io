@@ -38,7 +38,7 @@ body {
 
 /* Style the navigation menu */
 nav {
-  width: 100%;
+  width: 300px;
   background: #ccc;
   padding: 20px;
 }
@@ -74,6 +74,10 @@ nav ul {
   section {
     display: flex;
     flex-direction: column;
+  }
+
+  nav {
+    width: 100%; /* Cover the whole screen on small screens */
   }
   }
   @media (min-width: 601px) {
