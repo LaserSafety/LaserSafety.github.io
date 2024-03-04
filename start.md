@@ -123,8 +123,8 @@ footer {
     </section>
     <section id="wellenlaenge">
       <h1>Wellenlaenge</h1>
-      <p><br></b>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-      <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+      <br><p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
     </section>
     <section id="alpha">
       <h1>&#945;</h1>
