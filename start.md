@@ -48,7 +48,7 @@ header {
 /* Container for flexboxes */
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minimum and maximum width as needed */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
 }
 
@@ -78,17 +78,17 @@ footer {
   color: white;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
   section {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   nav, article {
     width: 100%;
   }
 }
-
 </style>
 </head>
 <body>
@@ -137,4 +137,3 @@ footer {
 <script src="calculator.js"></script>
 
 </body>
-
