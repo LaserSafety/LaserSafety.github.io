@@ -31,9 +31,18 @@ function calculate() {
             var C_a = wellenlaenge <= 700 ? 1 : Math.pow(10, 0.02 * (wellenlaenge - 700));
             result = (1.5E-4) * C_a * C_e;
             formula = "H = (1.5E-4) * C_a * C_e";
-        } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
-            result = (1.5E-4) * 5 * C_e;
-            formula = "H = (1.5E-4) * 5 * C_e";
+        } else if (wellenlaenge > 1050 && wellenlaenge <= 1150) {
+            var C_c = wellenlaenge <= 1150 ? 1 : Math.pow(10, 0.018 * (wellenlaenge - 1150));
+            result = (1.5E-3) * C_c * C_e;
+            formula = "H = (1.5E-3) * C_c * C_e";
+        } else if (wellenlaenge > 1150 && wellenlaenge <= 1200) {
+            var C_c = Math.pow(10, 0.018 * (wellenlaenge - 1150));
+            result = (1.5E-3) * C_c * C_e;
+            formula = "H = (1.5E-3) * C_c * C_e";
+        } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
+            var C_c = wellenlaenge <= 1200 ? 8 : 1;
+            result = (1.5E-3) * C_c * C_e;
+            formula = "H = (1.5E-3) * C_c * C_e";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
