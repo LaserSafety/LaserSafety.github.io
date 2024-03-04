@@ -56,11 +56,6 @@ article {
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 30px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-div.test:hover {
-  overflow: visible;
 }
 /* Style the header */
 header {
@@ -83,11 +78,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-      overflow: hidden;
-  text-overflow: ellipsis;
-}
-div.test:hover {
-  overflow: visible;
 }
   }
 article {
@@ -102,11 +92,6 @@ article {
   section {
     display: flex;
     flex-direction: row;
-      overflow: hidden;
-  text-overflow: ellipsis;
-}
-div.test:hover {
-  overflow: visible;
 }
   }
    article {
