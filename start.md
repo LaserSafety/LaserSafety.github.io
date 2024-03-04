@@ -35,7 +35,7 @@ input[type=text] {
   width: 20%;
 }
 input[type=number] {
-  width: 12%;
+  width: 10%;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -57,6 +57,7 @@ article {
   padding: 20px;
   border-radius: 30px;
 }
+
 /* Style the header */
 header {
   background-color: #666;
@@ -78,7 +79,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
   }
 article {
  height: 33%;
@@ -92,7 +92,6 @@ article {
   section {
     display: flex;
     flex-direction: row;
-}
   }
    article {
     width: 33%;
