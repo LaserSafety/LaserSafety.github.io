@@ -42,7 +42,6 @@ body {
 
 /* Style the navigation menu */
 nav {
-  max-width: 300px;
   background: #ccc;
   padding: 20px;
 }
@@ -73,6 +72,7 @@ nav ul {
   section {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   nav {
