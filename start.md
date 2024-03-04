@@ -56,6 +56,7 @@ article {
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 30px;
+  margin-top: 20px;
 }
 
 /* Style the header */
