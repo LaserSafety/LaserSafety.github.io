@@ -26,14 +26,14 @@ function calculate() {
     if (expositionsdauer >= 1E-13 && expositionsdauer < 1E-11) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (1.5E-4) * C_e;
-            formula = "H = (1.5E-4) * C_e";
+            formula = "H = (1.5 &sdot; 10<sup>-4</sup>) &sdot; C_e";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
             var C_a = wellenlaenge <= 700 ? 1 : Math.pow(10, 0.02 * (wellenlaenge - 700));
             result = (1.5E-4) * C_a * C_e;
-            formula = "H = (1.5E-4) * C_a * C_e";
+            formula = "H = (1.5 &sdot; 10<sup>-4</sup>) &sdot; C_a &sdot; C_e";
         } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
             result = (1.5E-4) * 5 * C_e;
-            formula = "H = (1.5E-4) * 5 * C_e";
+            formula = "H = (1.5 &sdot; 10<sup>-4</sup>) &sdot; C_a &sdot; C_e";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
@@ -43,5 +43,5 @@ function calculate() {
         return;
     }
 
-    document.getElementById('result').innerHTML = "Result: " + result.toFixed(6) + " J*m^2" + "<br>Formula: " + formula + ", C_e = " + C_e.toFixed(6);
+    document.getElementById('result').innerHTML = "Result: " + result.toFixed(6) + " J &sdot; m^2" + "<br>Formula: " + formula + ", C_e = " + C_e.toFixed(6);
 }
