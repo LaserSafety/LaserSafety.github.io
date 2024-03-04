@@ -120,8 +120,8 @@ footer {
       <br><input type="text" id="wellenlaenge"></p>
     </article>
       <article>
-      <h1>&#945</h1>
-      <p>eingabe &alpha;
+      <h1>&#945;</h1>
+      <p>eingabe &#945;
       <br><input type="text" id="alpha"></p>
       <p>eingabe &#945;<sub>max</sub>
         <br><input type="text" id="alphamax"></p>
