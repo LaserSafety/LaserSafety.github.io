@@ -49,6 +49,7 @@ body {
 nav {
   background: #ccc;
   padding: 20px;
+  height: 100%;
 }
 
 article {
@@ -107,6 +108,7 @@ article {
   }
   nav {
   max-width: 300px;
+  height: 100%;
 }
 footer {
   background-color: #777;
