@@ -138,6 +138,6 @@ footer {
 </footer>
 
 <!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>
+<script src="main_calculator.js"></script>
 
 </body>
