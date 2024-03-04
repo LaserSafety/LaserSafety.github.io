@@ -50,6 +50,7 @@ article {
   flex-grow: 1; /* Fill remaining space */
   background-color: #f1f1f1;
   padding: 20px;
+  border-radius: 25px;
 }
 
 /* Style the header */
