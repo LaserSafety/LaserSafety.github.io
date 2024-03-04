@@ -54,14 +54,41 @@ function calculate() {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
-    } else {
-        if (alpha < 0 || alpha > 1000) {
-            document.getElementById('result').innerHTML = "Invalid α value";
-            return;
-        } else if (expositionsdauer < 1E-13 || expositionsdauer >= 1E-9) {
-            document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
+    } else if (expositionsdauer >= 1E-9 && expositionsdauer <= 1E-8) {
+        if (wellenlaenge >= 1400 && wellenlaenge <= 1500) {
+            result = Math.pow(10, 12);
+            formula = "E = 10^12";
+        } else {
+            document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
+    } else if (expositionsdauer >= 1E-9 && expositionsdauer <= 1E-8) {
+        if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
+            result = Math.pow(10, 13);
+            formula = "E = 10^13";
+        } else {
+            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            return;
+        }
+    } else if (expositionsdauer >= 1E-9 && expositionsdauer <= 1E-8) {
+        if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
+            result = Math.pow(10, 12);
+            formula = "E = 10^12";
+        } else {
+            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            return;
+        }
+    } else if (expositionsdauer >= 1E-9 && expositionsdauer <= 1E-8) {
+        if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
+            result = Math.pow(10, 11);
+            formula = "E = 10^11";
+        } else {
+            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            return;
+        }
+    } else {
+        document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
+        return;
     }
 
     formula = formula.replace(/\*/g, "&sdot;"); // Replace asterisks with the dot symbol
