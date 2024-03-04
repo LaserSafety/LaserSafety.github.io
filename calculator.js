@@ -18,9 +18,6 @@ function calculate() {
         C_e = alpha / 1.5;
     } else if (alpha > 100 && alpha <= 1000) {
         C_e = alpha_max / alpha_min;
-    } else {
-        document.getElementById('result').innerHTML = "Invalid α value";
-        return;
     }
     
     if (expositionsdauer >= 1E-13 && expositionsdauer < 1E-11) {
@@ -47,14 +44,24 @@ function calculate() {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
-    } else if (expositionsdauer >= 1E-11 && expositionsdauer <= 1E-9 && wellenlaenge >= 700 && wellenlaenge <= 1050) {
-        var C_a = wellenlaenge <= 700 ? 1 : Math.pow(10, 0.02 * (wellenlaenge - 700));
-        var t = expositionsdauer / Math.pow(10, -9); // Convert to seconds
-        result = (2.7E-4) * Math.pow(t, 0.75) * C_a * C_e;
-        formula = "H = (2.7E-4) * t^0.75 * C_a * C_e";
+    } else if (expositionsdauer >= 1E-11 && expositionsdauer <= 1E-9) {
+        if (wellenlaenge >= 1050 && wellenlaenge <= 1400) {
+            var C_c = wellenlaenge <= 1200 ? 1 : 8;
+            var t = expositionsdauer / Math.pow(10, -9); // Convert to seconds
+            result = (2.7E-4) * Math.pow(t, 0.75) * C_c * C_e;
+            formula = "H = (2.7E-4) * t^0.75 * C_c * C_e";
+        } else {
+            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            return;
+        }
     } else {
-        document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
-        return;
+        if (alpha < 0 || alpha > 1000) {
+            document.getElementById('result').innerHTML = "Invalid α value";
+            return;
+        } else if (expositionsdauer < 1E-13 || expositionsdauer >= 1E-9) {
+            document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
+            return;
+        }
     }
 
     formula = formula.replace(/\*/g, "&sdot;"); // Replace asterisks with the dot symbol
