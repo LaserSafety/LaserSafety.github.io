@@ -83,6 +83,12 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+      overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.test:hover {
+  overflow: visible;
+}
   }
 article {
  height: 33%;
@@ -96,6 +102,12 @@ article {
   section {
     display: flex;
     flex-direction: row;
+      overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.test:hover {
+  overflow: visible;
+}
   }
    article {
     width: 33%;
