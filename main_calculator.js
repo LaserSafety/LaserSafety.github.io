@@ -28,5 +28,8 @@ function calculate() {
         document.getElementById('result').innerHTML = "Result: " + result.toFixed(6) + " J·m&sup2;";
     } catch (error) {
         document.getElementById('result').innerHTML = error.message;
+        document.getElementById('result').style.color = 'red'; // Change color to red
     }
+}
+
 }
