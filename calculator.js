@@ -48,5 +48,5 @@ function calculate() {
         return;
     }
 
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>" + C_values.join("<br>") + "<br>result: " + result.toFixed(6) + " J*m^2";
+    document.getElementById('result').innerHTML = "Result: " + result.toFixed(6) + " J &sdot; m^2" + "<br>Formula: " + formula + ", C_e = " + C_e.toFixed(6);
 }
