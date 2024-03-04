@@ -1,7 +1,7 @@
 function calculate() {
     var expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
-    var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
+    var wellenlaenge = parseFloat(document.getElementById('Wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
     var alpha_max = parseFloat(document.getElementById('alphamax').value);
     var alpha_min = parseFloat(document.getElementById('alphamin').value);
