@@ -1,3 +1,4 @@
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,26 +45,11 @@ header {
   color: white;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
 /* Container for flexboxes */
 section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minimum and maximum width as needed */
+  grid-gap: 20px;
 }
 
 /* Style the navigation menu */
@@ -80,7 +66,6 @@ nav ul {
 }
 
 article {
-  flex-grow: 1;
   padding: 20px;
   background-color: #f1f1f1;
 }
@@ -96,7 +81,7 @@ footer {
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   section {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   nav, article {
@@ -104,14 +89,6 @@ footer {
   }
 }
 
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
 </style>
 </head>
 <body>
@@ -158,3 +135,6 @@ footer {
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
+
+</body>
+
