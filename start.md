@@ -56,8 +56,12 @@ article {
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
+div.test:hover {
+  overflow: visible;
+}
 /* Style the header */
 header {
   background-color: #666;
