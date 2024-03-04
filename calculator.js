@@ -25,24 +25,24 @@ function calculate() {
     
     if (expositionsdauer >= 1E-13 && expositionsdauer < 1E-11) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
-            result = (1.5E-4) &sdot; C_e;
-            formula = "H = (1.5E-4) &sdot; C_e";
+            result = (1.5E-4) * C_e;
+            formula = "H = (1.5E-4) * C_e";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
             var C_a = wellenlaenge <= 700 ? 1 : Math.pow(10, 0.02 * (wellenlaenge - 700));
-            result = (1.5E-4) &sdot; C_a &sdot; C_e;
-            formula = "H = (1.5E-4) &sdot; C_a &sdot; C_e";
+            result = (1.5E-4) * C_a * C_e;
+            formula = "H = (1.5E-4) * C_a * C_e";
         } else if (wellenlaenge > 1050 && wellenlaenge <= 1150) {
             var C_c = wellenlaenge <= 1150 ? 1 : Math.pow(10, 0.018 * (wellenlaenge - 1150));
-            result = (1.5E-3) &sdot; C_c &sdot; C_e;
-            formula = "H = (1.5E-3) &sdot; C_c &sdot; C_e";
+            result = (1.5E-3) * C_c * C_e;
+            formula = "H = (1.5E-3) * C_c * C_e";
         } else if (wellenlaenge > 1150 && wellenlaenge <= 1200) {
             var C_c = Math.pow(10, 0.018 * (wellenlaenge - 1150));
-            result = (1.5E-3) &sdot; C_c &sdot; C_e;
-            formula = "H = (1.5E-3) &sdot; C_c &sdot; C_e";
+            result = (1.5E-3) * C_c * C_e;
+            formula = "H = (1.5E-3) * C_c * C_e";
         } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
             var C_c = wellenlaenge <= 1200 ? 8 : 1;
-            result = (1.5E-3) &sdot; C_c &sdot; C_e;
-            formula = "H = (1.5E-3) &sdot; C_c &sdot; C_e";
+            result = (1.5E-3) * C_c * C_e;
+            formula = "H = (1.5E-3) * C_c * C_e";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
@@ -52,5 +52,8 @@ function calculate() {
         return;
     }
 
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result.toFixed(6) + " J&m2;";
+    formula = formula.replace(/\*/g, "&sdot;"); // Replace asterisks with the dot symbol
+    result = result.toFixed(6) + " J·m^2";
+
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result;
 }
