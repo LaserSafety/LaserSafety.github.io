@@ -86,6 +86,14 @@ article {
   nav {
     width: 100%; /* Cover the whole screen on small screens */
   } 
+  footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
+}
 }
 
 @media (min-width: 601px) {
@@ -105,6 +113,7 @@ footer {
   text-align: center;
   color: white;
   margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
 }
 </style>
 </head>
