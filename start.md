@@ -37,23 +37,30 @@ body {
 }
 /* Style the section */
 section {
-  display: grid;
-  grid-template-columns: 30% 1fr; /* Sidebar takes up 30% of the width, and the rest is for articles */
-  grid-gap: 20px;
+  display: flex;
 }
 
 /* Style the navigation menu */
 nav {
+  width: 20%;
   background: #ccc;
   padding: 20px;
 }
 
 /* Style the articles */
+form {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Style the individual article */
 article {
+  flex-basis: calc(50% - 10px); /* Two articles per row with a gap of 20px */
   background-color: #f1f1f1;
   padding: 20px;
 }
-
 
 /* Style the header */
 header {
