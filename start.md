@@ -53,8 +53,6 @@ article {
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 30px;
-  width: 33%;
-  
 }
 
 /* Style the header */
@@ -79,10 +77,12 @@ nav ul {
     flex-direction: column;
     width: 100%;
   }
-
+article {
+ height: 33%;
+ }
   nav {
     width: 100%; /* Cover the whole screen on small screens */
-  }
+  } 
 }
 
 @media (min-width: 601px) {
@@ -90,8 +90,10 @@ nav ul {
     display: flex;
     flex-direction: row;
   }
+   article {
+    width: 33%;
 }
-
+}
 footer {
   background-color: #777;
   padding: 10px;
