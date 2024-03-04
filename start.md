@@ -119,6 +119,11 @@ footer {
       <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
       <br><input type="text" id="wellenlaenge"></p>
     </article>
+      <article>
+      <h1>&#945</h1>
+      <p>eingabe &#945 (dieser text ist ueberfluessig, spaeter wird er entfernt!
+      <br><input type="text" id="alpha"></p>
+    </article>
   </form>
 </section>
 
