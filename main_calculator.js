@@ -22,9 +22,9 @@ function calculate() {
     
     // Call calculate_formula to calculate the formula
     try {
-        const { formula, result } = calculate_formula(expositionsdauer, wellenlaenge, C_c, C_e);
+        const result = calculate_formula(expositionsdauer, wellenlaenge, C_c, C_e);
         // Display the result
-        document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result.toFixed(6) + " J·m&sup2;";
+        document.getElementById('result').innerHTML = "Result: " + result.toFixed(6) + " J·m&sup2;";
     } catch (error) {
         document.getElementById('result').innerHTML = error.message;
     }
