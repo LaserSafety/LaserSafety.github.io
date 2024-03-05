@@ -5,13 +5,27 @@
 <title>Laser Safety</title>
 <style>
 /* Your CSS styles here */
-a:link, a:visited {
+a:link {
   color: blue;
+  background-color: transparent;
   text-decoration: none;
 }
 
-a:hover, a:active {
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
   color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: blue;
+  background-color: transparent;
   text-decoration: underline;
 }
 
@@ -26,6 +40,8 @@ input[type=number] {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -52,18 +68,19 @@ header {
   font-size: 35px;
   color: white;
   position: relative;
-  z-index: 1;
 }
+
+/* Trapezoid */
 .header-trapezoid {
+  width: 200px; /* Adjust width as needed */
+  height: 20px;
+  background-color: blue;
   position: absolute;
-  top: -50px;
-  left: 50%;
-  border-top: 50px solid #27abeb;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  width: 0;
-  z-index: 2;
+  bottom: 0; /* Half of the height to position it correctly */
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
 }
+
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
@@ -110,6 +127,7 @@ nav ul {
     padding: 10px;
     text-align: center;
     color: white;
+    margin-top: auto; /* Push the footer to the bottom */
     width: 100%;
   }
 }
@@ -119,8 +137,9 @@ nav ul {
 
 <header>
   Werteneingabe:
+  <div class="header-trapezoid"></div>
 </header>
-<div class="header-trapezoid"></div>
+
 <section>
   <nav>
     <ul>
