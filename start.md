@@ -73,6 +73,8 @@ header {
     border-left: 25px solid transparent;
     height: 0;
     width: 125px;
+    position: absolute
+    
 }
 /* Style the list inside the menu */
 nav ul {
