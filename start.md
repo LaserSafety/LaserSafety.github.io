@@ -70,15 +70,14 @@ header {
   position: relative;
 }
 .header-trapezoid {
+  position: absolute;
+  bottom: 100%; /* Position above the header */
+  left: 50%;
+  transform: translateX(-50%);
   border-top: 50px solid #27abeb;
   border-left: 25px solid transparent;
-  height: 0;
-  width: 125px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -100%);
-  z-index: 1;
+  border-right: 25px solid transparent;
+  width: 0;
 }
 /* Style the list inside the menu */
 nav ul {
