@@ -52,16 +52,17 @@ header {
   font-size: 35px;
   color: white;
   position: relative;
+  z-index: 1;
 }
 .header-trapezoid {
   position: absolute;
   top: -50px;
   left: 50%;
-  transform: translateX(-50%);
   border-top: 50px solid #27abeb;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   width: 0;
+  z-index: 2;
 }
 /* Style the list inside the menu */
 nav ul {
