@@ -61,6 +61,7 @@ article {
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
+  color: #FDEBD0;
 }
 
 /* Style the header */
