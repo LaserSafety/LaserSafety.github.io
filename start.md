@@ -72,12 +72,11 @@ header {
 
 /* Trapezoid */
 .header-trapezoid {
-  width: 200px; /* Adjust width as needed */
+  width: 400px; /* Adjust width as needed */
   height: 20px;
-  background-color: blue;
-  position: absolute;
-  bottom: 0; /* Half of the height to position it correctly */
-  left: 0;
+  background-color: #4cbaef;
+  position: absolute; 
+  left: 1px;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
 }
 
