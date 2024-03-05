@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +5,120 @@
 <title>Laser Safety</title>
 <style>
 /* Your CSS styles here */
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+input[type=text] {
+  width: 20%;
+}
+input[type=number] {
+  width: 50px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navigation menu */
+nav {
+  background: #ccc;
+  padding: 20px;
+  height: auto;
+}
+
+article {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  article {
+    height: 33%;
+  }
+  nav {
+    width: 100%; /* Cover the whole screen on small screens */
+  } 
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  article {
+    width: 33%;
+  }
+  nav {
+    max-width: 300px;
+    height: auto;
+  }
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
