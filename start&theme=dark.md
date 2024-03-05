@@ -48,13 +48,13 @@ body {
 
 /* Style the navigation menu */
 nav {
-  background: #ccc;
+  background: #ABB2B9;
   padding: 20px;
   height: auto;
 }
 
 article {
-  background-color: #f1f1f1;
+  background-color: #283747;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -62,11 +62,11 @@ article {
 
 /* Style the header */
 header {
-  background-color: #666;
+  background-color: #2E4053;
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: white;
+  color: #FDEBD0;
   position: relative;
 }
 
@@ -78,7 +78,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 25px solid #4cbaef;
+  border-top: 25px solid #0041D9;
   border-left: 50px solid transparent;
 }
 
