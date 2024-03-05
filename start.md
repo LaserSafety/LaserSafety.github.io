@@ -74,10 +74,12 @@ header {
 .header-trapezoid {
   width: 400px; /* Adjust width as needed */
   height: 100%;
-  background-color: #4cbaef;
+  /*background-color: #4cbaef; */
   position: absolute; 
   right: 0px;
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  top: 0px;
+  border-top: 25px solid #4cbaef;
+	border-left: 50px solid transparent;
 }
 
 /* Style the list inside the menu */
