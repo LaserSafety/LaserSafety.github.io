@@ -136,7 +136,7 @@ nav ul {
 <body>
 
 <header>
-  Werteneingabe:
+  Werteeingabe:
   <div class="header-trapezoid"></div>
 </header>
 
@@ -158,16 +158,16 @@ nav ul {
       </article>
       <article id="Wellenlaenge">
         <h1>Wellenlaenge</h1>
-        <p>eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+        <p>Eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
           <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
       </article>
       <article id="Alpha">
         <h1>&#945;</h1>
-        <p>eingabe <b>&#945;</b> in <b>mrad</b>    
+        <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
           <br><input type="text" id="alpha"></p>
-        <p>eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
+        <p>Eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
           <br><input type="text" id="alphamax"></p>
-        <p>eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
+        <p>Eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
           <br><input type="text" id="alphamin"></p>
       </article>
     </section>
