@@ -70,14 +70,14 @@ header {
   position: relative;
 }
 .header-trapezoid {
-    border-top: 50px solid #27abeb;
-    border-left: 25px solid transparent;
-    height: 0;
-    width: 125px;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+  border-top: 50px solid #27abeb;
+  border-left: 25px solid transparent;
+  height: 0;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -100%);
 }
 /* Style the list inside the menu */
 nav ul {
