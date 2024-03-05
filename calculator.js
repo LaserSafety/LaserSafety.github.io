@@ -11,6 +11,26 @@ function calculate() {
     var result;
     var formula;
     
+    var C_a;
+    if (wellenlaenge >= 0 && alpha <= 700) {
+        C_e = 1;
+    } if (wellenlaenge >= 700 && alpha <= 1050) {
+        C_e = 10 * Math.pow(0.002 * (wellenlaenge-700));
+    } if (wellenlaenge >= 1050 && alpha <= 1400) {
+        C_e = 5;
+    }
+    var C_b;
+    if (wellenlaenge >= 400 && alpha <= 450) {
+        C_e = 1;
+    } if (wellenlaenge >= 450 && alpha <= 600) {
+        C_e = 10 * Math.pow(0.02 * (wellenlaenge-600));
+    }
+    var C_c;
+    if (wellenlaenge >= 700 && alpha <= 1150) {
+        C_e = 1;
+    } if (wellenlaenge >= 1150 && alpha <= 1200) {
+        C_e = 10 * Math.pow(0.018 * (wellenlaenge-1150));
+    }
     var C_e;
     if (alpha >= 0 && alpha <= 1.5) {
         C_e = 1;
@@ -25,19 +45,15 @@ function calculate() {
             result = (1.5E-4) * C_e;
             formula = "H = (1.5E-4) * C_e";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
-            var C_a = wellenlaenge <= 700 ? 1 : Math.pow(10, 0.02 * (wellenlaenge - 700));
             result = (1.5E-4) * C_a * C_e;
             formula = "H = (1.5E-4) * C_a * C_e";
         } else if (wellenlaenge > 1050 && wellenlaenge <= 1150) {
-            var C_c = wellenlaenge <= 1150 ? 1 : Math.pow(10, 0.018 * (wellenlaenge - 1150));
             result = (1.5E-3) * C_c * C_e;
             formula = "H = (1.5E-3) * C_c * C_e";
         } else if (wellenlaenge > 1150 && wellenlaenge <= 1200) {
-            var C_c = Math.pow(10, 0.018 * (wellenlaenge - 1150));
             result = (1.5E-3) * C_c * C_e;
             formula = "H = (1.5E-3) * C_c * C_e";
         } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
-            var C_c = wellenlaenge <= 1200 ? 8 : 1;
             result = (1.5E-3) * C_c * C_e;
             formula = "H = (1.5E-3) * C_c * C_e";
         } else {
