@@ -67,20 +67,13 @@ header {
   text-align: center;
   font-size: 35px;
   color: white;
-  position: relative;
 }
-
-/* Trapezoid */
 .header-trapezoid {
-  width: 200px; /* Adjust width as needed */
-  height: 20px;
-  background-color: #27abeb;
-  position: absolute;
-  bottom: -10px; /* Half of the height to position it correctly */
-  left: calc(50% - 100px); /* Half of the width to center it */
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    border-top: 50px solid #27abeb;
+    border-left: 25px solid transparent;
+    height: 0;
+    width: 125px;
 }
-
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
@@ -127,8 +120,9 @@ nav ul {
     padding: 10px;
     text-align: center;
     color: white;
-    margin-top: auto; /* Push the footer to the bottom */
+    position: relative;
     width: 100%;
+    bottom: 0;
   }
 }
 </style>
@@ -137,7 +131,6 @@ nav ul {
 
 <header>
   Werteneingabe:
-  <div class="header-trapezoid"></div>
 </header>
 
 <section>
