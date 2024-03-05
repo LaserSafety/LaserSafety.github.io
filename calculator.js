@@ -3,8 +3,6 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    var alpha_max = parseFloat(document.getElementById('alphamax').value);
-    var alpha_min = parseFloat(document.getElementById('alphamin').value);
     
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
     
@@ -13,6 +11,10 @@ function calculate() {
     
     // Calculate C variables based on wellenlaenge
     var C_a, C_b, C_c, C_e;
+
+    var alphamax, alphamin;
+    alphamax=100;
+    alphamin=1.5;
     
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
