@@ -1,3 +1,6 @@
+---
+permalink: /start&theme=dark.html
+---
 <html lang="en">
 <head>
 <meta charset="UTF-8">
