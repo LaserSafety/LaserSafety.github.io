@@ -67,14 +67,17 @@ header {
   text-align: center;
   font-size: 35px;
   color: white;
+  position: relative;
 }
 .header-trapezoid {
     border-top: 50px solid #27abeb;
     border-left: 25px solid transparent;
     height: 0;
     width: 125px;
-    position: absolute
-    
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 /* Style the list inside the menu */
 nav ul {
@@ -122,9 +125,7 @@ nav ul {
     padding: 10px;
     text-align: center;
     color: white;
-    position: relative;
     width: 100%;
-    bottom: 0;
   }
 }
 </style>
@@ -133,6 +134,7 @@ nav ul {
 
 <header>
   Werteneingabe:
+  <div class="header-trapezoid"></div>
 </header>
 
 <section>
