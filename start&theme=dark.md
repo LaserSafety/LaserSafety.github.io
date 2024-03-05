@@ -61,7 +61,7 @@ article {
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
-  color: #FDEBD0;
+  color: #F6DDCC;
 }
 
 /* Style the header */
@@ -70,7 +70,7 @@ header {
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: #FDEBD0;
+  color: #F6DDCC;
   position: relative;
 }
 
