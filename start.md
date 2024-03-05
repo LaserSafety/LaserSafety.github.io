@@ -5,27 +5,13 @@
 <title>Laser Safety</title>
 <style>
 /* Your CSS styles here */
-a:link {
+a:link, a:visited {
   color: blue;
-  background-color: transparent;
   text-decoration: none;
 }
 
-a:visited {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
+a:hover, a:active {
   color: black;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: blue;
-  background-color: transparent;
   text-decoration: underline;
 }
 
@@ -40,8 +26,6 @@ input[type=number] {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -71,7 +55,7 @@ header {
 }
 .header-trapezoid {
   position: absolute;
-  top: -50%;
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
   border-top: 50px solid #27abeb;
@@ -134,9 +118,8 @@ nav ul {
 
 <header>
   Werteneingabe:
-  <div class="header-trapezoid"></div>
 </header>
-
+<div class="header-trapezoid"></div>
 <section>
   <nav>
     <ul>
