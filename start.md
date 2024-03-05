@@ -72,8 +72,8 @@ header {
 
 /* Trapezoid */
 .header-trapezoid {
-  width: 100%; /* Adjust width as needed */
-  height: 300%;
+  width: 20%; /* Adjust width as needed */
+  height: 100px;
   /*background-color: #4cbaef; */
   position: absolute; 
   right: 0px;
