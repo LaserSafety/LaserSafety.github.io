@@ -71,7 +71,7 @@ header {
 }
 .header-trapezoid {
   position: absolute;
-  bottom: 100%; /* Position above the header */
+  top: -50%;
   left: 50%;
   transform: translateX(-50%);
   border-top: 50px solid #27abeb;
