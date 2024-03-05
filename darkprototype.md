@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html>
 ---
-permalink: /start&theme=dark.html
+permalink: /prototype_dark.html
 ---
 <html lang="en">
 <head>
@@ -210,4 +208,3 @@ nav ul {
 <script src="calculator.js"></script>
 
 </body>
-</html>
