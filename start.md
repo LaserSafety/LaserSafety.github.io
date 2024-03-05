@@ -78,6 +78,7 @@ header {
   top: 0;
   left: 0;
   transform: translate(-50%, -100%);
+  z-index: 1;
 }
 /* Style the list inside the menu */
 nav ul {
