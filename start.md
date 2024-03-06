@@ -220,7 +220,7 @@ nav ul {
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
     <!-- For example: -->
-    <p>Menu Content</p>
+    <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
   </div>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
