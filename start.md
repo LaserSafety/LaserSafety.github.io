@@ -31,7 +31,7 @@
   transition: left 10s ease;
   border: 1px solid #ccc;
   padding: 20px;
-  width: calc(100% - 300px); /* Adjust width as needed */
+  width: calc(100% - 270px); /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
   height: 80%;
@@ -84,7 +84,7 @@ body {
 /* Style the navigation menu */
 nav {
   background: #ccc;
-  padding: 0;
+  padding: 20px;
   height: auto;
 }
 
