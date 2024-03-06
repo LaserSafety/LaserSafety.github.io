@@ -8,7 +8,7 @@
 .settings-btn {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 10px;
   cursor: pointer;
   z-index: 1000;
 }
