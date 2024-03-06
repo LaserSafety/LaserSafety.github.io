@@ -140,18 +140,19 @@ nav ul {
   bottom: 10px;
   cursor: pointer;
 }
-
 .menu {
   display: none;
   position: absolute;
   right: -200px; /* initially off-screen */
   top: 50px;
-  background-color: #fff;
+  background-color: #f9f9f9; /* Changed to a light gray */
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 20px; /* Added padding */
+  width: 200px; /* Adjust width as needed */
+  max-height: 80vh; /* Limit maximum height */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
   transition: right 0.3s ease; /* Add transition effect */
 }
-
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
   position: relative; /* Set position to relative */
