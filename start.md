@@ -1,4 +1,4 @@
-<html lang="en">
+uu87z6<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +32,7 @@
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
   transition: width 5s ease;
+  right: 0px;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
