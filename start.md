@@ -25,7 +25,6 @@
 .menu {
   display: none;
   position: fixed;
-  bottom: 100px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
   transition: left 10s ease;
