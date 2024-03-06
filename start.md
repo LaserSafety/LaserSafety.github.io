@@ -154,20 +154,22 @@ nav ul {
 
 .rotate-settings {
   height: auto; /* Maintain aspect ratio */
-  transform-origin: center;
-  transition: transform 0.3s ease; /* Add transition effect */
-  bottom: 30px;
-  left: 30px
+  position: relative; /* Set position to relative */
+  transition: transform 0.3s ease, left 0.3s ease, bottom 0.3s ease; /* Add transition effect */
+  z-index: 1; /* Ensure the button is above the menu */
 }
-
-.menu.show {
-  right: 10px; /* Slide in from the right */
-}
-
 .rotate-settings.rotate {
   transform: rotate(45deg); /* Rotate clockwise */
 }
-
+.settings-btn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+.menu.show {
+  right: 10px; /* Slide in from the right */
+}
 </style>
 </head>
 <body>
