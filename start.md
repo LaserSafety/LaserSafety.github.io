@@ -24,8 +24,6 @@
 
 .menu {
   display: none;
-  display: flex;
-  flex-direction: column;
   position: fixed;
   bottom: 0;
   right: -300px; /* Initially off-screen */
@@ -39,7 +37,8 @@
   height: 100%;
 }
 .menu.show {
-  display: block; /* Show the menu when 'show' class is present */
+  display: flex; /* Show the menu when 'show' class is present */
+  flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
 }
 a:link {
