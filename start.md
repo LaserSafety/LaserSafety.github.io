@@ -145,14 +145,13 @@ nav ul {
   position: absolute;
   right: -200px; /* initially off-screen */
   top: 50px;
-  background-color: #f9f9f9; /* Changed to a light gray */
+  background-color: #fff;
   border: 1px solid #ccc;
-  padding: 20px; /* Added padding */
-  width: 200px; /* Adjust width as needed */
-  max-height: 80vh; /* Limit maximum height */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
-  transition: right 0.3s; /* Add transition effect */
+  padding: 10px;
+  transition: right 1s; /* Simplified transition effect */
+  height: 300px;
 }
+
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
   position: relative; /* Set position to relative */
@@ -168,7 +167,7 @@ nav ul {
   cursor: pointer;
 }
 .menu.show {
-  right: 10px; /* Slide in from the right */
+  right: 100px; /* Slide in from the right */
 }
 </style>
 </head>
