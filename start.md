@@ -5,6 +5,35 @@
 <title>Laser Safety</title>
 <style>
 /* Your CSS styles here */
+.settings-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.rotate-settings {
+  height: 50px; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.rotate-settings.rotate {
+  transform: rotate(45deg); /* Rotate clockwise */
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially off-screen */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 250px; /* Adjust width as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  z-index: 999; /* Ensure the menu is above other content */
+}
 a:link {
   color: blue;
   background-color: transparent;
@@ -132,38 +161,6 @@ nav ul {
   }
 }
 
-/* Your CSS styles here */
-/* Style the navigation menu */
-.menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: -300px; /* Initially off-screen */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  transition: right 0.5s; /* Transition the right property */
-  z-index: 1000; /* Ensure the menu is above other content */
-}
-
-.settings-btn {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  cursor: pointer;
-}
-
-.rotate-settings {
-  height: 50px; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Add transition effect */
-}
-
-.rotate-settings.rotate {
-  transform: rotate(45deg); /* Rotate clockwise */
-}
-.menu.show {
-  right: 100px; /* Slide in from the right */
-}
 </style>
 </head>
 <body>
@@ -206,9 +203,26 @@ nav ul {
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 <!-- Link to the JavaScript file for menu transitions -->
-<script src="menu-logic.js"></script>
+<script>
+// JavaScript code for toggling menu and rotating button
+document.addEventListener('DOMContentLoaded', function() {
+  var menu = document.getElementById("menu");
+  var settingsBtn = document.getElementById("settingsBtn");
+  var settingsImg = settingsBtn.querySelector("img");
+
+  settingsBtn.addEventListener("click", function() {
+    if (menu.style.right === "0px") {
+      menu.style.right = "-300px"; // Slide out the menu
+      settingsImg.classList.remove("rotate"); // Rotate the button back
+    } else {
+      menu.style.right = "0px"; // Slide in the menu
+      settingsImg.classList.add("rotate"); // Rotate the button
+    }
+  });
+});
+</script>
 <footer>
-  <div class="settings-btn" onclick="toggleMenu()">
+  <div class="settings-btn" id="settingsBtn">
     <!-- Use the image directly as the button -->
    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
