@@ -24,8 +24,8 @@
 
 .menu {
   display: none;
-  position: relative;
-  top: 100px;
+  position: absolute;
+  bottom: 0;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
   transition: left 10s ease;
