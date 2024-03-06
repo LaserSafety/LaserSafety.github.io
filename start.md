@@ -38,8 +38,7 @@
   display: flex; /* Show the menu when 'show' class is present */
   flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
-  /* width: calc(100% - 222px); */ /* Adjust width as needed */
-  width: 500px;
+  width: calc(100% - 222px); /* Adjust width as needed */
   height: 100%;
 }
 a:link {
