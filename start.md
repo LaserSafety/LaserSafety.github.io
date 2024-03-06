@@ -203,8 +203,8 @@ nav ul {
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">Settings</div>
   <div class="menu" id="menu">
-  <a href="#" id="settings-button"><img src="IMG_0217.png"
- alt="Settings" style="max-width: 100%; max-height: 100%;"></a>
+  <a href="#" id="settings-button"><img src="/IMG_0217.png"
+ alt="Settings" style="max-width: 20px; max-height: 20px;"></a>
    <!-- Add your menu content here -->
     <!-- For example: -->
     <p>Menu Content</p>
