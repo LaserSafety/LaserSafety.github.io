@@ -77,7 +77,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 102px solid #4cbaef;
+  border-top: 105px solid #4cbaef;
   border-left: 50px solid transparent;
 }
 
@@ -143,11 +143,12 @@ nav ul {
 .menu {
   display: none;
   position: absolute;
-  left: -200px; /* initially off-screen */
+  right: -200px; /* initially off-screen */
   top: 50px;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
+  transition: right 1s; /* Simplified transition effect */
   height: 300px;
 }
 
@@ -160,9 +161,13 @@ nav ul {
 .rotate-settings.rotate {
   transform: rotate(45deg); /* Rotate clockwise */
 }
-
+.settings-btn {
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
 .menu.show {
-  left: 100px; /* Slide in from the right */
+  right: 100px; /* Slide in from the right */
 }
 </style>
 </head>
@@ -181,6 +186,7 @@ nav ul {
       <li><a href="#">&#945;</a></li>
     </ul>
   </nav>
+  
   <form id="myForm">
     <section id="Expositionsdauer">
       <article>
@@ -197,26 +203,27 @@ nav ul {
         <h1>&#945;</h1>
         <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
           <br><input type="text" id="alpha"></p>
-       </article>
+      </article>
     </section>
   </form>
-  </section>
- <footer>
+</section>
+
+<!-- Link to the JavaScript file for calculations -->
+<script src="calculator.js"></script>
+<!-- Link to the JavaScript file for menu transitions -->
+<script src="menu-logic.js"></script>
+<footer>
   <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
     <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
-  <div class="menu.show" id="menu">
+  <div class="menu" id="menu">
     <!-- Add your menu content here -->
     <!-- For example: -->
     <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
   </div>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
- </footer>
-<!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>
-<!-- Link to the JavaScript file for menu transitions -->
-<script src="menu-logic.js"></script>
+</footer>
 </body>
 </html>
