@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laser Safety</title>
+<link rel="stylesheet" href="styles.css">
 <style>
 /* Your CSS styles here */
 a:link {
@@ -132,41 +133,36 @@ nav ul {
   }
 }
 
-.settings-btn {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  cursor: pointer;
-}
+/* Your CSS styles here */
+/* Style the navigation menu */
 .menu {
   display: none;
-  position: absolute;
-  right: -200px; /* initially off-screen */
-  top: 50px;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially off-screen */
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
-  transition: right 1s; /* Simplified transition effect */
-  height: 300px;
+  transition: right 0.5s; /* Transition the right property */
+  z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.settings-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
 }
 
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
-  position: relative; /* Set position to relative */
-  transition: transform 0.3s ease, left 0.3s ease, bottom 0.3s ease; /* Add transition effect */
-  z-index: 1; /* Ensure the button is above the menu */
+  transition: transform 0.3s ease; /* Add transition effect */
 }
+
 .rotate-settings.rotate {
   transform: rotate(45deg); /* Rotate clockwise */
 }
-.settings-btn {
-  left: 10px;
-  bottom: 10px;
-  cursor: pointer;
-}
-.menu.show {
-  right: 100px; /* Slide in from the right */
-}
+
 </style>
 </head>
 <body>
