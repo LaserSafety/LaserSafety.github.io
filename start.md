@@ -27,7 +27,7 @@
   position: fixed;
   right: -100%; /* Initially off-screen */
   background-color: #fff;
-  transition: left 10s ease;
+  transition: translation 10s ease;
   padding: 20px;
   width: calc(100% - 222px); /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
