@@ -25,7 +25,7 @@
 .menu {
   display: none;
   position: fixed;
-  right: -300px; /* Initially off-screen */
+  right: -100%; /* Initially off-screen */
   background-color: #fff;
   transition: left 10s ease;
   padding: 20px;
@@ -33,6 +33,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
+  transition: right 0.5s ease;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
