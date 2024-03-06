@@ -35,6 +35,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
   height: 100%;
+  top: 102px;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
@@ -113,7 +114,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 101px solid #4cbaef;
+  border-top: 102px solid #4cbaef;
   border-left: 50px solid transparent;
 }
 
