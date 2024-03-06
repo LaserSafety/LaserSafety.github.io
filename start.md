@@ -84,7 +84,7 @@ body {
 /* Style the navigation menu */
 nav {
   background: #ccc;
-  padding: 20px;
+  padding: 0;
   height: auto;
 }
 
