@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -154,6 +153,8 @@ nav ul {
 }
 
 .rotate-settings {
+  max-width: 100%; /* Set maximum width */
+  height: auto; /* Maintain aspect ratio */
   transform-origin: center;
   transition: transform 0.3s ease; /* Add transition effect */
 }
@@ -200,10 +201,6 @@ nav ul {
         <h1>&#945;</h1>
         <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
           <br><input type="text" id="alpha"></p>
-        <p>Eingabe <b>&#945;</b><sub>max</sub> in <b>mrad</b>
-          <br><input type="text" id="alphamax"></p>
-        <p>Eingabe <b>&#945;</b><sub>min</sub> in <b>mrad</b>
-          <br><input type="text" id="alphamin"></p>
       </article>
     </section>
   </form>
