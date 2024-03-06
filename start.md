@@ -211,7 +211,8 @@ nav ul {
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
-
+<!-- Link to the JavaScript file for menu transitions -->
+<script src="menu-logic.js"></script>
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
@@ -225,17 +226,5 @@ nav ul {
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
-
-<script>
-function toggleMenu() {
-  var menu = document.getElementById("menu");
-  var settingsBtn = document.querySelector(".settings-btn img");
-  
-  menu.classList.toggle("show"); // Toggle the menu visibility
-  
-  // Toggle the rotation of the settings button
-  settingsBtn.classList.toggle("rotate");
-}
-</script>
 </body>
 </html>
