@@ -148,7 +148,6 @@ nav ul {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
-  transition: right 1s; /* Simplified transition effect */
   height: 300px;
 }
 
