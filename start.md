@@ -30,7 +30,7 @@
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transition: width 2s ease;
+  transition: width 1.5s ease;
   right: 0px;
   height: 100%;
 }
