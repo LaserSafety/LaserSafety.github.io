@@ -77,7 +77,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 85px solid #4cbaef;
+  border-top: 100px solid #4cbaef;
   border-left: 50px solid transparent;
 }
 
@@ -162,7 +162,6 @@ nav ul {
   transform: rotate(45deg); /* Rotate clockwise */
 }
 .settings-btn {
-  position: absolute;
   left: 10px;
   bottom: 10px;
   cursor: pointer;
