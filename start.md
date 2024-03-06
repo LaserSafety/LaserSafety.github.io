@@ -107,6 +107,7 @@ nav ul {
     color: white;
     margin-top: auto; /* Push the footer to the bottom */
     width: 100%;
+    position: relative;
   }
 }
 
@@ -129,8 +130,27 @@ nav ul {
     color: white;
     margin-top: auto; /* Push the footer to the bottom */
     width: 100%;
+    position: relative;
   }
 }
+
+.settings-btn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -178,8 +198,16 @@ nav ul {
 <script src="calculator.js"></script>
 
 <footer>
+  <div class="settings-btn" onclick="toggleMenu()">Settings</div>
+  <div class="menu" id="menu">
+    <!-- Add your menu content here -->
+    <!-- For example: -->
+    <p>Menu Content</p>
+  </div>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
+<!-- Link to the JavaScript file for menu transitions -->
+<script src="menu-logic.js"></script>
 
 </body>
