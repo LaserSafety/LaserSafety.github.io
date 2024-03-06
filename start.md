@@ -105,7 +105,6 @@ nav ul {
     padding: 10px;
     text-align: center;
     color: white;
-    margin-top: auto; /* Push the footer to the bottom */
     width: 100%;
     position: relative;
   }
@@ -128,7 +127,6 @@ nav ul {
     padding: 10px;
     text-align: center;
     color: white;
-    margin-top: auto; /* Push the footer to the bottom */
     width: 100%;
     position: relative;
   }
