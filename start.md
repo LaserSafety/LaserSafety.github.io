@@ -147,7 +147,7 @@ nav ul {
 }
 
 .settings-btn {
-  position: relative;
+  position: fixed;
   right: 10px;
   bottom: 10px;
   cursor: pointer;
