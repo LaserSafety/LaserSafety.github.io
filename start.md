@@ -24,7 +24,7 @@
 
 .menu {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 100px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
