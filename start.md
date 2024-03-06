@@ -33,12 +33,12 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transition: right 0.5s ease;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
   flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
+  transition: right 0.5s ease;
 }
 a:link {
   color: blue;
