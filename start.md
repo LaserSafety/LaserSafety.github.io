@@ -143,7 +143,7 @@ nav ul {
 .menu {
   display: none;
   position: absolute;
-  right: -200px; /* initially off-screen */
+  left: -200px; /* initially off-screen */
   top: 50px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -167,7 +167,7 @@ nav ul {
   cursor: pointer;
 }
 .menu.show {
-  right: 100px; /* Slide in from the right */
+  left: 100px; /* Slide in from the right */
 }
 </style>
 </head>
@@ -186,7 +186,7 @@ nav ul {
       <li><a href="#">&#945;</a></li>
     </ul>
   </nav>
-  
+</section>
   <form id="myForm">
     <section id="Expositionsdauer">
       <article>
@@ -206,7 +206,6 @@ nav ul {
       </article>
     </section>
   </form>
-</section>
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
