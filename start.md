@@ -153,7 +153,7 @@ nav ul {
 }
 
 .rotate-settings {
-  height: auto; /* Maintain aspect ratio */
+  height: 50px; /* Maintain aspect ratio */
   position: relative; /* Set position to relative */
   transition: transform 0.3s ease, left 0.3s ease, bottom 0.3s ease; /* Add transition effect */
   z-index: 1; /* Ensure the button is above the menu */
