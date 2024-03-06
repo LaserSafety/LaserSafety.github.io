@@ -32,7 +32,7 @@
   top: 102px;
   transition: width 2s ease;
   right: 0px;
-  height: auto;
+  height: 100%;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
@@ -40,7 +40,7 @@
   right: 0; /* Ensure the menu is fully visible */
   /* width: calc(100% - 222px); */ /* Adjust width as needed */
   width: 500px;
-  height: auto;
+  height: 100%;
 }
 a:link {
   color: blue;
