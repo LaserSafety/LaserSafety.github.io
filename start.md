@@ -197,17 +197,18 @@ nav ul {
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 
+<!-- Link to the JavaScript file for menu transitions -->
+<script src="menu-logic.js"></script>
+
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">Settings</div>
   <div class="menu" id="menu">
-    <!-- Add your menu content here -->
+  <a href="#" id="settings-button"><img src="https://dsgenf-my.sharepoint.com/:i:/g/personal/cedvol_dsgenf_ch/ETo11tfi3chKuf6d2Gm0ivoBUw__l6c2trAaK7BT2C7rGw?e=OGoOtc" alt="Settings"></a>
+   <!-- Add your menu content here -->
     <!-- For example: -->
     <p>Menu Content</p>
   </div>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
-<!-- Link to the JavaScript file for menu transitions -->
-<script src="menu-logic.js"></script>
-
 </body>
