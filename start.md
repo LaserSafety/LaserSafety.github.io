@@ -31,7 +31,7 @@
   transition: left 10s ease;
   border: 1px solid #ccc;
   padding: 20px;
-  width: 100%; /* Adjust width as needed */
+  width: calc(100% - 300px); /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
   height: 80%;
@@ -155,7 +155,7 @@ nav ul {
     width: 33%;
   }
   nav {
-    max-width: 300px;
+    width: 300px;
     height: auto;
   }
   footer {
