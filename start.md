@@ -23,7 +23,7 @@
 }
 
 .menu {
-  display: none;
+  display: flex;
   position: fixed;
   background-color: #fff;
   padding: 20px;
