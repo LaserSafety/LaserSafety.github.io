@@ -153,10 +153,11 @@ nav ul {
 }
 
 .rotate-settings {
-  max-width: 100%; /* Set maximum width */
   height: auto; /* Maintain aspect ratio */
   transform-origin: center;
   transition: transform 0.3s ease; /* Add transition effect */
+  bottom: 30px;
+  left: 30px
 }
 
 .menu.show {
