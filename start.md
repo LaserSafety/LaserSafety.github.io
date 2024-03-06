@@ -208,7 +208,7 @@ nav ul {
   </section>
 <section>
  <footer>
-  <div class="menu" onclick="toggleMenu()">
+  <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
     <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
