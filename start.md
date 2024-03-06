@@ -203,7 +203,8 @@ nav ul {
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">Settings</div>
   <div class="menu" id="menu">
-  <a href="#" id="settings-button"><img src="![image](https://github.com/LaserSafety/LaserSafety.github.io/assets/161959238/ce081995-69a4-47dc-8d85-3e8bfa6c1648)"
+  <a href="#" id="settings-button"><img src="(https://raw.githubusercontent.com/LaserSafety/LaserSafety/main/IMG_0217.png
+)"
  alt="Settings"></a>
    <!-- Add your menu content here -->
     <!-- For example: -->
