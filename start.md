@@ -6,7 +6,7 @@
 <style>
 /* Your CSS styles here */
 .settings-btn {
-  position: fixed;
+  position: absolute;
   right: 20px;
   bottom: 20px;
   cursor: pointer;
