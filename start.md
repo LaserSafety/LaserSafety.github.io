@@ -25,14 +25,15 @@
 .menu {
   display: none;
   position: fixed;
-  top: 0;
+  top: 150px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
-  width: 250px; /* Adjust width as needed */
+  width: 50%; /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
+  height: 400px;
 }
 .menu.show {
   display: block; /* Show the menu when 'show' class is present */
