@@ -34,6 +34,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
 }
+.menu.show {
+  display: block; /* Show the menu when 'show' class is present */
+  right: 0; /* Ensure the menu is fully visible */
+}
 a:link {
   color: blue;
   background-color: transparent;
@@ -211,13 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var settingsImg = settingsBtn.querySelector("img");
 
   settingsBtn.addEventListener("click", function() {
-    if (menu.style.right === "0px") {
-      menu.style.right = "-300px"; // Slide out the menu
-      settingsImg.classList.remove("rotate"); // Rotate the button back
-    } else {
-      menu.style.right = "0px"; // Slide in the menu
-      settingsImg.classList.add("rotate"); // Rotate the button
-    }
+    menu.classList.toggle("show"); // Toggle the 'show' class on the menu
+    settingsImg.classList.toggle("rotate"); // Toggle the 'rotate' class on the button
   });
 });
 </script>
