@@ -174,12 +174,12 @@ nav ul {
   </form>
 </section>
 
+<!-- Link to the JavaScript file for calculations -->
+<script src="calculator.js"></script>
+
 <footer>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
-
-<!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>
 
 </body>
