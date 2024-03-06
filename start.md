@@ -24,7 +24,7 @@
 
 .menu {
   display: none;
-  position: relative;
+  position: fixed;
   top: 100px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
@@ -223,7 +223,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <footer>
-  <div class="settings-btn" id="settingsBtn">
+  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
+  <p id="result"></p>
+   <div class="settings-btn" id="settingsBtn">
     <!-- Use the image directly as the button -->
    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
@@ -232,8 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- For example: -->
     <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
   </div>
-  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
-  <p id="result"></p>
 </footer>
 </body>
 </html>
