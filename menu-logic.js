@@ -1,6 +1,16 @@
-function toggleMenu() {
+// JavaScript code for toggling menu and rotating button
+document.addEventListener('DOMContentLoaded', function() {
   var menu = document.getElementById("menu");
-  var settingsImg = document.querySelector(".rotate-settings");
-  menu.classList.toggle("show");
-  settingsImg.classList.toggle("rotate");
-}
+  var settingsBtn = document.getElementById("settingsBtn");
+  var settingsImg = settingsBtn.querySelector("img");
+
+  settingsBtn.addEventListener("click", function() {
+    if (menu.style.right === "0px") {
+      menu.style.right = "-300px";
+      settingsImg.classList.remove("rotate");
+    } else {
+      menu.style.right = "0px";
+      settingsImg.classList.add("rotate");
+    }
+  });
+});
