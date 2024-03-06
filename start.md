@@ -186,7 +186,6 @@ nav ul {
       <li><a href="#">&#945;</a></li>
     </ul>
   </nav>
-</section>
   <form id="myForm">
     <section id="Expositionsdauer">
       <article>
@@ -206,6 +205,7 @@ nav ul {
        </article>
     </section>
   </form>
+  </section>
 <section>
  <footer>
   <div class="settings-btn" onclick="toggleMenu()">
