@@ -199,8 +199,8 @@ nav ul {
       </article>
       <article id="Alpha">
         <h1>&#945;</h1>
-        <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
-          <br><input type="text" id="alpha"></p>
+        <p>placeholdertext
+          <br><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b></p>
       </article>
     </section>
   </form>
