@@ -31,10 +31,10 @@
   transition: left 10s ease;
   border: 1px solid #ccc;
   padding: 20px;
-  width: calc(100% - 240px); /* Adjust width as needed */
+  width: calc(100% - 230px); /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
-  height: 80%;
+  height: 100%;
 }
 .menu.show {
   display: block; /* Show the menu when 'show' class is present */
