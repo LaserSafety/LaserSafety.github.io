@@ -15,11 +15,11 @@
 
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Add transition effect */
+  transition: transform 0.8s ease; /* Add transition effect */
 }
 
 .rotate-settings.rotate {
-  transform: rotate(-45deg); /* Rotate clockwise */
+  transform: rotate(-60deg); /* Rotate clockwise */
 }
 
 .menu {
