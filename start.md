@@ -24,7 +24,9 @@
 
 .menu {
   display: none;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   bottom: 0;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
