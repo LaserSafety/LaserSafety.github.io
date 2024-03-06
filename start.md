@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -134,13 +135,6 @@ nav ul {
   }
 }
 
-.settings-btn {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  cursor: pointer;
-}
-
 .menu {
   display: none;
   position: absolute;
@@ -201,12 +195,12 @@ nav ul {
 <script src="menu-logic.js"></script>
 
 <footer>
-  
   <div class="menu" id="menu">
-  <a href="#" onclick="toggleMenu()">
-      <img src="IMG_0217.png" alt="Settings" style="max-width: 30px; max-height: 30px;">
+    <!-- Use the image directly as the button -->
+    <a href="#" onclick="toggleMenu()">
+      <img src="IMG_0217.png" alt="Settings" style="max-width: 20px; max-height: 20px;">
     </a>
-   <!-- Add your menu content here -->
+    <!-- Add your menu content here -->
     <!-- For example: -->
     <p>Menu Content</p>
   </div>
@@ -214,3 +208,4 @@ nav ul {
   <p id="result"></p>
 </footer>
 </body>
+</html>
