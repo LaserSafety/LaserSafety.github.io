@@ -141,7 +141,7 @@ nav ul {
 <body>
 
 <header>
-  Werteneingabe:
+  Werteingabe:
   <div class="header-trapezoid"></div>
 </header>
 
