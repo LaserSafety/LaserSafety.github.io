@@ -203,13 +203,10 @@ nav ul {
         <h1>&#945;</h1>
         <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
           <br><input type="text" id="alpha"></p>
-      </article>
+       </article>
+    </section>
   </form>
 </section>
-<!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>
-<!-- Link to the JavaScript file for menu transitions -->
-<script src="menu-logic.js"></script>
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
@@ -223,5 +220,9 @@ nav ul {
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
+<!-- Link to the JavaScript file for calculations -->
+<script src="calculator.js"></script>
+<!-- Link to the JavaScript file for menu transitions -->
+<script src="menu-logic.js"></script>
 </body>
 </html>
