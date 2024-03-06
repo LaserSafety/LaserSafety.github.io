@@ -204,9 +204,8 @@ nav ul {
         <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
           <br><input type="text" id="alpha"></p>
       </article>
-    </section>
   </form>
-
+</section>
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 <!-- Link to the JavaScript file for menu transitions -->
