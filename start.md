@@ -148,7 +148,6 @@ nav ul {
   padding: 10px;
   transition: right 1s; /* Simplified transition effect */
   height: 300px;
-  onclick="toggleMenu()"
 }
 
 .rotate-settings {
@@ -212,11 +211,11 @@ nav ul {
 <!-- Link to the JavaScript file for menu transitions -->
 <script src="menu-logic.js"></script>
 <footer>
-  <div class="settings-btn">
+  <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
     <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
-  <div class="menu" id="menu">
+  <div class="menu" id="show">
     <!-- Add your menu content here -->
     <!-- For example: -->
     <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
