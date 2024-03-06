@@ -19,27 +19,26 @@
 }
 
 .rotate-settings.rotate {
-  transform: rotate(-60deg); /* Rotate clockwise */
+  transform: rotate(-90deg); /* Rotate clockwise */
 }
 
 .menu {
   display: none;
   position: fixed;
-  right: -100%; /* Initially off-screen */
   background-color: #fff;
   padding: 20px;
   width: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transition: width 0.5s ease;
+  transition: width 5s ease;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
   flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
   width: calc(100% - 222px); /* Adjust width as needed */
-  
+  transition: width 5s ease;
 }
 a:link {
   color: blue;
