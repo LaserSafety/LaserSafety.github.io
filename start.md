@@ -136,8 +136,8 @@ nav ul {
 
 .settings-btn {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: 30px;
+  bottom: 30px;
   cursor: pointer;
 }
 
@@ -202,7 +202,7 @@ nav ul {
 
 <footer>
   <div class="settings-btn" onclick="toggleMenu()"><a href="#" id="settings-button"><img src="IMG_0217.png"
- alt="Settings" style="max-width: 20px; max-height: 20px;"></a></div>
+ alt="Settings" style="max-width: 50px; max-height: 50px;"></a></div>
   <div class="menu" id="menu">
   <a href="#" id="settings-button"><img src="IMG_0217.png"
  alt="Settings" style="max-width: 20px; max-height: 20px;"></a>
