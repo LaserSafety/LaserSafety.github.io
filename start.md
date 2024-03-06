@@ -134,11 +134,6 @@ nav ul {
   }
 }
 
-.settings-btn {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  cursor: pointer;
 }
 .menu {
   display: none;
