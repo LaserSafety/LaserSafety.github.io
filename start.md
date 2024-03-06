@@ -25,10 +25,10 @@
 .menu {
   display: none;
   position: fixed;
-  top: 102px;
+  top: 100px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
-  transition: right 0.5s ease;
+  transition: right 1s ease;
   border: 1px solid #ccc;
   padding: 20px;
   width: 50%; /* Adjust width as needed */
