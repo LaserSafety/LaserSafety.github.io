@@ -203,7 +203,8 @@ nav ul {
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">Settings</div>
   <div class="menu" id="menu">
-  <a href="#" id="settings-button"><img src="20240306_081303698_iOS.png" alt="Settings"></a>
+  <a href="#" id="settings-button"><img src="![image](https://github.com/LaserSafety/LaserSafety.github.io/assets/161959238/cd9ce4f6-98e4-431b-bdc1-bf418d507266)
+" alt="Settings"></a>
    <!-- Add your menu content here -->
     <!-- For example: -->
     <p>Menu Content</p>
