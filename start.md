@@ -34,7 +34,7 @@
   width: 50%; /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
-  height: 100%;
+  height: 60%;
 }
 .menu.show {
   display: block; /* Show the menu when 'show' class is present */
