@@ -28,7 +28,7 @@
   top: 100px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
-  transition: left 1s ease;
+  transition: left 10s ease;
   border: 1px solid #ccc;
   padding: 20px;
   width: 50%; /* Adjust width as needed */
