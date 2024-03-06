@@ -77,7 +77,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 100px solid #4cbaef;
+  border-top: 105px solid #4cbaef;
   border-left: 50px solid transparent;
 }
 
