@@ -151,7 +151,7 @@ nav ul {
   width: 200px; /* Adjust width as needed */
   max-height: 80vh; /* Limit maximum height */
   overflow-y: auto; /* Enable vertical scrolling if needed */
-  transition: right 0.3s ease; /* Add transition effect */
+  transition: right 0.3s; /* Add transition effect */
 }
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
@@ -216,7 +216,7 @@ nav ul {
 <footer>
   <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
-    <img src="IMG_0217.png" alt="Settings" class="rotate-settings" onclick="toggleMenu()">
+    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
