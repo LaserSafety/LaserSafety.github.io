@@ -7,4 +7,3 @@ function toggleMenu() {
   
   // Toggle rotation of the settings button
   settingsImg.classList.toggle("rotate");
-}
