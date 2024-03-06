@@ -25,11 +25,10 @@
 .menu {
   display: none;
   position: fixed;
-  bottom: 0;
+  bottom: 10%;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
   transition: left 10s ease;
-  border: 1px solid #ccc;
   padding: 20px;
   width: calc(100% - 222px); /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
