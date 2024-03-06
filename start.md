@@ -5,16 +5,6 @@
 <title>Laser Safety</title>
 <style>
 /* Your CSS styles here */
-  <script>
-  window.onload = function() {
-  var footerHeight = document.querySelector('footer').offsetHeight;
-  var menu = document.querySelector('.menu');
-  var headerHeight = 100; // Adjust based on the actual height of the header
-
-  // Set the maximum height of the menu
-  menu.style.maxHeight = 'calc(100vh - ' + (headerHeight + footerHeight) + 'px)';
-};
-</script>
 .settings-btn {
   position: absolute;
   right: 20px;
