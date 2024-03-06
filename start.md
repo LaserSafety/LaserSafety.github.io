@@ -134,6 +134,11 @@ nav ul {
   }
 }
 
+.settings-btn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
 }
 .menu {
   display: none;
@@ -181,6 +186,7 @@ nav ul {
       <li><a href="#">&#945;</a></li>
     </ul>
   </nav>
+  
   <form id="myForm">
     <section id="Expositionsdauer">
       <article>
@@ -199,7 +205,8 @@ nav ul {
           <br><input type="text" id="alpha"></p>
       </article>
     </section>
-   </form>
+  </form>
+</section>
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
