@@ -201,7 +201,6 @@ nav ul {
     </section>
   </form>
   </section>
-<section>
  <footer>
   <div class="settings-btn" onclick="toggleMenu()">
     <!-- Use the image directly as the button -->
@@ -215,7 +214,6 @@ nav ul {
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
  </footer>
-</section>
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 <!-- Link to the JavaScript file for menu transitions -->
