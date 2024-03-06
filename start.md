@@ -186,8 +186,8 @@ nav ul {
       <li><a href="#">&#945;</a></li>
     </ul>
   </nav>
-  <section id="Expositionsdauer">
-    <form id="myForm">
+  <form id="myForm">
+    <section id="Expositionsdauer">
       <article>
         <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
         <p>Enter expositionsdauer in the format xE-y:
@@ -203,8 +203,8 @@ nav ul {
         <p>Eingabe <b>&#945;</b> in <b>mrad</b>    
           <br><input type="text" id="alpha"></p>
       </article>
-    </form>
-  </section>
+    </section>
+   </form>
 
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
