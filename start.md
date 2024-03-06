@@ -142,6 +142,7 @@ nav ul {
     color: white;
     width: 100%;
     position: relative;
+    align-items: center;
   }
 }
 
