@@ -11,12 +11,10 @@
 function adjustMenuHeight() {
     var footerTop = document.querySelector('footer').getBoundingClientRect().top;
     var menu = document.querySelector('.menu');
-    
     // Calculate the maximum height for the menu
     var windowHeight = window.innerHeight;
     var menuTop = menu.getBoundingClientRect().top;
     var maxMenuHeight = windowHeight - (menuTop - footerTop);
-    
     // Set the maximum height for the menu
     menu.style.maxHeight = maxMenuHeight + 'px';
 }
