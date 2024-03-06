@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -136,19 +137,33 @@ nav ul {
 
 .settings-btn {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 10px;
+  bottom: 10px;
   cursor: pointer;
 }
 
 .menu {
   display: none;
   position: absolute;
-  left: 10px;
+  right: -200px; /* initially off-screen */
   top: 50px;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
+  transition: right 0.3s ease; /* Add transition effect */
+}
+
+.rotate-settings {
+  transform-origin: center;
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.menu.show {
+  right: 10px; /* Slide in from the right */
+}
+
+.rotate-settings.rotate {
+  transform: rotate(45deg); /* Rotate clockwise */
 }
 
 </style>
@@ -197,20 +212,30 @@ nav ul {
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 
-<!-- Link to the JavaScript file for menu transitions -->
-<script src="menu-logic.js"></script>
-
 <footer>
-  <div class="settings-btn" onclick="toggleMenu()"><a href="#" id="settings-button"><img src="IMG_0217.png"
- alt="Settings" style="max-width: 50px; max-height: 50px;"></a></div>
+  <div class="settings-btn" onclick="toggleMenu()">
+    <!-- Use the image directly as the button -->
+    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
+  </div>
   <div class="menu" id="menu">
-  <a href="#" id="settings-button"><img src="IMG_0217.png"
- alt="Settings" style="max-width: 20px; max-height: 20px;"></a>
-   <!-- Add your menu content here -->
+    <!-- Add your menu content here -->
     <!-- For example: -->
     <p>Menu Content</p>
   </div>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
 </footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  var settingsBtn = document.querySelector(".settings-btn img");
+  
+  menu.classList.toggle("show"); // Toggle the menu visibility
+  
+  // Toggle the rotation of the settings button
+  settingsBtn.classList.toggle("rotate");
+}
+</script>
 </body>
+</html>
