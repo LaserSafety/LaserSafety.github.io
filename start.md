@@ -161,11 +161,7 @@ nav ul {
 .rotate-settings.rotate {
   transform: rotate(45deg); /* Rotate clockwise */
 }
-.settings-btn {
-  left: 10px;
-  bottom: 10px;
-  cursor: pointer;
-}
+
 .menu.show {
   left: 100px; /* Slide in from the right */
 }
@@ -212,7 +208,7 @@ nav ul {
     <!-- Use the image directly as the button -->
     <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
-  <div class="menu" id="menu">
+  <div class="menu.show" id="menu">
     <!-- Add your menu content here -->
     <!-- For example: -->
     <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
