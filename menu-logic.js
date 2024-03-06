@@ -1,7 +1,7 @@
 function toggleMenu() {
   var menu = document.getElementById("menu");
   var settingsImg = document.querySelector(".rotate-settings");
-   menu.classList.toggle(show);
+   menu.classList.toggle("show");
   // Toggle menu visibility
   if (menu.classList.contains("show")) {
     menu.classList.remove("show");
