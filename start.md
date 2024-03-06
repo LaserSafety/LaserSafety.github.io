@@ -28,13 +28,13 @@
   top: 100px;
   right: -300px; /* Initially off-screen */
   background-color: #fff;
-  transition: right 1s ease;
+  transition: left 1s ease;
   border: 1px solid #ccc;
   padding: 20px;
   width: 50%; /* Adjust width as needed */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   z-index: 999; /* Ensure the menu is above other content */
-  height: 400px;
+  height: 100%;
 }
 .menu.show {
   display: block; /* Show the menu when 'show' class is present */
@@ -112,7 +112,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 105px solid #4cbaef;
+  border-top: 100px solid #4cbaef;
   border-left: 50px solid transparent;
 }
 
