@@ -1,4 +1,4 @@
-uu87z6<html lang="en">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +38,8 @@ uu87z6<html lang="en">
   display: flex; /* Show the menu when 'show' class is present */
   flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
-  width: calc(100% - 222px); /* Adjust width as needed */
+  /* width: calc(100% - 222px); */ /* Adjust width as needed */
+  width: 500px;
   transition: width 5s ease;
 }
 a:link {
