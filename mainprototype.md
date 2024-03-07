@@ -47,13 +47,25 @@ permalink: /prototype.html
   width: calc(100% - 222px); /* Adjust width as needed */
   height: 100%;
 }
-  
+
+.menu.hide {
+  animation: slideOut 1.4s ease forwards; /* Apply slideOut animation */
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%); /* Start position (off-screen) */
   }
   to {
     transform: translateX(0); /* End position (fully visible) */
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0); /* Start position (fully visible) */
+  }
+  to {
+    transform: translateX(100%); /* End position (off-screen) */
   }
 }
 
