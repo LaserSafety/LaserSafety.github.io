@@ -19,7 +19,7 @@ function calculate() {
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
     } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
-        C_a = 10 * Math.pow(0.002 * (wellenlaenge-700));
+        C_a = Math.pow(10, 0.002 * (wellenlaenge-700));
     } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
         C_a = 5;
     }
@@ -27,13 +27,13 @@ function calculate() {
     if (wellenlaenge >= 400 && wellenlaenge <= 450) {
         C_b = 1;
     } else if (wellenlaenge > 450 && wellenlaenge <= 600) {
-        C_b = 10 * Math.pow(0.02 * (wellenlaenge-600));
+        C_b = Math.pow(10, 0.02 * (wellenlaenge-600));
     }
     
     if (wellenlaenge >= 700 && wellenlaenge <= 1150) {
         C_c = 1;
     } else if (wellenlaenge > 1150 && wellenlaenge <= 1200) {
-        C_c = 10 * Math.pow(0.018 * (wellenlaenge-1150));
+        C_c = Math.pow(10, 0.018 * (wellenlaenge-1150));
     } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
         C_c = 8;
     }
