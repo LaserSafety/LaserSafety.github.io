@@ -33,7 +33,7 @@
   transition: width 1.4s ease;
   right: 0px;
   height: 100%;
-  color: black
+  color: black;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
