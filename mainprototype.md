@@ -249,7 +249,7 @@ nav ul {
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 <!-- Link to the JavaScript file for menu transitions -->
-<script src="menu-logic.js"></script>
+<script src="protologic.js"></script>
 <footer>
   <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
   <p id="result"></p>
