@@ -29,7 +29,6 @@
   width: calc(100% - 222px);
   color: black;
   text-align: center;
-  visibility: hidden; /* Hide the menu, but keep it in the document flow */
 }
 
 .menu.show {
@@ -41,6 +40,7 @@
 
 .menu.hide {
   animation: slideOut 1.4s ease forwards; /* Apply slideOut animation */
+  animation-fill-mode: forwards; /* Maintain end state after animation */
 }
 
 @keyframes slideIn {
