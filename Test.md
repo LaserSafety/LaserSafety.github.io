@@ -11,31 +11,35 @@ permalink: /test.html
 .slider {
   width: 300px;
   height: 50px;
-  background-color: #ddd;
+  background-color: #4CAF50;
   border-radius: 25px; /* half of height */
+  border: 2px solid #ccc; /* Add grey border */
   overflow: hidden;
   position: relative;
-  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
 }
 
 .slider-handle {
   width: 50px;
   height: 50px;
-  background-color: #4CAF50;
+  background-color: #ddd; /* Default background color */
   border-radius: 50%; /* makes it circular */
   position: absolute;
   top: 0;
   left: 0;
-  animation: slide 2s infinite alternate; /* applies animation */
+  transition: left 0.5s, background-color 0.5s; /* added transition for smooth movement and background color change */
 }
 
-@keyframes slide {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: calc(100% - 50px); /* slides to the end */
-  }
+.slider.clicked .slider-handle {
+  left: calc(100% - 50px); /* slides to the end */
+  background-color: #f44336; /* Change background color when handle is clicked */
+}
+
+.slider.left-bg .slider-handle {
+  background-color: #4CAF50; /* green when handle is on the left */
+}
+
+.slider.right-bg .slider-handle {
+  background-color: #f44336; /* red when handle is on the right */
 }
 </style>
 </head>
@@ -48,15 +52,13 @@ permalink: /test.html
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var slider = document.getElementById('slider');
-  var handle = document.getElementById('handle');
   
   slider.addEventListener('click', function() {
-    // Toggle the position of the handle
-    if (handle.style.left === '0px') {
-      handle.style.left = 'calc(100% - 50px)';
-    } else {
-      handle.style.left = '0px';
-    }
+    // Toggle the clicked class to move the handle
+    slider.classList.toggle('clicked');
+    // Toggle the left-bg and right-bg classes based on handle position
+    slider.classList.toggle('left-bg', !slider.classList.contains('clicked'));
+    slider.classList.toggle('right-bg', slider.classList.contains('clicked'));
   });
 });
 </script>
