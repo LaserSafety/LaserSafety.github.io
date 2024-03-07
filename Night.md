@@ -23,12 +23,31 @@ body {
 }
 
 .star {
-    width: 2px;
-    height: 2px;
-    background-color: #fff; /* White for the stars */
-    border-radius: -50%; /* Make stars circular */
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
     position: absolute;
-    animation: twinkle 1s infinite alternate; /* Add twinkle animation */
+}
+
+.star::before,
+.star::after {
+    content: '';
+    width: 30px; /* Adjust size as needed */
+    height: 6px; /* Adjust size as needed */
+    background-color: #fff; /* White for the stars */
+    position: absolute;
+    border-radius: 3px; /* Create rounded ends */
+}
+
+.star::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate to form + shape */
+}
+
+.star::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg); /* Rotate to form + shape */
 }
 
 /* Set position of stars */
@@ -45,10 +64,6 @@ body {
 /* You can add more star positions similarly */
 /* Ensure stars are not overlapping with each other for a natural look */
 
-@keyframes twinkle {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
 </style>
 <body>
     <div class="night-sky">
