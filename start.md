@@ -42,6 +42,10 @@
   width: calc(100% - 222px); /* Adjust width as needed */
   height: 100%;
 }
+.menu.bottom {
+  top: auto;
+  bottom: 0;
+}
 a:link {
   color: blue;
   background-color: transparent;
@@ -145,6 +149,10 @@ nav ul {
     width: 100%;
     position: relative;
     align-items: center;
+  }
+   .menu {
+    top: auto;
+    bottom: 0;
   }
 }
 
