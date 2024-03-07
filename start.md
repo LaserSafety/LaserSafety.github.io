@@ -6,41 +6,38 @@
 <style>
 /* Your CSS styles here */
 .settings-btn {
-  position: absolute;
+  position: fixed;
   right: 20px;
-  bottom: 10px;
+  bottom: 20px;
   cursor: pointer;
-  z-index: 50;
+  z-index: 1000;
 }
 
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
-  transition: transform 1.4s ease; /* Add transition effect */
+  transition: transform 0.3s ease; /* Add transition effect */
 }
 
 .rotate-settings.rotate {
-  transform: rotate(-180deg); /* Rotate clockwise */
+  transform: rotate(-45deg); /* Rotate clockwise */
 }
 
 .menu {
-  display: flex;
+  display: none;
   position: fixed;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
-  width: 0;
-  z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transition: width 1.4s ease;
-  right: 0px;
-  height: 100%;
-  color: black;
-  text-align: center;
+  right: -300px; /* Initially off-screen */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 50%; /* Adjust width as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  z-index: 999; /* Ensure the menu is above other content */
+  height: 400px;
 }
 .menu.show {
-  display: flex; /* Show the menu when 'show' class is present */
-  flex-direction: column;
+  display: block; /* Show the menu when 'show' class is present */
   right: 0; /* Ensure the menu is fully visible */
-  width: calc(100% - 222px); /* Adjust width as needed */
-  height: 100%;
 }
 a:link {
   color: blue;
@@ -144,7 +141,6 @@ nav ul {
     color: white;
     width: 100%;
     position: relative;
-    align-items: center;
   }
 }
 
@@ -157,7 +153,7 @@ nav ul {
     width: 33%;
   }
   nav {
-    width: 300px;
+    max-width: 300px;
     height: auto;
   }
   footer {
@@ -167,8 +163,6 @@ nav ul {
     color: white;
     width: 100%;
     position: relative;
-    align-items: center;
-    
   }
 }
 
@@ -228,20 +222,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <footer>
-  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
-  <p id="result"></p>
-   <div class="settings-btn" id="settingsBtn">
+  <div class="settings-btn" id="settingsBtn">
     <!-- Use the image directly as the button -->
    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
-    <p><h1>Settings</h1></p>
-    <p><h2>Theme</h2>
-     <br>Light
-     <br>Dark
-    </p>
+    <!-- For example: -->
+    <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
   </div>
+  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
+  <p id="result"></p>
 </footer>
 </body>
 </html>
