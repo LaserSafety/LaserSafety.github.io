@@ -6,36 +6,41 @@
 <style>
 /* Your CSS styles here */
 .settings-btn {
-  position: fixed;
+  position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 10px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 50;
 }
 
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Add transition effect */
+  transition: transform 1.4s ease; /* Add transition effect */
 }
 
 .rotate-settings.rotate {
-  transform: rotate(-45deg); /* Rotate clockwise */
+  transform: rotate(-180deg); /* Rotate clockwise */
 }
 
 .menu {
-  display: none;
+  display: flex;
   position: fixed;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
+  width: 0;
+  z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  right: -300px; /* Initially off-screen */
-  linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.9) 100%);
-  width: 0; /* Adjust width as needed */ 
-  z-index: 999; /* Ensure the menu is above other content */
-  height: 400px;
-  transition: width 1.8s ease;
+  transition: width 1.4s ease;
+  right: 0px;
+  height: 100%;
+  color: black;
+  text-align: center;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
-  width: calc(100% - 222px); /* Ensure the menu is fully visible */
+  flex-direction: column;
+  right: 0; /* Ensure the menu is fully visible */
+  width: calc(100% - 222px); /* Adjust width as needed */
+  height: 100%;
 }
 a:link {
   color: blue;
@@ -139,6 +144,7 @@ nav ul {
     color: white;
     width: 100%;
     position: relative;
+    align-items: center;
   }
 }
 
@@ -151,7 +157,7 @@ nav ul {
     width: 33%;
   }
   nav {
-    max-width: 300px;
+    width: 300px;
     height: auto;
   }
   footer {
@@ -161,6 +167,8 @@ nav ul {
     color: white;
     width: 100%;
     position: relative;
+    align-items: center;
+    
   }
 }
 
@@ -206,31 +214,22 @@ nav ul {
 <!-- Link to the JavaScript file for calculations -->
 <script src="calculator.js"></script>
 <!-- Link to the JavaScript file for menu transitions -->
-<script>
-// JavaScript code for toggling menu and rotating button
-document.addEventListener('DOMContentLoaded', function() {
-  var menu = document.getElementById("menu");
-  var settingsBtn = document.getElementById("settingsBtn");
-  var settingsImg = settingsBtn.querySelector("img");
-
-  settingsBtn.addEventListener("click", function() {
-    menu.classList.toggle("show"); // Toggle the 'show' class on the menu
-    settingsImg.classList.toggle("rotate"); // Toggle the 'rotate' class on the button
-  });
-});
-</script>
+<script src="menu-logic.js"></script>
 <footer>
-  <div class="settings-btn" id="settingsBtn">
+  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
+  <p id="result"></p>
+   <div class="settings-btn" id="settingsBtn">
     <!-- Use the image directly as the button -->
    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
-    <!-- For example: -->
-    <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
+    <p><h1>Settings</h1></p>
+    <p><h2>Theme</h2>
+     <br>Light
+     <br>Dark
+    </p>
   </div>
-  <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
-  <p id="result"></p>
 </footer>
 </body>
 </html>
