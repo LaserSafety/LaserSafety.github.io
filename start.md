@@ -27,17 +27,15 @@
   position: fixed;
   top: 102px;
   right: -300px; /* Initially off-screen */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 50%; /* Adjust width as needed */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.9) 100%);
+  width: 0; /* Adjust width as needed */ 
   z-index: 999; /* Ensure the menu is above other content */
   height: 400px;
+  transition: width 1.8s ease;
 }
 .menu.show {
-  display: block; /* Show the menu when 'show' class is present */
-  right: 0; /* Ensure the menu is fully visible */
+  display: flex; /* Show the menu when 'show' class is present */
+  width: calc(100% - 222px); /* Ensure the menu is fully visible */
 }
 a:link {
   color: blue;
