@@ -1,0 +1,187 @@
+/* styles.css */
+
+.settings-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.rotate-settings {
+  height: 50px; /* Maintain aspect ratio */
+  transition: transform 1.4s ease; /* Add transition effect */
+}
+
+.rotate-settings.rotate {
+  transform: rotate(-180deg); /* Rotate clockwise */
+}
+
+.menu {
+  display: flex;
+  position: fixed;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
+  z-index: 49; /* Ensure the menu is above other content */
+  top: 102px;
+  transform: translateX(100%);
+  right: 0px;
+  height: 100%;
+  width: calc(100% - 222px);
+  color: black;
+  text-align: center;
+}
+
+.menu.show {
+  display: flex; /* Show the menu when 'show' class is present */
+  flex-direction: column;
+  right: 0; /* Ensure the menu is fully visible */
+  animation: slideIn 1.4s ease forwards;
+  width: calc(100% - 222px); /* Adjust width as needed */
+  height: 100%;
+}
+
+.menu.hide {
+  animation: slideOut 1.4s ease forwards; /* Apply slideOut animation */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%); /* Start position (off-screen) */
+  }
+  to {
+    transform: translateX(0); /* End position (fully visible) */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0); /* Start position (fully visible) */
+  }
+  to {
+    transform: translateX(100%); /* End position (off-screen) */
+  }
+}
+
+.menu.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  width: 20%;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #ccc;
+  padding: 20px;
+  height: auto;
+}
+
+article {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  position: relative;
+}
+
+.header-trapezoid {
+  width: 20%; /* Adjust width as needed */
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-top: 102px solid #4cbaef;
+  border-left: 50px solid transparent;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  article {
+    height: 33%;
+  }
+  nav {
+    width: 100%; /* Cover the whole screen on small screens */
+  } 
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    align-items: center;
+  }
+  .menu {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 601px) {
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  article {
+    width: 33%;
+  }
+  nav {
+    width: 300px;
+    height: auto;
+  }
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: relative;
+  }
+}
