@@ -29,15 +29,18 @@
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transition: transform 1.4s ease;
+  transition: width 1.4s ease;
   right: 0px;
   height: 100%;
   color: black;
   text-align: center;
-  overflow: hidden;
 }
 .menu.show {
-  transform: translateX(-250px); /* Move the menu into view */
+  display: flex; /* Show the menu when 'show' class is present */
+  flex-direction: column;
+  right: 0; /* Ensure the menu is fully visible */
+  width: calc(100% - 222px); /* Adjust width as needed */
+  height: 100%;
 }
 .menu.bottom {
   top: auto;
