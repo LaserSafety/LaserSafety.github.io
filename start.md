@@ -195,7 +195,7 @@ nav ul {
       <article>
         <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
         <p>Enter expositionsdauer in the format xE-y:
-          <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup><input type="number" id="expositionsdauer_y">in <b>s</b></p>
+          <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y">in <b>s</b></p>
       </article>
       <article id="Wellenlaenge">
         <h1>Wellenlaenge</h1>
