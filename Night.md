@@ -23,12 +23,12 @@ body {
 }
 
 .star {
-    width: 2px;
-    height: 2px;
-    background-color: #fff; /* White for the stars */
-    border-radius: 50%; /* Make stars circular */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #fff; /* White for the stars */
     position: absolute;
-    animation: twinkle 1s infinite alternate; /* Add twinkle animation */
 }
 
 /* Set position of stars */
@@ -45,10 +45,6 @@ body {
 /* You can add more star positions similarly */
 /* Ensure stars are not overlapping with each other for a natural look */
 
-@keyframes twinkle {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
 </style>
 <body>
     <div class="night-sky">
