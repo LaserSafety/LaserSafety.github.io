@@ -7,15 +7,16 @@ permalink: /prototype.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laser Safety</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+<!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
-/* Header Content */
+<!-- header content -->
 <body>
     <header>
         Werteeingabe:
         <div class="header-trapezoid"></div>
     </header>
-  /* Navigation Menu */
+<!-- navigation menu content -->
     <section>
         <nav>
             <ul>
@@ -24,7 +25,7 @@ permalink: /prototype.html
                 <li><a href="#">&#945;</a></li>
             </ul>
         </nav>
-/* Main Content */
+<!-- main content -->
         <form id="myForm">
             <section id="Expositionsdauer">
                 <article>
@@ -45,24 +46,24 @@ permalink: /prototype.html
             </section>
         </form>
     </section>
-/* Footer Content */
+<!-- footer content -->
     <footer>
         <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
         <p id="result"></p>
         <div class="settings-btn" id="settingsBtn">
-            <!-- Use the image directly as the button -->
+<!--force image to work as the button -->
             <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
         </div>
         <div class="menu" id="menu">
-            <!-- Add your menu content here -->
+<!-- menu content -->
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2>
                 <br>Light
                 <br>Dark
             </p>
         </div>
-    </footer>
-/* JavaScript file links */
+    </footer> 
+<!-- JavaScript file links -->
     <!-- Link to the JavaScript file for calculations -->
     <script src="calculator.js"></script>
     <!-- Link to the JavaScript file for menu transitions -->
