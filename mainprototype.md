@@ -1,3 +1,6 @@
+---
+permalink: /prototype.html
+---
 <html lang="en">
 
 <head>
