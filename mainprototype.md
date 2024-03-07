@@ -29,7 +29,6 @@ permalink: /prototype.html
   display: flex;
   position: fixed;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
-  width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
   transform: translateX(100%);
@@ -202,11 +201,8 @@ nav ul {
     color: white;
     width: 100%;
     position: relative;
-    align-items: center;
-    
   }
 }
-
 </style>
 </head>
 <body>
@@ -255,7 +251,7 @@ nav ul {
   <p id="result"></p>
    <div class="settings-btn" id="settingsBtn">
     <!-- Use the image directly as the button -->
-   <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
+    <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
   </div>
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
