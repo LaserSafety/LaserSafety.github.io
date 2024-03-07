@@ -34,12 +34,12 @@
   height: 100%;
   color: black;
   background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: opacity 0.5s ease;
 }
 
 .menu-left {
   opacity: 0;
   width: 10px; /* Adjust width as needed */
-  transition: opacity 0.5s ease;
 }
 }
 .menu.show {
@@ -246,8 +246,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <p> Settings </p>
     <!-- For example: -->
     <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
-  </div>
-    <div class="menu-left"></div>
 </div>
 </footer>
 </body>
