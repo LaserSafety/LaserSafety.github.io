@@ -34,6 +34,7 @@
   right: 0px;
   height: 100%;
   color: black;
+  text-align: right;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
