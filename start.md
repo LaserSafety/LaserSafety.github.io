@@ -236,8 +236,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
-    <p><h>Settings</h></p>
-    <p><h1>Theme</h1>
+    <p><h1>Settings</h1></p>
+    <p><h2>Theme</h2>
      <br>Light
      <br>Dark
     </p>
