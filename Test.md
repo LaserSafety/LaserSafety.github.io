@@ -1,6 +1,7 @@
 ---
 permalink: /test.html
 ---
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,19 +18,10 @@ permalink: /test.html
   position: relative;
 }
 
-.slider-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #4CAF50; /* Default background color */
-}
-
 .slider-handle {
   width: 50px;
   height: 50px;
-  background-color: #ddd; /* Default background color */
+  background-color: #4CAF50;
   border-radius: 50%; /* makes it circular */
   position: absolute;
   top: 0;
@@ -39,58 +31,51 @@ permalink: /test.html
 
 .slider.clicked .slider-handle {
   left: calc(100% - 50px); /* slides to the end */
-  background-color: #f44336; /* Change background color when handle is clicked */
 }
 
-.slider.left-bg .slider-inner {
+.slider.left-bg {
   background-color: #4CAF50; /* green when handle is on the left */
 }
 
-.slider.right-bg .slider-inner {
+.slider.right-bg {
   background-color: #f44336; /* red when handle is on the right */
+}
+
+/* Animation for background color change */
+@keyframes bgChange {
+  0% {
+    background-color: #4CAF50; /* green when handle is on the left */
+  }
+  100% {
+    background-color: #f44336; /* red when handle is on the right */
+  }
+}
+
+.slider.clicked .slider-inner {
+  animation: bgChange 0.5s forwards; /* Use animation to change background color */
 }
 </style>
 </head>
 <body>
 
 <div class="slider" id="slider">
-  <div class="slider-inner" id="slider-inner"></div>
+  <div class="slider-inner"></div>
   <div class="slider-handle" id="handle"></div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var slider = document.getElementById('slider');
-  var sliderInner = document.getElementById('slider-inner');
-  var handle = document.getElementById('handle');
   
-  handle.addEventListener('click', function() {
+  slider.addEventListener('click', function() {
+    // Toggle the clicked class to move the handle
     slider.classList.toggle('clicked');
+    // Toggle the left-bg and right-bg classes based on handle position
     slider.classList.toggle('left-bg', !slider.classList.contains('clicked'));
     slider.classList.toggle('right-bg', slider.classList.contains('clicked'));
-  });
-  
-  slider.addEventListener('mousemove', function(e) {
-    if (slider.classList.contains('clicked')) {
-      var sliderRect = slider.getBoundingClientRect();
-      var handleRect = handle.getBoundingClientRect();
-      var relativePosition = (e.clientX - sliderRect.left) / sliderRect.width;
-      var handlePosition = (handleRect.left - sliderRect.left) / sliderRect.width;
-      
-      if (relativePosition > handlePosition) {
-        sliderInner.style.width = (relativePosition * 100) + '%';
-      }
-    }
-  });
-  
-  slider.addEventListener('mouseleave', function() {
-    if (slider.classList.contains('clicked')) {
-      sliderInner.style.width = '100%';
-    }
   });
 });
 </script>
 
 </body>
 </html>
-
