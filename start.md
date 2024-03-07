@@ -27,7 +27,7 @@
   position: fixed;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
   padding: 120px;
-  width: 0;
+  width: -40px;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
   transition: width 1.4s ease;
