@@ -32,6 +32,7 @@
   top: 102px;
   transition: width 1.4s ease;
   right: 0px;
+  opacity: 0.9;
   height: 100%;
 }
 .menu.show {
