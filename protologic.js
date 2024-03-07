@@ -9,13 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.classList.add("hide"); // Add the 'hide' class to the menu
     settingsImg.classList.remove("rotate"); // Remove the 'rotate' class from the button
   }
+
+  // Function to show the menu
+  function showMenu() {
+    menu.classList.remove("hide"); // Remove the 'hide' class from the menu
+    menu.classList.add("show"); // Add the 'show' class to the menu
+    settingsImg.classList.add("rotate"); // Add the 'rotate' class to the button
+  }
   
   settingsBtn.addEventListener("click", function() {
     if (menu.classList.contains("show")) {
       hideMenu(); // If menu is shown, hide it
     } else {
-      menu.classList.toggle("show"); // Toggle the 'show' class on the menu
-      settingsImg.classList.toggle("rotate"); // Toggle the 'rotate' class on the button
+      showMenu(); // Otherwise, show it
     }
   });
 });
