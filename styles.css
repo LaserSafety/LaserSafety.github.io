@@ -38,12 +38,10 @@
   animation: slideIn 1.4s ease forwards;
   width: calc(100% - 222px); /* Adjust width as needed */
   height: 100%;
-  text-align: center;
 }
 
 .menu.hide {
   animation: slideOut 1.4s ease forwards; /* Apply slideOut animation */
-  text-align: center;
 }
 
 @keyframes slideIn {
