@@ -23,47 +23,22 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transform: translateX(100%);
-  right: 0px;
+  right: 0;
   height: 100%;
   width: calc(100% - 222px);
   color: black;
   text-align: center;
+  transform: translateX(100%); /* Initially position the menu outside the viewport */
 }
 
 .menu.show {
-  visibility: visible; /* Show the menu */
-  flex-direction: column;
-  right: 0; /* Ensure the menu is fully visible */
-  animation: slideIn 1.4s ease forwards;
+  transform: translateX(0); /* Slide the menu into view */
+  transition: transform 1.4s ease; /* Add transition for smooth animation */
 }
 
 .menu.hide {
-  animation: slideOut 1.4s ease forwards; /* Apply slideOut animation */
-  animation-fill-mode: forwards; /* Maintain end state after animation */
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(100%); /* Start position (off-screen) */
-  }
-  to {
-    transform: translateX(0); /* End position (fully visible) */
-  }
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(0); /* Start position (fully visible) */
-  }
-  to {
-    transform: translateX(100%); /* End position (off-screen) */
-  }
-}
-
-.menu.bottom {
-  top: auto;
-  bottom: 0;
+  transform: translateX(100%); /* Slide the menu out of view */
+  transition: transform 1.4s ease; /* Add transition for smooth animation */
 }
 
 a:link,
@@ -156,10 +131,6 @@ nav ul {
     width: 100%;
     position: relative;
     align-items: center;
-  }
-  .menu {
-    top: auto;
-    bottom: 0;
   }
 }
 
