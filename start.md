@@ -236,9 +236,11 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <div class="menu" id="menu">
     <!-- Add your menu content here -->
-    <p> Settings </p>
-    <!-- For example: -->
-    <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
+    <p><h>Settings</h></p>
+    <p><h1>Theme</h1>
+     <br>Light
+     <br>Dark
+    </p>
   </div>
 </footer>
 </body>
