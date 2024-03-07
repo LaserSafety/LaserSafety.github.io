@@ -27,8 +27,8 @@
   height: 100%;
   width: calc(100% - 222px);
   color: black;
-  text-align: center;
   transform: translateX(100%); /* Initially position the menu outside the viewport */
+  text-align: center;
 }
 
 .menu.show {
