@@ -19,7 +19,7 @@
 }
 
 .rotate-settings.rotate {
-  transform: rotate(-140deg); /* Rotate clockwise */
+  transform: rotate(-100deg); /* Rotate clockwise */
 }
 
 .menu {
