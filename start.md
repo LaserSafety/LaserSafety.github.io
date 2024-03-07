@@ -36,12 +36,6 @@
   background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   transition: opacity 0.5s ease;
 }
-
-.menu-left {
-  opacity: 0;
-  width: 10px; /* Adjust width as needed */
-}
-}
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
   flex-direction: column;
