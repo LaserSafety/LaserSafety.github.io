@@ -15,7 +15,7 @@
 
 .rotate-settings {
   height: 50px; /* Maintain aspect ratio */
-  transition: transform 1.4 ease; /* Add transition effect */
+  transition: transform 1.4s ease; /* Add transition effect */
 }
 
 .rotate-settings.rotate {
