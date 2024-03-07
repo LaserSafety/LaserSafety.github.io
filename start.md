@@ -25,7 +25,7 @@
 .menu {
   display: flex;
   position: fixed;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 5%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.9) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.52) 6%, rgba(255, 255, 255, 0.7) 10%, rgba(255, 255, 255, 0.9) 100%);
   padding: 0;
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
