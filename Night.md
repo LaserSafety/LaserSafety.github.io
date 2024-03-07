@@ -8,7 +8,7 @@ permalink: /night.html
     <title>Night Sky</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
+<style>
 body {
     margin: 0;
     padding: 0;
@@ -49,7 +49,7 @@ body {
     0% { opacity: 0.5; }
     100% { opacity: 1; }
 }
-
+</style>
 <body>
     <div class="night-sky">
         <div class="star"></div>
