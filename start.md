@@ -26,7 +26,7 @@
   display: flex;
   position: fixed;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
-  padding: 120 px;
+  padding-right: 120 px;
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
