@@ -25,14 +25,13 @@
 .menu {
   display: flex;
   position: fixed;
-  background-color: #fff;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.1) 100%), rgba(255, 255, 255, 0.7);
   padding: 0;
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
   transition: width 1.4s ease;
   right: 0px;
-  opacity: 0.9;
   height: 100%;
 }
 .menu.show {
