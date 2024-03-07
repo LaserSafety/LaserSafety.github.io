@@ -26,7 +26,6 @@
   display: flex;
   position: fixed;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
-  margin-right: 20px;
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
@@ -34,7 +33,8 @@
   right: 0px;
   height: 100%;
   color: black;
-  text-align: right;
+  text-align: left;
+  padding-left: 20px;
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
