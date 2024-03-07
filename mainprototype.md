@@ -32,9 +32,10 @@ permalink: /prototype.html
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
   top: 102px;
-  transition: width 1.4s ease;
+  transform: translateX(100%);
   right: 0px;
   height: 100%;
+  width: calc(100% - 222px);
   color: black;
   text-align: center;
 }
@@ -42,9 +43,20 @@ permalink: /prototype.html
   display: flex; /* Show the menu when 'show' class is present */
   flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
+  animation: slideIn 1.4s ease forwards;
   width: calc(100% - 222px); /* Adjust width as needed */
   height: 100%;
 }
+  
+@keyframes slideIn {
+  from {
+    transform: translateX(100%); /* Start position (off-screen) */
+  }
+  to {
+    transform: translateX(0); /* End position (fully visible) */
+  }
+}
+
 .menu.bottom {
   top: auto;
   bottom: 0;
