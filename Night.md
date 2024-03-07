@@ -23,31 +23,30 @@ body {
 }
 
 .star {
-    width: 60px; /* Adjust size as needed */
-    height: 60px; /* Adjust size as needed */
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
     position: absolute;
-}
-
-.star::before,
-.star::after {
-    content: '';
-    width: 30px; /* Adjust size as needed */
-    height: 6px; /* Adjust size as needed */
-    background-color: #fff; /* White for the stars */
-    position: absolute;
-    border-radius: 3px; /* Create rounded ends */
 }
 
 .star::before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg); /* Rotate to form + shape */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* White for the stars */
+    position: absolute;
+    border-radius: 50%; /* Circular shape */
+    animation: pulse 2s infinite alternate; /* Optional: Add animation */
 }
 
 .star::after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: #fff; /* White for the stars */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(135deg); /* Rotate to form + shape */
+    transform-origin: left;
 }
 
 /* Set position of stars */
@@ -63,6 +62,16 @@ body {
 
 /* You can add more star positions similarly */
 /* Ensure stars are not overlapping with each other for a natural look */
+
+/* Animation for the stars (optional) */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
 
 </style>
 <body>
