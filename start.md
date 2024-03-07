@@ -25,7 +25,6 @@
 .menu {
   display: flex;
   position: fixed;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 10%);
   padding: 0;
   width: 0;
   z-index: 49; /* Ensure the menu is above other content */
@@ -34,6 +33,14 @@
   right: 0px;
   height: 100%;
   color: black;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.menu-left {
+  opacity: 0;
+  width: 10px; /* Adjust width as needed */
+  transition: opacity 0.5s ease;
+}
 }
 .menu.show {
   display: flex; /* Show the menu when 'show' class is present */
@@ -240,6 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- For example: -->
     <p>test test test test test test test test test test test test test test test test test test test test test test test</p>
   </div>
+    <div class="menu-left"></div>
+</div>
 </footer>
 </body>
 </html>
