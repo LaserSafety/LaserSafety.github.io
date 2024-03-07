@@ -29,10 +29,11 @@
   width: calc(100% - 222px);
   color: black;
   text-align: center;
+  visibility: hidden; /* Hide the menu, but keep it in the document flow */
 }
 
 .menu.show {
-  display: flex; /* Show the menu when 'show' class is present */
+  visibility: visible; /* Show the menu */
   flex-direction: column;
   right: 0; /* Ensure the menu is fully visible */
   animation: slideIn 1.4s ease forwards;
