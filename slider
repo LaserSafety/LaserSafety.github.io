@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider</title>
+<style>
+.slider-container {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.slider-checkbox {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.slider-checkbox:checked + .slider {
+  background-color: #2196F3;
+}
+
+.slider-checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+</style>
+</head>
+<body>
+
+<h2>Slider</h2>
+
+<label class="slider-container">
+  <input type="checkbox" class="slider-checkbox">
+  <span class="slider"></span>
+</label>
+
+</body>
+</html>
