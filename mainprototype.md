@@ -28,7 +28,7 @@ permalink: /prototype.html
             top: 0;
             left: 0;
             right: 0;
-            bottom: 26px;
+            bottom: 0;
             background-color: #ccc;
             border-radius: 34px;
             transition: .4s;
@@ -40,7 +40,7 @@ permalink: /prototype.html
             height: 26px;
             width: 26px;
             left: 4px;
-            bottom: 4px;
+            bottom: 26px;
             background-color: white;
             border-radius: 50%;
             transition: .4s;
