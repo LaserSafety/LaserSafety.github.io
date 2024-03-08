@@ -13,10 +13,10 @@ permalink: /night.html
         <!-- Replace div elements with SVG star shapes -->
         <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="2" height="2">
             <!-- Rotated and Flipped Curves -->
-            <path d="M75,25 Q50,50 75,75" fill="none" stroke="#fff" transform="rotate(45 50 50)" />
-            <path d="M25,75 Q50,50 75,75" fill="none" stroke="#fff" transform="rotate(45 50 50)" />
-            <path d="M25,25 Q50,50 75,25" fill="none" stroke="#fff" transform="rotate(45 50 50)" /> <!-- Flipped Curve -->
-            <path d="M25,25 Q50,50 25,75" fill="none" stroke="#fff" transform="rotate(45 50 50)" />
+            <path d="M75,25 Q50,50 75,75" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" />
+            <path d="M25,75 Q50,50 75,75" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" />
+            <path d="M25,25 Q50,50 75,25" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" /> <!-- Flipped Curve -->
+            <path d="M25,25 Q50,50 25,75" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" />
         </svg>
     </div>
     <style>
