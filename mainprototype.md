@@ -51,7 +51,7 @@ permalink: /prototype.html
         }
 
         .slider-checkbox:checked+.slider:before {
-            transform: translateX(26px);
+            transform: translateY(26px);
         }
     </style>
 </head>
