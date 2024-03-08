@@ -40,7 +40,7 @@ permalink: /prototype.html
             height: 26px;
             width: 26px;
             left: 4px;
-            bottom: 26px;
+            bottom: 30px;
             background-color: white;
             border-radius: 50%;
             transition: .4s;
