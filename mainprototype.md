@@ -32,6 +32,7 @@ permalink: /prototype.html
             background-color: #ccc;
             border-radius: 34px;
             transition: .4s;
+            z-index: 5;
         }
 
         .slider:before {
@@ -44,6 +45,7 @@ permalink: /prototype.html
             background-color: white;
             border-radius: 50%;
             transition: .4s;
+            z-index: 5;
         }
 
         .slider-checkbox:checked+.slider {
