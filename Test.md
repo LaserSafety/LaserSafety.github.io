@@ -1,81 +1,118 @@
 ---
 permalink: /test.html
 ---
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pill-shaped Slider</title>
-<style>
-.slider {
-  width: 300px;
-  height: 50px;
-  background-color: #4CAF50;
-  border-radius: 25px; /* half of height */
-  border: 2px solid #ccc; /* Add grey border */
-  overflow: hidden;
-  position: relative;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Safety</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include slider styles -->
+    <style>
+        .slider-container {
+            display: inline-block;
+            position: relative;
+            width: 34px; /* Adjusted width for vertical slider */
+            height: 60px; /* Adjusted height for vertical slider */
+            transform: rotate(-90deg); /* Rotate the container */
+        }
 
-.slider-handle {
-  width: 50px;
-  height: 50px;
-  background-color: #4CAF50;
-  border-radius: 50%; /* makes it circular */
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: left 0.5s, background-color 0.5s; /* added transition for smooth movement and background color change */
-}
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: .4s top; /* Transition from top to bottom */
+            transform: rotate(180deg); /* Rotate the slider */
+        }
 
-.slider.clicked .slider-handle {
-  left: calc(100% - 50px); /* slides to the end */
-}
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s top; /* Transition from top to bottom */
+        }
 
-.slider.left-bg {
-  background-color: #4CAF50; /* green when handle is on the left */
-}
+        .slider-checkbox:checked+.slider {
+            top: calc(100% - 34px); /* Move slider to the bottom */
+            background-color: #2196F3;
+        }
 
-.slider.right-bg {
-  background-color: #f44336; /* red when handle is on the right */
-}
-
-/* Animation for background color change */
-@keyframes bgChange {
-  0% {
-    background-color: #4CAF50; /* green when handle is on the left */
-  }
-  100% {
-    background-color: #f44336; /* red when handle is on the right */
-  }
-}
-
-.slider.clicked .slider-inner {
-  animation: bgChange 0.5s forwards; /* Use animation to change background color */
-}
-</style>
+        .slider-checkbox:checked+.slider:before {
+            top: calc(100% - 34px - 4px); /* Move slider before element to the bottom */
+        }
+    </style>
 </head>
+
 <body>
-
-<div class="slider" id="slider">
-  <div class="slider-inner"></div>
-  <div class="slider-handle" id="handle"></div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var slider = document.getElementById('slider');
-  
-  slider.addEventListener('click', function() {
-    // Toggle the clicked class to move the handle
-    slider.classList.toggle('clicked');
-    // Toggle the left-bg and right-bg classes based on handle position
-    slider.classList.toggle('left-bg', !slider.classList.contains('clicked'));
-    slider.classList.toggle('right-bg', slider.classList.contains('clicked'));
-  });
-});
-</script>
+    <header>
+        Werteeingabe:
+        <div class="header-trapezoid"></div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Expositionsdauer</a></li>
+                <li><a href="#">Wellenlaenge</a></li>
+                <li><a href="#">&#945;</a></li>
+            </ul>
+        </nav>
+        <form id="myForm">
+            <section id="Expositionsdauer">
+                <article>
+                    <h1>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
+                    <p>Enter expositionsdauer in the format xE-y:
+                        <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y">in <b>s</b></p>
+                </article>
+                <article id="Wellenlaenge">
+                    <h1>Wellenlaenge</h1>
+                    <p>Eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
+                        <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+                </article>
+                <article id="Alpha">
+                    <h1>&#945;</h1>
+                    <p>placeholdertext
+                        <br><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b></p>
+                </article>
+            </section>
+        </form>
+    </section>
+    <footer>
+        <p><input type="submit" value="Ausrechnen" onclick="calculate()"><input type="reset" value="Zur&uuml;cksetzen"></p>
+        <p id="result"></p>
+        <div class="settings-btn" id="settingsBtn">
+            <img src="IMG_0217.png" alt="Settings" class="rotate-settings">
+        </div>
+        <div class="menu" id="menu">
+            <p><h1>Settings</h1></p>
+            <p><h2>Theme</h2>
+                <br>
+                <label class="slider-container">
+                    <input type="checkbox" class="slider-checkbox">
+                    <span class="slider"></span>
+                </label>
+                Light
+                <br>Dark
+            </p>
+        </div>
+    </footer>
+    <!-- JavaScript file links -->
+    <!-- Link to the JavaScript file for calculations -->
+    <script src="calculator.js"></script>
+    <!-- Link to the JavaScript file for menu transitions -->
+    <script src="protologic.js"></script>
 
 </body>
+
 </html>
