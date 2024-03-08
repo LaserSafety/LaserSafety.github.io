@@ -14,8 +14,8 @@ permalink: /prototype.html
         .slider-container {
             display: inline-block;
             position: relative;
-            width: 60px;
-            height: 34px;
+            width: 34px;
+            height: 60px;
         }
 
         .slider-checkbox {
