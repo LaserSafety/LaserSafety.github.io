@@ -1,7 +1,6 @@
 ---
 permalink: /prototype.html
 ---
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
