@@ -17,6 +17,11 @@ permalink: /night.html
             <path d="M25,75 Q50,50 75,75" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" />
             <path d="M25,25 Q50,50 75,25" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" /> <!-- Flipped Curve -->
             <path d="M25,25 Q50,50 25,75" fill="#fff" stroke="#fff" transform="rotate(45 50 50)" />
+            <!-- Mirrored Curves -->
+            <path d="M75,25 Q50,50 25,75" fill="#fff" stroke="#fff" transform="rotate(-45 50 50)" />
+            <path d="M25,75 Q50,50 25,25" fill="#fff" stroke="#fff" transform="rotate(-45 50 50)" />
+            <path d="M75,75 Q50,50 25,25" fill="#fff" stroke="#fff" transform="rotate(-45 50 50)" />
+            <path d="M75,25 Q50,50 75,75" fill="#fff" stroke="#fff" transform="rotate(-45 50 50)" />
         </svg>
     </div>
     <style>
