@@ -11,10 +11,10 @@ permalink: /night.html
 <body>
     <div class="night-sky">
         <!-- Replace div elements with SVG star shapes -->
-        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="2" height="2">
+        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path d="M75,25 Q50,50 75,75" fill="#fff" />
         </svg>
-        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="2" height="2">
+        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path d="M25,75 Q50,50 75,75" fill="#fff" />
         </svg>
         <!-- Add more SVG star elements similarly -->
@@ -36,6 +36,10 @@ permalink: /night.html
 
         .star {
             position: absolute;
+            width: 2px; /* Set width */
+            height: 2px; /* Set height */
+            background-color: #fff; /* White for the stars */
+            border-radius: 50%; /* Make stars circular */
             animation: twinkle 1s infinite alternate; /* Add twinkle animation */
         }
 
