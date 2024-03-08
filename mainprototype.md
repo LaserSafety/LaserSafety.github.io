@@ -101,12 +101,12 @@ permalink: /prototype.html
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2>
                 <br>Light
-                <!-- Include slider -->
+                <br>Dark
+<!-- Include slider -->
                 <label class="slider-container">
                     <input type="checkbox" class="slider-checkbox">
                     <span class="slider"></span>
                 </label>
-                <br>Dark
             </p>
         </div>
     </footer>
