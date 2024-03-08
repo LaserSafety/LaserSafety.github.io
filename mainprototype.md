@@ -102,13 +102,13 @@ permalink: /prototype.html
             <p><h2>Theme</h2>
                 <br>Light
                 <br>Dark
+                </p>
+        </div>
 <!-- Include slider -->
                 <label class="slider-container">
                     <input type="checkbox" class="slider-checkbox">
                     <span class="slider"></span>
                 </label>
-            </p>
-        </div>
     </footer>
     <!-- JavaScript file links -->
     <!-- Link to the JavaScript file for calculations -->
