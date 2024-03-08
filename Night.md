@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+---
+permalink: /night.html
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,4 +59,3 @@
         }
     </style>
 </body>
-</html>
