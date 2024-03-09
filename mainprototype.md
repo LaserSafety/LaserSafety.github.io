@@ -17,6 +17,7 @@ permalink: /prototype.html
             width: 34px;
             height: 60px;
             vertical-align: middle; /* Align slider vertically with text */
+            margin-right: 10px; /* Adjust margin for spacing */
         }
 
         .slider-checkbox {
@@ -101,12 +102,13 @@ permalink: /prototype.html
         <div class="menu" id="menu">
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2></p>
-            <label for="theme">Light</label>
             <!-- Include single slider -->
+            <label for="theme">Light</label>
             <label class="slider-container">
                 <input type="checkbox" class="slider-checkbox">
                 <span class="slider"></span>
             </label>
+            <br> <!-- Line break for spacing -->
             <label for="theme">Dark</label>
         </div>
     </footer>
