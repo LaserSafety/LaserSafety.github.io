@@ -16,7 +16,6 @@ permalink: /prototype.html
             position: relative;
             width: 34px;
             height: 60px;
-            margin-left: 10px; /* Adjust the margin to create space between the options and the slider */
         }
 
         .slider-checkbox {
@@ -55,6 +54,20 @@ permalink: /prototype.html
 
         .slider-checkbox:checked+.slider:before {
             transform: translateY(26px);
+        }
+
+        /* Center items */
+        .menu {
+            text-align: center;
+        }
+
+        .menu p {
+            margin: 0;
+        }
+
+        .menu label {
+            display: block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -101,20 +114,13 @@ permalink: /prototype.html
         <div class="menu" id="menu">
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2></p>
-            <div style="display: flex; align-items: center;">
-                <label>Light</label>
-                <label class="slider-container">
-                    <input type="checkbox" class="slider-checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div style="display: flex; align-items: center;">
-                <label>Dark</label>
-                <label class="slider-container">
-                    <input type="checkbox" class="slider-checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
+            <!-- Include single slider -->
+            <label class="slider-container">
+                <input type="checkbox" class="slider-checkbox">
+                <span class="slider"></span>
+            </label>
+            <label for="theme">Light</label>
+            <label for="theme">Dark</label>
         </div>
     </footer>
     <!-- JavaScript file links -->
