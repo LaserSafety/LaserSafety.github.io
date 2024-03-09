@@ -16,6 +16,7 @@ permalink: /prototype.html
             position: relative;
             width: 34px;
             height: 60px;
+            vertical-align: middle; /* Align slider vertically with text */
         }
 
         .slider-checkbox {
@@ -54,20 +55,6 @@ permalink: /prototype.html
 
         .slider-checkbox:checked+.slider:before {
             transform: translateY(26px);
-        }
-
-        /* Center items */
-        .menu {
-            text-align: center;
-        }
-
-        .menu p {
-            margin: 0;
-        }
-
-        .menu label {
-            display: block;
-            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -114,12 +101,12 @@ permalink: /prototype.html
         <div class="menu" id="menu">
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2></p>
+            <label for="theme">Light</label>
             <!-- Include single slider -->
             <label class="slider-container">
                 <input type="checkbox" class="slider-checkbox">
                 <span class="slider"></span>
             </label>
-            <label for="theme">Light</label>
             <label for="theme">Dark</label>
         </div>
     </footer>
