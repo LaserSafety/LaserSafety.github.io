@@ -1,6 +1,7 @@
 ---
 permalink: /prototype.html
 ---
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,12 +15,9 @@ permalink: /prototype.html
         .slider-container {
             display: inline-block;
             position: relative;
-            width: 34px;
-            height: 60px;
-        }
-
-        .slider-checkbox {
-            display: none;
+            width: 34px; /* Adjusted width for vertical slider */
+            height: 60px; /* Adjusted height for vertical slider */
+            transform: rotate(-90deg); /* Rotate the container */
         }
 
         .slider {
@@ -31,8 +29,8 @@ permalink: /prototype.html
             bottom: 0;
             background-color: #ccc;
             border-radius: 34px;
-            transition: .4s;
-            z-index: 5;
+            transition: .4s top; /* Transition from top to bottom */
+            transform: rotate(180deg); /* Rotate the slider */
         }
 
         .slider:before {
@@ -41,19 +39,19 @@ permalink: /prototype.html
             height: 26px;
             width: 26px;
             left: 4px;
-            bottom: 30px;
+            bottom: 4px;
             background-color: white;
             border-radius: 50%;
-            transition: .4s;
-            z-index: 5;
+            transition: .4s top; /* Transition from top to bottom */
         }
 
         .slider-checkbox:checked+.slider {
+            top: calc(100% - 34px); /* Move slider to the bottom */
             background-color: #2196F3;
         }
 
         .slider-checkbox:checked+.slider:before {
-            transform: translateY(26px);
+            top: calc(100% - 34px - 4px); /* Move slider before element to the bottom */
         }
     </style>
 </head>
@@ -100,15 +98,15 @@ permalink: /prototype.html
         <div class="menu" id="menu">
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2>
-                <br>Light
-                <br>Dark
-                </p>
-<!-- Include slider -->
+                <br>
+                Light
                 <label class="slider-container">
                     <input type="checkbox" class="slider-checkbox">
                     <span class="slider"></span>
                 </label>
-            </div>
+                Dark
+            </p>
+        </div>
     </footer>
     <!-- JavaScript file links -->
     <!-- Link to the JavaScript file for calculations -->
