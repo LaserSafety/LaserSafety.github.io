@@ -60,7 +60,8 @@ permalink: /prototype.html
 
         /* Align text next to the slider */
         label {
-            vertical-align: middle;
+            display: block;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -112,7 +113,7 @@ permalink: /prototype.html
                 <input type="checkbox" class="slider-checkbox">
                 <span class="slider"></span>
             </label>
-            <label for="theme">Light</label>
+            <label for="theme" style="margin-bottom: 10px;">Light</label>
             <label for="theme">Dark</label>
         </div>
     </footer>
