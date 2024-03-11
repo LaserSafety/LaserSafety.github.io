@@ -63,7 +63,7 @@ permalink: /new.html
   <p><input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
   </div>
 </div>
-
+</div>
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
   <h3>Wellenlaenge</h3><br>
