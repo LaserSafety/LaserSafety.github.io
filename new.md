@@ -1,6 +1,4 @@
----
-permalink: /new.html
----
+<!DOCTYPE html>
 <html>
 <head>
 <title>Laser Safety</title>
@@ -89,17 +87,18 @@ permalink: /new.html
 </header>
 
 <!-- Settings Menu -->
-<div id="settingsMenu" class="settings-menu">
-  <a href="#" class="closebtn" onclick="closeSettingsMenu()">&times;</a>
-  <a href="#">Setting 1</a>
-  <a href="#">Setting 2</a>
-  <a href="#">Setting 3</a>
-  <a href="#">Setting 4</a>
-</div>
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none" id="settingsMenu">
+  <h1 class="w3-xxxlarge w3-text-theme">Settings</h1>
+  <button class="w3-bar-item w3-button closebtn" onclick="closeSettingsMenu()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="w3-bar-item w3-button">Setting 1</a>
+  <a href="#" class="w3-bar-item w3-button">Setting 2</a>
+  <a href="#" class="w3-bar-item w3-button">Setting 3</a>
+  <a href="#" class="w3-bar-item w3-button">Setting 4</a>
+</nav>
 
 <script>
 function openSettings() {
-  // You can put additional logic here if needed
+  document.getElementById("settingsMenu").style.display = "block";
 }
 
 function closeSettingsMenu() {
