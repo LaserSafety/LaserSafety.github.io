@@ -9,8 +9,62 @@ permalink: /new.html
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+.settings-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.settings-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.settings-menu a:hover {
+  background-color: #ddd;
+}
+
+.settings-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.settings-button {
+  float: right;
+}
+
+.settings-button:hover + .settings-menu {
+  display: block;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    right: -250px;
+  }
+  to {
+    right: 0;
+  }
+}
+</style>
 </head>
 <body>
+
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
@@ -20,10 +74,11 @@ permalink: /new.html
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
   <a href="#" class="w3-bar-item w3-button">Link 4</a>
 </nav>
+
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
-  <i onclick="openSettings()" class="fa fa-cog w3-xlarge w3-button w3-theme" style="float:right;"></i>
+  <i onclick="openSettings()" class="fa fa-cog w3-xlarge w3-button w3-theme settings-button"></i>
   <div class="w3-center">
     <h4>test</h4>
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
@@ -32,6 +87,26 @@ permalink: /new.html
     </div>
   </div>
 </header>
+
+<!-- Settings Menu -->
+<div id="settingsMenu" class="settings-menu">
+  <a href="#" class="closebtn" onclick="closeSettingsMenu()">&times;</a>
+  <a href="#">Setting 1</a>
+  <a href="#">Setting 2</a>
+  <a href="#">Setting 3</a>
+  <a href="#">Setting 4</a>
+</div>
+
+<script>
+function openSettings() {
+  // You can put additional logic here if needed
+}
+
+function closeSettingsMenu() {
+  document.getElementById("settingsMenu").style.display = "none";
+}
+</script>
+
 <!-- Modal -->
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-top">
