@@ -451,7 +451,6 @@ permalink: /new.html
 <div id="Expositionsdauer" class="w3-container city w3-animate-opacity">
   <h2>Expositionsdauer</h2>
   <p>Definition etc.</p>
-  <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
 </div>
 
 <div id="Wellenlaenge" class="w3-container city w3-animate-opacity">
