@@ -66,23 +66,19 @@ permalink: /new.html
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Standard CSS</h3><br>
+  <h3>Wellenlaenge</h3><br>
   <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Standard CSS only</p>
-  <p>Easy to learn</p>
-  <p>No need for jQuery</p>
-  <p>No JavaScript library</p>
+  <p>Eingabe Wellenlaenge</p>
+  <p><br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
   </div>
 </div>
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Design</h3><br>
+  <h3>&#945;</h3><br>
   <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Paper like design</p>
-  <p>Bold colors and shadows</p>
-  <p>Equal across platforms</p>
-  <p>Equal across devices</p>
+  <p>Eingabe &#945;</p>
+  <p><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b>
   </div>
 </div>
 </div>
@@ -245,34 +241,6 @@ permalink: /new.html
 </div>
 
 <div class="w3-row-padding"> 
-
-<div class="w3-third">
-<div class="w3-card">
-  <img src="/w3images/car.jpg" alt="Car" style="width:100%">
-  <div class="w3-container">
-  <p>w3-card</p>
-  </div>
-</div>
-</div>
-
-<div class="w3-third">
-<div class="w3-card-4">
-  <img src="/w3images/car.jpg" alt="Car" style="width:100%">
-  <div class="w3-container">
-  <p>w3-card-4</p>
-  </div>
-</div>
-</div>
-
-<div class="w3-third">
-<div class="w3-card-4">
-  <img src="/w3images/car.jpg" alt="Car" style="width:100%">
-  <div class="w3-container">
-  <p>w3-card-4</p>
-  </div>
-</div>
-</div>
-</div>
 
 <div class="w3-container">
   <hr>
