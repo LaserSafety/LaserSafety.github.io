@@ -1,6 +1,7 @@
 ---
 permalink: /new.html
 ---
+
 <html>
 <head>
 <title>Laser Safety</title>
@@ -56,12 +57,10 @@ permalink: /new.html
 <div class="w3-row-padding w3-center w3-margin-top">
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Responsive</h3><br>
+  <h3>Expositionsdauer</h3><br>
   <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Built-in responsiveness</p>
-  <p>Mobile first fluid grid</p>
-  <p>Fits any screen sizes</p>
-  <p>PC Tablet and Mobile</p>
+  <p>Enter expositionsdauer in the format xE-y:</p>
+  <p><input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
   </div>
 </div>
 
