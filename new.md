@@ -67,7 +67,6 @@ permalink: /new.html
 @media screen and (max-width: 768px) {
   .settings-menu {
     width: 100%;
-    padding-top: 10%;
   }
 }
 </style>
