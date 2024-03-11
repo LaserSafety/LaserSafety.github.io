@@ -66,12 +66,10 @@ permalink: /new.html
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Standard CSS</h3><br>
+  <h3>Wellenlaenge</h3><br>
   <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Standard CSS only</p>
-  <p>Easy to learn</p>
-  <p>No need for jQuery</p>
-  <p>No JavaScript library</p>
+  <p>Eingabe Wellenlaenge</p>
+  <p></p><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
   </div>
 </div>
 
