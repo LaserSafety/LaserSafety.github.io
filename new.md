@@ -40,7 +40,6 @@ permalink: /new.html
   top: 0;
   right: 25px;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 .settings-button {
@@ -54,7 +53,7 @@ permalink: /new.html
 
 @keyframes slideIn {
   from {
-    right: -250px;
+    right: -100%;
   }
   to {
     right: 0;
