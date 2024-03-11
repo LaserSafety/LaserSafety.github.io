@@ -80,7 +80,7 @@ permalink: /new.html
   <p>Eingabe &#945;</p>
   <p><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b>
   </div>
-</div>
+ </div>
 </div>
 <div class="w3-container">
 <hr>
