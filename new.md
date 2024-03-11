@@ -21,6 +21,7 @@ permalink: /new.html
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  z-index: 2; /* Adjusted z-index */
 }
 
 .settings-menu a {
