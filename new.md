@@ -1,3 +1,6 @@
+---
+permalink: /new.html
+---
 <html>
 <head>
 <title>Laser Safety</title>
