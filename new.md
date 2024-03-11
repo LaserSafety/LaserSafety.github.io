@@ -61,6 +61,14 @@ permalink: /new.html
     right: 0;
   }
 }
+
+/* Adjust the position of the settings menu */
+@media screen and (max-width: 768px) {
+  .settings-menu {
+    width: 100%;
+    padding-top: 10%;
+  }
+}
 </style>
 </head>
 <body>
@@ -89,7 +97,7 @@ permalink: /new.html
 </header>
 
 <!-- Settings Menu -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none" id="settingsMenu">
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none; right: 0;" id="settingsMenu">
   <h1 class="w3-xxxlarge w3-text-theme">Settings</h1>
   <button class="w3-bar-item w3-button closebtn" onclick="closeSettingsMenu()">Close <i class="fa fa-remove"></i></button>
   <a href="#" class="w3-bar-item w3-button">Setting 1</a>
@@ -128,69 +136,68 @@ function closeSettingsMenu() {
 </div>
 
 <div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Expositionsdauer</h3><br>
-  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Eingabe Expositionsdauer 
-  <br>(xE-y)</p>
-  <p><input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:460px">
+      <h3>Expositionsdauer</h3><br>
+      <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe Expositionsdauer 
+      <br>(xE-y)</p>
+      <p><input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
+    </div>
   </div>
-</div>
 
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Wellenlaenge</h3><br>
-  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Eingabe Wellenlaenge</p>
-  <p><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:460px">
+      <h3>Wellenlaenge</h3><br>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe Wellenlaenge</p>
+      <p><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+    </div>
   </div>
-</div>
 
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>&alpha;</h3><br>
-  <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Eingabe <b>&alpha;</b></p>
-  <p><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b></p>
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:460px">
+      <h3>&alpha;</h3><br>
+      <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe <b>&alpha;</b></p>
+      <p><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b></p>
+    </div>
   </div>
-</div>
 </div>
 
 <hr>
 
 <h2 class="w3-center">Progress Bars</h2>
 <div class="w3-container">
-
-<div class="w3-light-gray">
-  <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
-</div><br>
-<button class="w3-btn w3-theme" onclick="move()">Click Me</button> 
+  <div class="w3-light-gray">
+    <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
+  </div><br>
+  <button class="w3-btn w3-theme" onclick="move()">Click Me</button> 
 </div>
 
 <hr>
 <h2 class="w3-center">Tabs</h2>
 <div class="w3-border">
-<div class="w3-bar w3-theme">
-  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Expositionsdauer')">Expositionsdauer</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Wellenlaenge')">Wellenlaenge</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'&alpha;')">&alpha;</button>
-</div>
+  <div class="w3-bar w3-theme">
+    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Expositionsdauer')">Expositionsdauer</button>
+    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Wellenlaenge')">Wellenlaenge</button>
+    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'&alpha;')">&alpha;</button>
+  </div>
 
-<div id="Expositionsdauer" class="w3-container city w3-animate-opacity">
-  <h2>Expositionsdauer</h2>
-  <p>Definition etc.</p>
-</div>
+  <div id="Expositionsdauer" class="w3-container city w3-animate-opacity">
+    <h2>Expositionsdauer</h2>
+    <p>Definition etc.</p>
+  </div>
 
-<div id="Wellenlaenge" class="w3-container city w3-animate-opacity">
-  <h2>Wellenlaenge</h2>
-  <p>Definition etc.</p>
-</div>
+  <div id="Wellenlaenge" class="w3-container city w3-animate-opacity">
+    <h2>Wellenlaenge</h2>
+    <p>Definition etc.</p>
+  </div>
 
-<div id="&alpha;" class="w3-container city w3-animate-opacity">
-  <h2>&alpha;</h2>
-  <p>Definition etc.</p>
-</div>
+  <div id="&alpha;" class="w3-container city w3-animate-opacity">
+    <h2>&alpha;</h2>
+    <p>Definition etc.</p>
+  </div>
 </div>
 
 <hr>
