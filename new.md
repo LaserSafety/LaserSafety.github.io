@@ -87,7 +87,7 @@ permalink: /new.html
 <div class="w3-center">
   <h2>Color Classes</h2>
 </div>
-
+</div>
 <div class="w3-row">
   <div class="w3-col w3-container m2 w3-red"><p>Red</p></div>
   <div class="w3-col w3-container m2 w3-blue"><p>Blue</p></div>
