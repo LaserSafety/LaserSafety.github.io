@@ -63,12 +63,6 @@ permalink: /new.html
   }
 }
 
-/* Adjust the position of the settings menu */
-@media screen and (max-width: 768px) {
-  .settings-menu {
-    width: 100%;
-  }
-}
 </style>
 </head>
 <body>
