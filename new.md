@@ -63,31 +63,36 @@ permalink: /new.html
   <p><input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
   </div>
 </div>
-</div>
+
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Wellenlaenge</h3><br>
+  <h3>Standard CSS</h3><br>
   <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Eingabe Wellenlaenge</p>
-  <p><br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+  <p>Standard CSS only</p>
+  <p>Easy to learn</p>
+  <p>No need for jQuery</p>
+  <p>No JavaScript library</p>
   </div>
 </div>
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-  <h3>&#945;</h3><br>
+  <h3>Design</h3><br>
   <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Eingabe &#945;</p>
-  <p><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b>
+  <p>Paper like design</p>
+  <p>Bold colors and shadows</p>
+  <p>Equal across platforms</p>
+  <p>Equal across devices</p>
   </div>
- </div>
 </div>
+</div>
+
 <div class="w3-container">
 <hr>
 <div class="w3-center">
   <h2>Color Classes</h2>
 </div>
-</div>
+
 <div class="w3-row">
   <div class="w3-col w3-container m2 w3-red"><p>Red</p></div>
   <div class="w3-col w3-container m2 w3-blue"><p>Blue</p></div>
@@ -240,6 +245,34 @@ permalink: /new.html
 </div>
 
 <div class="w3-row-padding"> 
+
+<div class="w3-third">
+<div class="w3-card">
+  <img src="/w3images/car.jpg" alt="Car" style="width:100%">
+  <div class="w3-container">
+  <p>w3-card</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-4">
+  <img src="/w3images/car.jpg" alt="Car" style="width:100%">
+  <div class="w3-container">
+  <p>w3-card-4</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-4">
+  <img src="/w3images/car.jpg" alt="Car" style="width:100%">
+  <div class="w3-container">
+  <p>w3-card-4</p>
+  </div>
+</div>
+</div>
+</div>
 
 <div class="w3-container">
   <hr>
