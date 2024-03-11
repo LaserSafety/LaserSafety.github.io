@@ -60,10 +60,8 @@ permalink: /prototype.html
 
         /* Align text next to the slider */
         label {
-            display: block;
-            margin-top: 5px;
-            position: relative; /* Set position to relative */
-            z-index: 10; /* Ensure options appear above the slider */
+            display: inline-block;
+            vertical-align: middle; /* Align options vertically with the slider */
         }
     </style>
 </head>
@@ -116,7 +114,7 @@ permalink: /prototype.html
                 <span class="slider"></span>
             </label>
             <label for="theme" style="margin-bottom: 10px;">Light</label>
-            <label for="theme">Dark</label>
+            <label for="theme" style="margin-top: 10px;">Dark</label>
         </div>
     </footer>
     <!-- JavaScript file links -->
