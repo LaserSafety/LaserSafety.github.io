@@ -108,8 +108,8 @@ permalink: /prototype.html
         <div class="menu" id="menu">
             <p><h1>Settings</h1></p>
             <p><h2>Theme</h2></p>
-            <label for="theme">Light</label>
-            <br><label for="theme">Dark</label>
+            <br><label for="theme">Light</label>
+                <label for="theme">Dark</label>
             <!-- Include single slider -->
             <label class="slider-container">
                 <input type="checkbox" class="slider-checkbox">
