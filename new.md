@@ -13,9 +13,11 @@ permalink: /new.html
 .settings-menu {
   display: block;
   top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: #f1f1f1;
+  overflow-x: hidden;
   transition: 0.5s;
   z-index: 2; /* Adjusted z-index */
 }
@@ -63,7 +65,7 @@ permalink: /new.html
 <body>
 
 <!-- Side Navigation -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none; right: 0;" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
   <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
   <a href="#" class="w3-bar-item w3-button">Link 1</a>
@@ -73,9 +75,9 @@ permalink: /new.html
 </nav>
 
 <!-- Settings Menu -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none" id="settingsMenu">
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none; right: 0;" id="settingsMenu">
   <h1 class="w3-xxxlarge w3-text-theme">Settings</h1>
-  <button class="w3-bar-item w3-button closebtn" onclick="closeSettingsMenu()">Close <i class="fa fa-remove"></i></button>
+  <button class="w3-bar-item w3-button closebtn" onclick="w3_close_r()">Close <i class="fa fa-remove"></i></button>
   <a href="#" class="w3-bar-item w3-button">Setting 1</a>
   <a href="#" class="w3-bar-item w3-button">Setting 2</a>
   <a href="#" class="w3-bar-item w3-button">Setting 3</a>
@@ -84,12 +86,12 @@ permalink: /new.html
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
-  <i onclick="openSettings()" class="fa fa-cog w3-xlarge w3-button w3-theme settings-button"></i>
+  <i onclick="w3_open_r()" class="fa fa-cog w3-xlarge w3-button w3-theme settings-button"></i>
   <div class="w3-center">
     <h4>test</h4>
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LEARN W3.CSS</button>
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">placeholder</button>
     </div>
   </div>
 </header>
@@ -216,6 +218,18 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
+// Settings
+function w3_open_r() {
+  var x = document.getElementById("settingsMenu");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close_r() {
+  document.getElementById("settingsMenu").style.display = "none";
+}
+
 // Tabs
 function openCity(evt, cityName) {
   var i;
@@ -233,36 +247,6 @@ function openCity(evt, cityName) {
 
 var mybtn = document.getElementsByClassName("testbtn")[0];
 mybtn.click();
-
-// Accordions
-function myAccFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Slideshows
-var slideIndex = 1;
-
-function plusDivs(n) {
-  slideIndex = slideIndex + n;
-  showDivs(slideIndex);
-}
-
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-showDivs(1);
 
 // Progress Bars
 function move() {
