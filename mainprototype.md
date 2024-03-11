@@ -18,7 +18,6 @@ permalink: /prototype.html
             height: 60px;
             vertical-align: middle; /* Align slider vertically with text */
             margin-right: 10px; /* Adjust margin for spacing */
-            z-index: 10; /* Ensure slider appears above other elements */
         }
 
         .slider-checkbox {
@@ -63,6 +62,8 @@ permalink: /prototype.html
         label {
             display: block;
             margin-top: 5px;
+            position: relative; /* Set position to relative */
+            z-index: 10; /* Ensure options appear above the slider */
         }
     </style>
 </head>
