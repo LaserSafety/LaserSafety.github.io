@@ -454,7 +454,9 @@ permalink: /new.html
 
 <div id="London" class="w3-container city w3-animate-opacity">
   <h2>Expositionsdauer</h2>
-  <p> </p>
+  <p>Expositionsdauer (x&sdot;10<sup>-y</sup>)</h1>
+  <p>Enter expositionsdauer in the format xE-y:
+  <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
   <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
 </div>
 
