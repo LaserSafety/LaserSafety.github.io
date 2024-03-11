@@ -23,12 +23,12 @@ permalink: /new.html
 }
 
 .settings-menu a {
-  padding: 10px 15px;
   text-decoration: none;
   font-size: 25px;
   color: black;
   display: block;
   transition: 0.3s;
+  width: 100%;
 }
 
 .settings-menu a:hover {
