@@ -443,29 +443,25 @@ permalink: /new.html
 <h2 class="w3-center">Tabs</h2>
 <div class="w3-border">
 <div class="w3-bar w3-theme">
-  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'London')">London</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')">Paris</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')">Tokyo</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Expositionsdauer')">Expositionsdauer</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Wellenlaenge')">Wellenlaenge</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'&alpha;')">&alpha;</button>
 </div>
 
-<div id="London" class="w3-container city w3-animate-opacity">
+<div id="Expositionsdauer" class="w3-container city w3-animate-opacity">
   <h2>Expositionsdauer</h2>
-  <p>Expositionsdauer (x&sdot;10<sup>-y</sup>)
-  <br>Enter expositionsdauer in the format xE-y:
-  <br><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
+  <p>Definition etc.</p>
   <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
 </div>
 
-<div id="Paris" class="w3-container city w3-animate-opacity">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p> 
-  <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+<div id="Wellenlaenge" class="w3-container city w3-animate-opacity">
+  <h2>Wellenlaenge</h2>
+  <p>Definition etc.</p>
 </div>
 
-<div id="Tokyo" class="w3-container city w3-animate-opacity">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
-  <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+<div id="&alpha;" class="w3-container city w3-animate-opacity">
+  <h2>&alpha;</h2>
+  <p>Definition etc.</p>
 </div>
 </div>
 
