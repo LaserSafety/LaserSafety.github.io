@@ -11,8 +11,7 @@ permalink: /new.html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
 .settings-menu {
-  display: none;
-  position: absolute;
+  display: block;
   top: 0;
   right: 0;
   width: 100%;
@@ -20,7 +19,6 @@ permalink: /new.html
   background-color: #f1f1f1;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
   z-index: 2; /* Adjusted z-index */
 }
 
