@@ -207,8 +207,7 @@ nav ul {
       </article>
       <article id="Wellenlaenge">
         <h1>Wellenlaenge</h1>
-        <p>Eingabe expositionsdauer (dieser text ist ueberfluessig, spaeter wird er entfernt!
-          <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
+        <p>Eingabe Wellenlaenge <br><b>&lambda;</b> = <input type="text" id="wellenlaenge"> in <b>nm</b></p>
       </article>
       <article id="Alpha">
         <h1>&#945;</h1>
