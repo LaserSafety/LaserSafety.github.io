@@ -62,7 +62,6 @@ permalink: /prototype.html
         label {
             display: inline-block;
             vertical-align: middle; /* Align options vertically with the slider */
-            margin-bottom: 5px; /* Adjust spacing between options */
         }
     </style>
 </head>
@@ -114,7 +113,7 @@ permalink: /prototype.html
                 <input type="checkbox" class="slider-checkbox">
                 <span class="slider"></span>
             </label>
-            <label for="theme" style="display: block; margin-bottom: 5px;">Light</label>
+            <label for="theme">Light</label>
             <label for="theme">Dark</label>
         </div>
     </footer>
