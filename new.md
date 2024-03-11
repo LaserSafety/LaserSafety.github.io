@@ -1,7 +1,6 @@
 ---
 permalink: /new.html
 ---
-
 <html>
 <head>
 <title>Laser Safety</title>
@@ -12,7 +11,6 @@ permalink: /new.html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
@@ -25,15 +23,15 @@ permalink: /new.html
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+  <i onclick="openSettings()" class="fa fa-cog w3-xlarge w3-button w3-theme" style="float:right;"></i>
   <div class="w3-center">
-  <h4>test</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
+    <h4>test</h4>
+    <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
       <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LEARN W3.CSS</button>
     </div>
   </div>
 </header>
-
 <!-- Modal -->
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-top">
