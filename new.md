@@ -204,17 +204,18 @@ function closeSettingsMenu() {
  </div>
 </div>
 
-<hr>
+<!-- <hr>
 
-<h2 class="w3-center">Progress Bars</h2>
+ <h2 class="w3-center">Progress Bars</h2>
 <div class="w3-container">
   <div class="w3-light-gray">
     <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
   </div><br>
   <button class="w3-btn w3-theme" onclick="move()">Click Me</button> 
-</div>
+</div> -->
 
 <hr>
+
 <h2 class="w3-center">Tabs</h2>
 <div class="w3-border">
   <div class="w3-bar w3-theme">
