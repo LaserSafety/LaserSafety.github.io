@@ -24,7 +24,7 @@ permalink: /new.html
 #navbar {
   background-color: #333;
   position: fixed;
-  top: -100%;
+  top: -60px;
   width: 100%;
   display: block;
   transition: top 0.3s;
