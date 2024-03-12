@@ -74,14 +74,12 @@ permalink: /new.html
 .fade-out-frequenz {
   opacity: 0;
   transition: opacity 0.4s ease-out 0.2s;
-  
 }
+
 .fade-in-frequenz {
   opacity: 1;
   transition: opacity 0.4s ease-out;
 }
-
-
 
 input[type=text] {
   width: 20%;
@@ -450,8 +448,6 @@ function move() {
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
   if (dropdownValue === "D") {
-    document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-in");
-    document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-in-frequenz");
     document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz"); // Use fade-out-frequenz class for "Frequenz"
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
     setTimeout(function() {
@@ -459,14 +455,14 @@ document.getElementById("dropdown").addEventListener("change", function() {
       document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
     }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" input block
   } else {
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
+    setTimeout(function() {
     document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
     document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
     document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in-frequenz"); // Add fade-in class
     }, 400); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
-    setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
   }
 });
 </script>
