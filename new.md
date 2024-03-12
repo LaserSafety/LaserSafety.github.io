@@ -460,9 +460,11 @@ document.getElementById("dropdown").addEventListener("change", function() {
     setTimeout(function() {
       document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in");
       document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in-frequenz");
+    }, 10); // Add a short delay before adding the fade-in classes to ensure the fade-out transition is triggered
+    setTimeout(function() {
       document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
       document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
-    }, 200); // Wait for a short duration before adding the fade-in classes to ensure the transition is triggered
+    }, 410); // Wait for 0.41 seconds before setting the display to "block" to ensure the fade-in transition is triggered
   }
 });
 </script>
