@@ -344,7 +344,8 @@ document.getElementById("dropdown").addEventListener("change", function() {
     setTimeout(function() {
     document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
     }, 400);
-});
+  }
+  });
 
 </script>
 
