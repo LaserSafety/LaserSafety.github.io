@@ -132,7 +132,7 @@ function closeSettingsMenu() {
       <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <p>Eingabe Expositionsdauer 
       <br>(xE-y)</p>
-      <p><input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
+      <p><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
     </div>
   </div>
 
@@ -173,16 +173,16 @@ function closeSettingsMenu() {
     <h3>Frequenz</h3><br>
     <i class="fa fa-clock-o w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Frequenz</p>
-    <p><input type="text" id="frequenz"> in <b>Hz</b></p>
+    <p><b>F</b> = <input type="text" id="frequenz"> in <b>Hz</b></p>
   </div>
 </div>
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
     <h3>Impulsdauer</h3><br>
-    <i class="fa fa-hourglass-start w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Impulsdauer</p>
-    <p><input type="text" id="impulsdauer"> in <b>s</b></p>
+    <p><b>t</b>b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
   </div>
  </div>
 </div>
