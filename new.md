@@ -324,11 +324,13 @@ document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
   if (dropdownValue === "D") {
     document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz"); // Use fade-out-frequenz class for "Frequenz"
+    setTimeout(function() {
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "none"; // Hide frequenz input block after fading out
+    }, 400); // Wait for 0.4 seconds before hiding the "Frequenz" input block
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out"); // Add fade-out class to impulsdauer block
     setTimeout(function() {
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
       document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none"; // Hide impulsdauer input block after fading out
-    }, 400); // Wait for 0.4 seconds before hiding the "Frequenz" and "Impulsdauer" input blocks
+    }, 200); // Wait for 0.2 seconds before hiding the "Impulsdauer" input block
   } else {
     document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
     document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
