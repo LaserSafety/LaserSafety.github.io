@@ -295,6 +295,17 @@ function move() {
     }
   }
 }
+
+document.getElementById("dropdown").addEventListener("change", function() {
+  var dropdownValue = this.value;
+  if (dropdownValue === "D") {
+    document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
+    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
+  } else {
+    document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
+    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+  }
+});
 </script>
 
 </body>
