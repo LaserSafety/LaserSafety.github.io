@@ -271,7 +271,8 @@ function closeSettingsMenu() {
 <footer class="w3-container w3-theme-dark w3-padding-16">
   <img src="wappen.png" width="100" height="100">
   <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+    <span class="w3-text w3-theme-light w3-padding">
+      <button onclick="topFunction()" id="myBtn" title="Go to top" position="relative" right="5">Top</button>Go To Top</span>    
     <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
@@ -288,6 +289,12 @@ function scrollFunction() {
     document.getElementById("navbar").style.top = "-100%";
   }
 }
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // Side navigation
 function w3_open() {
   var x = document.getElementById("mySidebar");
