@@ -339,7 +339,6 @@ function move() {
   }
 }
 
-<script>
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
   if (dropdownValue === "D") {
