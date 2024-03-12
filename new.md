@@ -77,6 +77,14 @@ permalink: /new.html
   transition: opacity 0.4s ease-in;
 }
 
+input[type=text] {
+  width: 20%;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
 </style>
 </head>
 <body>
