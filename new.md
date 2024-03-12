@@ -60,21 +60,21 @@ permalink: /new.html
   }
 }
 
-/* Add fade-out and fade-in classes */
 .fade-out {
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
 
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.4s ease-in;
-}
-
-/* Add fade-out-frequenz class */
+/* Add this style */
 .fade-out-frequenz {
   opacity: 0;
   transition: opacity 0.4s ease-out 0.2s; /* Added a delay of 0.2 seconds */
+}
+
+/* Add this style for fade-in */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
 }
 
 input[type=text] {
@@ -84,6 +84,7 @@ input[type=text] {
 input[type=number] {
   width: 50px;
 }
+
 </style>
 </head>
 <body>
@@ -323,30 +324,26 @@ function move() {
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
   if (dropdownValue === "D") {
-    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz");
-    setTimeout(function() {
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    }, 400);
+    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz"); // Use fade-out-frequenz class for "Frequenz"
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
     setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
-    }, 200);
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
+    }, 400); // Wait for 0.4 seconds before hiding the "Frequenz" input block
   } else {
-    document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
-    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
     setTimeout(function() {
-      document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz");
-      document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in");
-    }, 200); // Adjusted timing for frequenz block fade-in
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+    }, 200); // Wait for 0.2 seconds before showing the "Impulsdauer" input block
     setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
-      document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in");
-    }, 400); // Adjusted timing for impulsdauer block fade-in
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
+      document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class
+      document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
+    }, 10); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
   }
 });
-
 </script>
 
 
 </body>
 </html>
+
