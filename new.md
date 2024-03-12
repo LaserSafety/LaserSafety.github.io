@@ -74,8 +74,135 @@ permalink: /new.html
 .fade-out-frequenz {
   opacity: 0;
   transition: opacity 0.4s ease-out 0.2s;
+  
+}
+.fade-in-frequenz {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
 }
 
+
+
+input[type=text] {
+  width: 20%;
+}
+
+input[type=number] {
+  width: 50px;
+}
+</style>
+</head>
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+</nav>
+
+<!-- Settings Menu -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none; right: 0;" id="settingsMenu">
+  <h1 class="w3-xxxlarge w3-text-theme">Settings</h1>
+  <button class="w3-bar-item w3-button closebtn" onclick="w3_close_r()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="w3-bar-item w3-button">Setting 1</a>
+  <a href="#" class="w3-bar-item w3-button">Setting 2</a>
+  <a href="#" class="w3-bar-item w3-button">Setting 3</a>
+  <a href="#" class="w3-bar-item w3-button">Setting 4</a>
+</nav>
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+  <i onclick="w3_open_r()" class="fa fa-cog w3-xlarge w3-button w3-theme settings-button"></i>
+  <div class="w3-center">
+    <h4>test</h4>
+    <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">placeholder</button>
+    </div>
+  </div>
+</header>
+
+<script>
+function openSettings() {<!DOCTYPE html>
+<html>
+<head>
+<title>Laser Safety</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+.settings-menu {
+  display: block;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 2; /* Adjusted z-index */
+}
+
+.settings-menu a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.settings-menu a:hover {
+  background-color: #ddd;
+}
+
+.settings-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.settings-button {
+  float: right;
+}
+
+.settings-button:hover + .settings-menu {
+  display: block;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+/* Add fade-out and fade-in classes */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+
+/* Add fade-out-frequenz class */
+.fade-out-frequenz {
+  opacity: 0;
+  transition: opacity 0.4s ease-out 0.2s; /* Added a delay of 0.2 seconds */
+}
 
 input[type=text] {
   width: 20%;
@@ -160,25 +287,6 @@ function closeSettingsMenu() {
     </div>
   </div>
 
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-    <h3>Laserklasse</h3><br>
-    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-    <p>Select an option:</p>
-    <select id="laserklasse">
-      <option value="unbekannt">Unbekannt</option>
-      <option value="1">1</option>
-      <option value="1M">1M</option>
-      <option value="2">2</option>
-      <option value="2">2M</option>
-      <option value="3A">3A</option>
-      <option value="3B">3B</option>
-      <option value="3R">3R</option>
-      <option value="4">4</option>
-    </select>
-  </div>
- </div>
-
   <div class="w3-third">
     <div class="w3-card w3-container" style="min-height:460px">
       <h3>Wellenlaenge</h3><br>
@@ -203,10 +311,10 @@ function closeSettingsMenu() {
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
     <select id="dropdown">
-      <option value="D">Dauerstrich</option>
-      <option value="I">Impuls</option>
-      <option value="R">Riesenimpuls</option>
-      <option value="M">Modengekoppelt</option>
+      <option value="D">Dauerstrahl</option>
+      <option value="R">Option 2</option>
+      <option value="I">Option 3</option>
+      <option value="M">Option 4</option>
     </select>
   </div>
  </div>
@@ -222,10 +330,10 @@ function closeSettingsMenu() {
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-    <h3>Pulsdauer</h3><br>
+    <h3>Impulsdauer</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Impulsdauer</p>
-    <p><b>t<sub>H</sub></b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
+    <p><b>t</b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
   </div>
  </div>
 </div>
@@ -341,24 +449,29 @@ function move() {
 
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
-  var impulsdauerElement = document.getElementById("impulsdauer").parentNode.parentNode;
   if (dropdownValue === "D") {
-    impulsdauerElement.classList.add("fade-out");
-    setTimeout(() => {
-      impulsdauerElement.style.display = "none";
-    }, 400);
+    document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-in");
+    document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-in-frequenz");
+    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz"); // Use fade-out-frequenz class for "Frequenz"
+    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
+    setTimeout(function() {
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
+    }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" input block
   } else {
-    setTimeout(() => {
-      impulsdauerElement.style.display = "block";
-      impulsdauerElement.classList.add("fade-in");
-    }, 200);
+    document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
+    document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class
+    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
+    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in-frequenz"); // Add fade-in class
+    }, 400); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
+    setTimeout(function() {
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
   }
 });
-
-document.getElementById("frequenz").addEventListener("change", function() {
-  var frequenzElement = document.getElementById("frequenz").parentNode.parentNode;
-  frequenzElement.classList.add("fade-in");
-});
 </script>
+
+
 </body>
 </html>
+
