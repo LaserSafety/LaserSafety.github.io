@@ -155,6 +155,21 @@ function closeSettingsMenu() {
   </div>
 </div>
 
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+    <h3>Betriebsart</h3><br>
+    <i class="fa fa-chevron-circle-down w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>Select an option:</p>
+    <select id="dropdown">
+      <option value="D">Dauerstrahl</option>
+      <option value="R">Option 2</option>
+      <option value="I">Option 3</option>
+      <option value="M">Option 4</option>
+    </select>
+  </div>
+</div>
+
+
 <hr>
 
 <h2 class="w3-center">Progress Bars</h2>
