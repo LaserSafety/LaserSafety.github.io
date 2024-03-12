@@ -357,7 +357,6 @@ document.getElementById("dropdown").addEventListener("change", function() {
     }, 200); // Add a slight delay before adding the fade-in class to "Impulsdauer" block
   }
 });
-</script>
 
 </script>
 </body>
