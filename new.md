@@ -448,21 +448,21 @@ function move() {
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
   if (dropdownValue === "D") {
-    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz"); // Use fade-out-frequenz class for "Frequenz"
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
+    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz");
     setTimeout(function() {
       document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
       document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" input block
+    }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" and "Frequenz" input blocks
   } else {
-    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
-    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in-frequenz"); 
     document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
-    document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class
+    document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz");
     setTimeout(function() {
-    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
-    document.getElementById("frequenz").parentNode.parentNode.style.display = "block";// Add fade-in class
-    }, 400); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
+      document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in");
+      document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in-frequenz");
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
+    }, 200); // Wait for a short duration before adding the fade-in classes to ensure the transition is triggered
   }
 });
 </script>
