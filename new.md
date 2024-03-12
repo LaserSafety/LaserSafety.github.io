@@ -327,6 +327,7 @@ document.getElementById("dropdown").addEventListener("change", function() {
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out"); // Add fade-out class to impulsdauer block
     setTimeout(function() {
       document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none"; // Hide impulsdauer input block after fading out
     }, 400); // Wait for 0.4 seconds before hiding the "Frequenz" and "Impulsdauer" input blocks
   } else {
     document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
