@@ -74,7 +74,7 @@ permalink: /new.html
 /* Add fade-out-frequenz class */
 .fade-out-frequenz {
   opacity: 0;
-  transition: opacity 0.4s ease-out 0.4s; /* Added a delay of 0.2 seconds */
+  transition: opacity 0.4s ease-out 0.2s; /* Added a delay of 0.2 seconds */
 }
 
 input[type=text] {
