@@ -24,7 +24,7 @@ permalink: /new.html
 #navbar {
   background-color: #333;
   position: fixed;
-  top: -60px;
+  top: -100%;
   width: 100%;
   display: block;
   transition: top 0.3s;
@@ -285,7 +285,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("navbar").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbar").style.top = "-100%";
   }
 }
 // Side navigation
