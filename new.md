@@ -67,7 +67,7 @@ permalink: /new.html
 
 .fade-out-frequenz {
   opacity: 0;
-  transition: opacity 0.4s ease-out 0.2s; 
+  transition: opacity 0.4s ease-out 0.4s; 
 }
 
 </style>
@@ -313,7 +313,7 @@ document.getElementById("dropdown").addEventListener("change", function() {
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
     setTimeout(function() {
       document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    }, 200); // Wait for 0.2 seconds before hiding the "Frequenz" input block
+    }, 400); // Wait for 0.2 seconds before hiding the "Frequenz" input block
   } else {
     document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
     document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
