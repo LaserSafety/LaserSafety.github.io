@@ -186,7 +186,7 @@ function closeSettingsMenu() {
  </div>
 
  <div class="w3-third">
-  <div class="w3-card w3-container fading.element" style="min-height:460px" id="Frequenz">
+  <div class="w3-card w3-container fadingElement" style="min-height:460px" id="Frequenz">
     <h3>Frequenz</h3><br>
     <i class="fa fa-clock-o w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Frequenz</p>
@@ -195,7 +195,7 @@ function closeSettingsMenu() {
 </div>
 
 <div class="w3-third">
-  <div class="w3-card w3-container fading.element" style="min-height:460px" id="Pulsdauer">
+  <div class="w3-card w3-container fadingElement" style="min-height:460px" id="Pulsdauer">
     <h3>Pulsdauer</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Pulsdauer</p>
