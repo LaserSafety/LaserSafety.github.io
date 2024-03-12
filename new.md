@@ -95,10 +95,14 @@ permalink: /new.html
 
 input[type=text] {
   width: 20%;
+  border: 2px #6b2443;
+  border-radius: 4px;
 }
 
 input[type=number] {
   width: 50px;
+  border: 2px #6b2443;
+  border-radius: 4px;
 }
 </style>
 </head>
