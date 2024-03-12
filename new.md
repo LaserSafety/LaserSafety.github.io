@@ -335,16 +335,10 @@ document.getElementById("dropdown").addEventListener("change", function() {
     document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
     setTimeout(function() {
       document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class from "Frequenz" block
-      document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class to "Frequenz" block
-    }, 10); // Wait for a short duration before removing the fade-out-frequenz class to ensure the transition is triggered
-    setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out"); // Remove fade-out class from "Impulsdauer" block
       document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class to "Impulsdauer" block
-    }, 200); // Add a slight delay before removing the fade-out class from "Impulsdauer" block to ensure the transition is triggered after "Frequenz" block
+    }, 200); // Add a slight delay before adding the fade-in class to "Impulsdauer" block
   }
 });
 </script>
-
-
 </body>
 </html>
