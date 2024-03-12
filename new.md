@@ -70,6 +70,10 @@ permalink: /new.html
   transition: opacity 0.4s ease-out 0.2s; 
 }
 
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
 </style>
 </head>
 <body>
@@ -313,13 +317,15 @@ document.getElementById("dropdown").addEventListener("change", function() {
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
     setTimeout(function() {
       document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    }, 400); // Wait for 0.2 seconds before hiding the "Frequenz" input block
+    }, 400); // Wait for 0.4 seconds before hiding the "Frequenz" input block
   } else {
     document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
     document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
     setTimeout(function() {
       document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class
       document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
+      document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
+      document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
     }, 10); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
   }
 });
