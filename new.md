@@ -192,7 +192,7 @@ function closeSettingsMenu() {
     <h3>Impulsdauer</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Impulsdauer</p>
-    <p><b>t</b>b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
+    <p><b>t</b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
   </div>
  </div>
 </div>
