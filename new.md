@@ -327,17 +327,15 @@ document.getElementById("dropdown").addEventListener("change", function() {
     document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz"); // Use fade-out-frequenz class for "Frequenz"
     document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
     setTimeout(function() {
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    }, 400); // Wait for 0.4 seconds before hiding the "Frequenz" input block
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
+    }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" input block
   } else {
-    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
+    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
     setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
-    }, 200); // Wait for 0.2 seconds before showing the "Impulsdauer" input block
-    setTimeout(function() {
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
       document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class
+      document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
       document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
+      document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class
     }, 10); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
   }
 });
@@ -346,4 +344,5 @@ document.getElementById("dropdown").addEventListener("change", function() {
 
 </body>
 </html>
+
 
