@@ -165,7 +165,7 @@ function closeSettingsMenu() {
     <h3>Laserklasse</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
-    <select id="dropdown">
+    <select id="laserklasse">
       <option value="unbekannt">Unbekannt</option>
       <option value="1">1</option>
       <option value="1M">1M</option>
