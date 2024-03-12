@@ -10,6 +10,9 @@ permalink: /new.html
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
+  .grad {
+  background-image: linear-gradient(black, 20%, #6b2443);
+}
 .settings-menu {
   display: block;
   top: 0;
@@ -130,7 +133,7 @@ input[type=number] {
   <a href="#" class="w3-bar-item w3-button">Setting 4</a>
 </nav>
 <!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
+<header class="w3-container grad w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
   <i onclick="w3_open_r()" class="fa fa-cog w3-xlarge w3-button w3-theme settings-button"></i>
   <div class="w3-center">
