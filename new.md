@@ -67,7 +67,7 @@ permalink: /new.html
 
 .fade-out-frequenz {
   opacity: 0;
-  transition: opacity 0.4s ease-out 0.4s; 
+  transition: opacity 0.4s ease-out 0.2s; 
 }
 
 </style>
@@ -135,7 +135,7 @@ function closeSettingsMenu() {
     </div>
 </div>
 
-<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
     <div class="w3-card w3-container" style="min-height:460px">
       <h3>Expositionsdauer</h3><br>
