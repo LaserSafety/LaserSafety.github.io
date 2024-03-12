@@ -55,7 +55,7 @@ permalink: /new.html
 }
 
 .settings-menu a:hover {
-  background-color: #ddd;
+  background-color: #6b2443;
 }
 
 .settings-menu .closebtn {
