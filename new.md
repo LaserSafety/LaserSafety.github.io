@@ -103,7 +103,7 @@ input[type=number] {
 </head>
 <body>
 <div id="navbar">
-  <img src"wappen.png" width="50" height="50"
+  <img src"wappen.png" width="50" height="50">
 </div>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
