@@ -153,12 +153,11 @@ function closeSettingsMenu() {
       <p><b>&#945;</b> = <input type="text" id="alpha"> in <b>mrad</b></p>
     </div>
   </div>
-</div>
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
     <h3>Betriebsart</h3><br>
-    <i class="fa fa-chevron-circle-down w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
     <select id="dropdown">
       <option value="D">Dauerstrahl</option>
@@ -167,8 +166,8 @@ function closeSettingsMenu() {
       <option value="M">Option 4</option>
     </select>
   </div>
+ </div>
 </div>
-
 
 <hr>
 
