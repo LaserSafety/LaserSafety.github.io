@@ -184,10 +184,10 @@ function closeSettingsMenu() {
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
     <select id="dropdown">
-      <option value="D">Dauerstrahl</option>
-      <option value="R">Option 2</option>
-      <option value="I">Option 3</option>
-      <option value="M">Option 4</option>
+      <option value="D">Dauerstrich</option>
+      <option value="I">Impuls</option>
+      <option value="R">Riesenimpuls</option>
+      <option value="M">Modengekoppelt</option>
     </select>
   </div>
  </div>
@@ -203,10 +203,10 @@ function closeSettingsMenu() {
 
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
-    <h3>Impulsdauer</h3><br>
+    <h3>Pulsdauer</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Impulsdauer</p>
-    <p><b>t</b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
+    <p><b>t<sub>H</sub></b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
   </div>
  </div>
 </div>
