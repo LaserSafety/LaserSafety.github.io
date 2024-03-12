@@ -60,7 +60,6 @@ permalink: /new.html
   }
 }
 
-/* Add fade-out and fade-in classes */
 .fade-out {
   opacity: 0;
   transition: opacity 0.4s ease-out;
@@ -68,14 +67,15 @@ permalink: /new.html
 
 .fade-in {
   opacity: 1;
-  transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in 0.2s;
 }
 
 /* Add fade-out-frequenz class */
 .fade-out-frequenz {
   opacity: 0;
-  transition: opacity 0.4s ease-out 0.2s; /* Added a delay of 0.2 seconds */
+  transition: opacity 0.4s ease-out 0.2s;
 }
+
 
 input[type=text] {
   width: 20%;
@@ -341,17 +341,23 @@ function move() {
 
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
+  var impulsdauerElement = document.getElementById("impulsdauer").parentNode.parentNode;
   if (dropdownValue === "D") {
-    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out"); // Use fade-out class for "Impulsdauer" block
-    setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
-    }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" input block
+    impulsdauerElement.classList.add("fade-out");
+    setTimeout(() => {
+      impulsdauerElement.style.display = "none";
+    }, 400);
   } else {
-    setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block"; // Reappear the "Impulsdauer" block
-      document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class to "Impulsdauer" block
-    }, 200); // Add a slight delay before adding the fade-in class to "Impulsdauer" block
+    setTimeout(() => {
+      impulsdauerElement.style.display = "block";
+      impulsdauerElement.classList.add("fade-in");
+    }, 200);
   }
+});
+
+document.getElementById("frequenz").addEventListener("change", function() {
+  var frequenzElement = document.getElementById("frequenz").parentNode.parentNode;
+  frequenzElement.classList.add("fade-in");
 });
 </script>
 </body>
