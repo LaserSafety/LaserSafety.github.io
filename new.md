@@ -352,6 +352,7 @@ document.getElementById("dropdown").addEventListener("change", function() {
   } else {
     setTimeout(function() {
       document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class from "Frequenz" block
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block"; // Reappear the "Impulsdauer" block
       document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class to "Impulsdauer" block
     }, 200); // Add a slight delay before adding the fade-in class to "Impulsdauer" block
   }
