@@ -11,7 +11,7 @@ permalink: /new.html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
  .grad {
-  background-image: linear-gradient(black 20%, #6b2443);
+  background-image: linear-gradient(black, #6b2443 90%);
 }
 .text {
  color: white;
