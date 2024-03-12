@@ -59,28 +59,16 @@ permalink: /new.html
     right: 0;
   }
 }
-
-/* Add fade-out and fade-in classes */
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.4s ease-in;
-}
-
-/* Add fade-out-frequenz class */
-.fade-out-frequenz {
-  opacity: 0;
-  transition: opacity 0.4s ease-out 0.2s; /* Added a delay of 0.2 seconds */
-}
-
-.fade-in-frequenz {
-  opacity: 1;
-  transition: opacity 0.4s ease-in;
-}
+    .fadingElement {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+    .fade-in {
+      opacity: 1;
+    }
 
 input[type=text] {
   width: 20%;
@@ -188,7 +176,7 @@ function closeSettingsMenu() {
     <h3>Betriebsart</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
-    <select id="dropdown">
+    <select id="betriebsart">
       <option value="D">Dauerstrahl</option>
       <option value="R">Option 2</option>
       <option value="I">Option 3</option>
@@ -198,7 +186,7 @@ function closeSettingsMenu() {
  </div>
 
  <div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
+  <div class="w3-card w3-container" style="min-height:460px" id="Frequenz">
     <h3>Frequenz</h3><br>
     <i class="fa fa-clock-o w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Frequenz</p>
@@ -207,11 +195,11 @@ function closeSettingsMenu() {
 </div>
 
 <div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-    <h3>Impulsdauer</h3><br>
+  <div class="w3-card w3-container" style="min-height:460px" id="Pulsdauer">
+    <h3>Pulsdauer</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-    <p>Eingabe Impulsdauer</p>
-    <p><b>t</b> = <input type="text" id="impulsdauer"> in <b>s</b></p>
+    <p>Eingabe Pulsdauer</p>
+    <p><b>t</b> = <input type="text" id="pulsdauer"> in <b>s</b></p>
   </div>
  </div>
 </div>
@@ -325,26 +313,29 @@ function move() {
   }
 }
 
-document.getElementById("dropdown").addEventListener("change", function() {
-  var dropdownValue = this.value;
-  if (dropdownValue === "D") {
-    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
-    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out-frequenz");
-    setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    }, 400); // Wait for 0.4 seconds before hiding the "Impulsdauer" and "Frequenz" input blocks
-  } else {
-    document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
-    document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz");
-    setTimeout(function() {
-      document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in");
-      document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-in-frequenz");
-      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block"; // Set display to "block" before fade-in
-      document.getElementById("frequenz").parentNode.parentNode.style.display = "block"; // Set display to "block" before fade-in
-    }, 10); // Add a short delay before adding the fade-in classes to ensure the fade-out transition is triggered
-  }
-});
+    const Betriebsart = document.getElementById('betriebsart');
+    const Frequenz = document.getElementById('Frequenz');
+    const Pulsdauer = document.getElementById('Pulsdauer');
+
+    betriebsart.addEventListener('change', function() {
+      if (betriebsart.value === 'D') {
+        // Fade out first element, then fade out second element after a delay
+        Pulsdauer.classList.add('fade-out');
+        Pulsdauer.classList.remove('fade-in');
+        setTimeout(() => {
+          Frequenz.classList.add('fade-out');
+          Frequenz.classList.remove('fade-in');
+        }, 500); // Delay after first element fades out
+      } else {
+        // Fade in second element, then fade in first element after a delay
+          Frequenz.classList.remove('fade-out');
+          Frequenz.classList.add('fade-in');
+        setTimeout(() => {
+          Pulsdauer.classList.remove('fade-out');
+          Pulsdauer.classList.add('fade-in');
+        }, 500); // Delay before first element fades in
+      }
+    });
 </script>
 
 
