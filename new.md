@@ -62,12 +62,12 @@ permalink: /new.html
 
 .fade-out {
   opacity: 0;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.4s ease-out;
 }
 
 .fade-out-frequenz {
   opacity: 0;
-  transition: opacity 0.2s ease-out 0.2s; 
+  transition: opacity 0.4s ease-out 0.2s; 
 }
 
 </style>
