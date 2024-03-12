@@ -21,7 +21,29 @@ permalink: /new.html
   transition: 0.5s;
   z-index: 2; /* Adjusted z-index */
 }
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
 
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 .settings-menu a {
   text-decoration: none;
   font-size: 25px;
@@ -80,7 +102,9 @@ input[type=number] {
 </style>
 </head>
 <body>
-
+<div id="navbar">
+  <img src"wappen.png" width="50" height="50"
+</div>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
