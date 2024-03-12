@@ -10,8 +10,12 @@ permalink: /new.html
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
-  .grad {
-  background-image: linear-gradient(black, 20%, #6b2443);
+ .grad {
+  background-image: linear-gradient(black, 40%, #6b2443);
+}
+.text {
+ color: white;
+}
 }
 .settings-menu {
   display: block;
@@ -136,7 +140,7 @@ input[type=number] {
 <header class="w3-container grad w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
   <i onclick="w3_open_r()" class="fa fa-cog w3-xlarge w3-button w3-theme settings-button"></i>
-  <div class="w3-center">
+  <div class="w3-center text">
     <h4>test</h4>
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
