@@ -28,6 +28,7 @@ permalink: /new.html
   width: 100%;
   display: block;
   transition: top 0.3s;
+  padding: 5px 10px;
 }
 
 #navbar a {
