@@ -178,9 +178,9 @@ function closeSettingsMenu() {
     <p>Select an option:</p>
     <select id="betriebsart">
       <option value="D">Dauerstrahl</option>
-      <option value="R">Option 2</option>
-      <option value="I">Option 3</option>
-      <option value="M">Option 4</option>
+      <option value="I">Impuls</option>
+      <option value="R">Riesenimpuls</option>
+      <option value="M">Modengekoppelt</option>
     </select>
   </div>
  </div>
