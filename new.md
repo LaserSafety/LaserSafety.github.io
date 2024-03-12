@@ -298,7 +298,6 @@ function closeSettingsMenu() {
     <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
-  <p>Remember to check out our  <a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
 </footer>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
