@@ -160,6 +160,25 @@ function closeSettingsMenu() {
     </div>
   </div>
 
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+    <h3>Laserklasse</h3><br>
+    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>Select an option:</p>
+    <select id="dropdown">
+      <option value="unbekannt">Unbekannt</option>
+      <option value="1">1</option>
+      <option value="1M">1M</option>
+      <option value="2">2</option>
+      <option value="2">2M</option>
+      <option value="3A">3A</option>
+      <option value="3B">3B</option>
+      <option value="3R">3R</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+ </div>
+
   <div class="w3-third">
     <div class="w3-card w3-container" style="min-height:460px">
       <h3>Wellenlaenge</h3><br>
@@ -335,8 +354,6 @@ document.getElementById("dropdown").addEventListener("change", function() {
       document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out-frequenz"); // Remove fade-out-frequenz class from "Frequenz" block
       document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-in"); // Add fade-in class to "Impulsdauer" block
     }, 200); // Add a slight delay before adding the fade-in class to "Impulsdauer" block
-    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
-    document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
   }
 });
 </script>
