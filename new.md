@@ -65,15 +65,18 @@ permalink: /new.html
   transition: opacity 0.4s ease-out;
 }
 
+/* Add this style */
 .fade-out-frequenz {
   opacity: 0;
-  transition: opacity 0.4s ease-out 0.2s; 
+  transition: opacity 0.4s ease-out 0.2s; /* Added a delay of 0.2 seconds */
 }
 
+/* Add this style for fade-in */
 .fade-in {
   opacity: 1;
   transition: opacity 0.4s ease-in;
 }
+
 </style>
 </head>
 <body>
