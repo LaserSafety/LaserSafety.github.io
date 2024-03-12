@@ -167,6 +167,24 @@ function closeSettingsMenu() {
     </select>
   </div>
  </div>
+
+ <div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+    <h3>Frequenz</h3><br>
+    <i class="fa fa-clock-o w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>Eingabe Frequenz</p>
+    <p><input type="text" id="frequenz"> in <b>Hz</b></p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+    <h3>Impulsdauer</h3><br>
+    <i class="fa fa-hourglass-start w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>Eingabe Impulsdauer</p>
+    <p><input type="text" id="impulsdauer"> in <b>s</b></p>
+  </div>
+ </div>
 </div>
 
 <hr>
