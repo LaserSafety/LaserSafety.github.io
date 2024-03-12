@@ -278,6 +278,15 @@ function closeSettingsMenu() {
 
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
+  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
 // Side navigation
 function w3_open() {
   var x = document.getElementById("mySidebar");
