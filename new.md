@@ -60,6 +60,11 @@ permalink: /new.html
   }
 }
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
 </style>
 </head>
 <body>
@@ -299,14 +304,23 @@ function move() {
 document.getElementById("dropdown").addEventListener("change", function() {
   var dropdownValue = this.value;
   if (dropdownValue === "D") {
-    document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
-    document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
+    document.getElementById("frequenz").parentNode.parentNode.classList.add("fade-out");
+    document.getElementById("impulsdauer").parentNode.parentNode.classList.add("fade-out");
+    setTimeout(function() {
+      document.getElementById("frequenz").parentNode.parentNode.style.display = "none";
+      document.getElementById("impulsdauer").parentNode.parentNode.style.display = "none";
+    }, 400); // Wait for 0.4 seconds before hiding the elements
   } else {
     document.getElementById("frequenz").parentNode.parentNode.style.display = "block";
     document.getElementById("impulsdauer").parentNode.parentNode.style.display = "block";
+    setTimeout(function() {
+      document.getElementById("frequenz").parentNode.parentNode.classList.remove("fade-out");
+      document.getElementById("impulsdauer").parentNode.parentNode.classList.remove("fade-out");
+    }, 10); // Wait for a short duration before removing the fade-out class to ensure the transition is triggered
   }
 });
 </script>
+
 
 </body>
 </html>
