@@ -103,14 +103,21 @@ permalink: /new.html
 input[type=text] {
   width: 20%;
   box-sizing: border-box;
-  border: 2px solid #6b2443;
+  border: 2px solid #8b3a5d;
   border-radius: 4px;
 }
-
+input[type=text]:focus {
+  border: 3px solid #6b2443;
+  border-radius: 4px;
+}
 input[type=number] {
   width: 50px;
   box-sizing: border-box;
-  border: 2px solid #6b2443;
+  border: 2px solid #8b3a5d;
+  border-radius: 4px;
+}
+input[type=number]:focus {
+  border: 3px solid #6b2443;
   border-radius: 4px;
 }
 </style>
