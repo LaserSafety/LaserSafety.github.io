@@ -15,7 +15,10 @@ function calculate() {
     var alphamax, alphamin;
     alphamax=100;
     alphamin=1.5;
-   
+
+// h = (J/m^2) e = (W/m^2)
+
+    
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
     } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
@@ -230,7 +233,7 @@ function calculate() {
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
     // Format result
-    result = result.toFixed(6) + " J&sdot;m<sup>2</sup>";
+    result = result.toFixed(6) + " J/m<sup>2</sup>";
 
     // Display result and formula
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result;
