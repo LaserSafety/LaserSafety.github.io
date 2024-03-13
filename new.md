@@ -107,7 +107,7 @@ input[type=text] {
   border-radius: 4px;
 }
 input[type=text]:focus {
-  border: 3px solid #6b2443;
+  border: 2px solid #6b2443;
   border-radius: 4px;
 }
 input[type=number] {
@@ -117,7 +117,7 @@ input[type=number] {
   border-radius: 4px;
 }
 input[type=number]:focus {
-  border: 3px solid #6b2443;
+  border: 2px solid #6b2443;
   border-radius: 4px;
 }
 </style>
