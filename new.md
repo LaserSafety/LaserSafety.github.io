@@ -153,51 +153,40 @@ input[type=number]:focus {
     <h4>test</h4>
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="calculate()" style="font-weight:900;">Calculate</button>
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">placeholder</button>
     </div>
   </div>
 </header>
 
+<script>
+function openSettings() {
+  document.getElementById("settingsMenu").style.display = "block";
+}
+
+function closeSettingsMenu() {
+  document.getElementById("settingsMenu").style.display = "none";
+}
+</script>
+
 <!-- Modal -->
 <div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-theme-l1"> 
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
-      <h4>Calculation Results</h4>
-    </header>
-    <div class="w3-padding" id="modalContent">
-      <!-- Result content will be added here -->
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-padding">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>Modal footer</p>
+      </footer>
     </div>
-    <footer class="w3-container w3-theme-l1">
-      <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-theme-dark">Close</button>
-    </footer>
-  </div>
 </div>
-<script>
- const Betriebsart = document.getElementById('betriebsart');
- const Frequenz = document.getElementById('Frequenz');
- const Pulsdauer = document.getElementById('Pulsdauer');
 
-   betriebsart.addEventListener('change', function() {
-      if (betriebsart.value === 'D') {
-        // Fade out first element, then fade out second element after a delay
-        Pulsdauer.classList.add('fade-out');
-        Pulsdauer.classList.remove('fade-in');
-        setTimeout(() => {
-          Frequenz.classList.add('fade-out');
-          Frequenz.classList.remove('fade-in');
-        }, 500); // Delay after first element fades out
-      } else {
-        // Fade in second element, then fade in first element after a delay
-          Frequenz.classList.remove('fade-out');
-          Frequenz.classList.add('fade-in');
-        setTimeout(() => {
-          Pulsdauer.classList.remove('fade-out');
-          Pulsdauer.classList.add('fade-in');
-        }, 500); // Delay before first element fades in
-      }
-    });
-</script>
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
@@ -364,9 +353,106 @@ input[type=number]:focus {
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-<!-- Scripts -->
-<script src="main-logic.js"></script>
-<script src="calculator.js"></script>
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100%";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Settings
+function w3_open_r() {
+  var x = document.getElementById("settingsMenu");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close_r() {
+  document.getElementById("settingsMenu").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+    const Betriebsart = document.getElementById('betriebsart');
+    const Frequenz = document.getElementById('Frequenz');
+    const Pulsdauer = document.getElementById('Pulsdauer');
+
+    betriebsart.addEventListener('change', function() {
+      if (betriebsart.value === 'D') {
+        // Fade out first element, then fade out second element after a delay
+        Pulsdauer.classList.add('fade-out');
+        Pulsdauer.classList.remove('fade-in');
+        setTimeout(() => {
+          Frequenz.classList.add('fade-out');
+          Frequenz.classList.remove('fade-in');
+        }, 500); // Delay after first element fades out
+      } else {
+        // Fade in second element, then fade in first element after a delay
+          Frequenz.classList.remove('fade-out');
+          Frequenz.classList.add('fade-in');
+        setTimeout(() => {
+          Pulsdauer.classList.remove('fade-out');
+          Pulsdauer.classList.add('fade-in');
+        }, 500); // Delay before first element fades in
+      }
+    });
+</script>
+
 
 </body>
 </html>
