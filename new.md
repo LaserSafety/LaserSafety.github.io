@@ -153,9 +153,7 @@ input[type=number]:focus {
     <h4>test</h4>
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
-     <form>
       <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">placeholder</button>
-     </form>
     </div>
   </div>
 </header>
@@ -176,12 +174,10 @@ function closeSettingsMenu() {
       <header class="w3-container w3-theme-l1"> 
         <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">×</span>
-        <h4>Oh snap! We just showed you a modal..</h4>
-        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+        <h4>Results</h4>
+        <h5> test <i class="fa fa-smile-o"></i></h5>
       </header>
-      <div class="w3-padding">
-        <p>Cool huh? Ok, enough teasing around..</p>
-        <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      <div class="w3-padding" id="result">
       </div>
       <footer class="w3-container w3-theme-l1">
         <p>Modal footer</p>
