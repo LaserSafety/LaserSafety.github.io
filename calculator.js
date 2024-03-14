@@ -184,7 +184,19 @@ function calculate() {
     // 1E-9 TO 1E-7
     
     if (expositionsdauer >= 1E-9 && expositionsdauer < 1E-7) {
-        if (wellenlaenge >= 400 && wellenlaenge <= 700) {
+        if (wellenlaenge >= 100 && wellenlaenge <= 302) {
+            result = (3E10);
+            formula = "E = 3 * 10<sup>10</sup>";
+            optischer_bereich = "UV - C";
+        } else if (wellenlaenge >= 303 && wellenlaenge <= 314) {
+            result = (3E10);
+            formula = "E = 3 * 10<sup>10</sup>";
+            optischer_bereich = "UV - B";
+        } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
+            result = (3E10);
+            formula = "E = 3 * 10<sup>10</sup>";
+            optischer_bereich = "UV - A";
+        } else if (wellenlaenge > 400 && wellenlaenge <= 700) {
             result = (5E-3) * C_e;
             formula = "H = (5E-3) * C<sub>e</sub>";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
@@ -304,7 +316,7 @@ function calculate() {
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
 
-    // Format result
+   // Format result
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
@@ -318,14 +330,21 @@ if (coefficient >= 0.1 && coefficient < 1) {
     exponent--;
 }
 
-result = coefficient.toFixed(6) + " " + "&sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
+result = coefficient.toFixed(6) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
 
+var resultH, resultE;
+
+// Calculate result for H or E based on the formula
 if (formula.includes("E =")) {
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+    resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
+    resultH = resultE * expositionsdauer; // Calculate H if the formula is E = xyz
 } else if (formula.includes("H =")) {
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+    resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
+    resultE = resultH / expositionsdauer; // Calculate E if the formula is H = xyz
 } else {
     document.getElementById('result').innerHTML = "Invalid formula";
+    return;
 }
-}
- 
+
+// Display result and formula with appropriate units
+document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
