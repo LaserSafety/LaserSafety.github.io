@@ -153,11 +153,11 @@ input[type=number]:focus {
     <h4>test</h4>
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="calculate()" style="font-weight:900;">placeholder</button>
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="calculate()" style="font-weight:900;">Calculate</button>
     </div>
   </div>
 </header>
-
+<script src="main-logic.js"></script>
 <!-- Modal -->
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-top">
@@ -342,7 +342,6 @@ input[type=number]:focus {
 </footer>
 <!-- Scripts -->
 <script src="calculator.js"></script>
-<script src="main-logic.js"></script>
 
 </body>
 </html>
