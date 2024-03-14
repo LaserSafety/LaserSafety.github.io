@@ -1,4 +1,7 @@
 function calculate() {
+
+    document.getElementById('id01').style.display='block';
+    
     var expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
@@ -377,8 +380,6 @@ if (formula.includes("E =")) {
 }
 
 // Display result and formula with appropriate units
-document.getElementById('modalContent').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
-
-document.getElementById('id01').style.display='block'; 
+document.getElementById('modalContent').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich; 
 
 }  
