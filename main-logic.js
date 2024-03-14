@@ -1,3 +1,26 @@
+    const Betriebsart = document.getElementById('betriebsart');
+    const Frequenz = document.getElementById('Frequenz');
+    const Pulsdauer = document.getElementById('Pulsdauer');
+
+    betriebsart.addEventListener('change', function() {
+      if (betriebsart.value === 'D') {
+        // Fade out first element, then fade out second element after a delay
+        Pulsdauer.classList.add('fade-out');
+        Pulsdauer.classList.remove('fade-in');
+        setTimeout(() => {
+          Frequenz.classList.add('fade-out');
+          Frequenz.classList.remove('fade-in');
+        }, 500); // Delay after first element fades out
+      } else {
+        // Fade in second element, then fade in first element after a delay
+          Frequenz.classList.remove('fade-out');
+          Frequenz.classList.add('fade-in');
+        setTimeout(() => {
+          Pulsdauer.classList.remove('fade-out');
+          Pulsdauer.classList.add('fade-in');
+        }, 500); // Delay before first element fades in
+      }
+    }
 function openSettings() {
   document.getElementById("settingsMenu").style.display = "block";
 }
@@ -5,6 +28,7 @@ function openSettings() {
 function closeSettingsMenu() {
   document.getElementById("settingsMenu").style.display = "none";
 }
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -78,26 +102,3 @@ function move() {
   }
 }
 
-    const Betriebsart = document.getElementById('betriebsart');
-    const Frequenz = document.getElementById('Frequenz');
-    const Pulsdauer = document.getElementById('Pulsdauer');
-
-    betriebsart.addEventListener('change', function() {
-      if (betriebsart.value === 'D') {
-        // Fade out first element, then fade out second element after a delay
-        Pulsdauer.classList.add('fade-out');
-        Pulsdauer.classList.remove('fade-in');
-        setTimeout(() => {
-          Frequenz.classList.add('fade-out');
-          Frequenz.classList.remove('fade-in');
-        }, 500); // Delay after first element fades out
-      } else {
-        // Fade in second element, then fade in first element after a delay
-          Frequenz.classList.remove('fade-out');
-          Frequenz.classList.add('fade-in');
-        setTimeout(() => {
-          Pulsdauer.classList.remove('fade-out');
-          Pulsdauer.classList.add('fade-in');
-        }, 500); // Delay before first element fades in
-      }
-    }
