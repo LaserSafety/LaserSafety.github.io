@@ -8,7 +8,6 @@ function calculate() {
     
     var result;
     var formula;
-
     var optischer_bereich;
     
     // Calculate C variables based on wellenlaenge
