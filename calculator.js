@@ -320,10 +320,12 @@ if (coefficient >= 0.1 && coefficient < 1) {
 
 result = coefficient.toFixed(6) + " * 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
 
-// Display result and formula
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup>" + "<br>Optischer Bereich: " + optischer_bereich;
-
-
-    // Display result and formula
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + "<br>Optischer Bereich: " + optischer_bereich;
+if (formula.includes("E =")) {
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+} else if (formula.includes("H =")) {
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+} else {
+    document.getElementById('result').innerHTML = "Invalid formula";
 }
+}
+ 
