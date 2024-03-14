@@ -372,7 +372,7 @@ if (formula.includes("E =")) {
     resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
     resultE = resultH / expositionsdauer; // Calculate E if the formula is H = xyz
 } else {
-    document.getElementById('modalContent').innerHTML = "Invalid formula";
+    document.getElementById('result').innerHTML = "Invalid formula";
     return;
 }
 
