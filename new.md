@@ -189,7 +189,7 @@ function closeSettingsMenu() {
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
-    <div class="w3-card w3-container" style="min-height:460px">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
       <h3>Expositionsdauer</h3><br>
       <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <p>Eingabe Expositionsdauer 
@@ -199,7 +199,7 @@ function closeSettingsMenu() {
   </div>
 
   <div class="w3-third">
-    <div class="w3-card w3-container" style="min-height:460px">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
       <h3>Wellenlaenge</h3><br>
       <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <p>Eingabe Wellenlaenge</p>
@@ -208,7 +208,7 @@ function closeSettingsMenu() {
   </div>
 
   <div class="w3-third">
-    <div class="w3-card w3-container" style="min-height:460px">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
       <h3>&alpha;</h3><br>
       <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <p>Eingabe <b>&alpha;</b></p>
@@ -217,7 +217,7 @@ function closeSettingsMenu() {
   </div>
 
 <div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
+  <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
     <h3>Betriebsart</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
@@ -231,7 +231,7 @@ function closeSettingsMenu() {
  </div>
 
  <div class="w3-third">
-  <div class="w3-card w3-container fadingElement" style="min-height:460px" id="Frequenz">
+  <div class="w3-card w3-container fadingElement w3-animate-bottom" style="min-height:460px" id="Frequenz">
     <h3>Frequenz</h3><br>
     <i class="fa fa-clock-o w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Frequenz</p>
@@ -240,13 +240,58 @@ function closeSettingsMenu() {
 </div>
 
 <div class="w3-third">
-  <div class="w3-card w3-container fadingElement" style="min-height:460px" id="Pulsdauer">
+  <div class="w3-card w3-container fadingElement w3-animate-bottom" style="min-height:460px" id="Pulsdauer">
     <h3>Pulsdauer</h3><br>
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Eingabe Pulsdauer</p>
     <p><b>t</b> = <input type="text" id="pulsdauer"> in <b>s</b></p>
   </div>
  </div>
+
+  <div class="w3-third">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
+      <h3>Austrittsdurchmesser</h3><br>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe Austrittsdurchmesser</p>
+      <p><b>a</b> = <input type="text" id="austrittsdurchmesser"> in <b>mm</b></p>
+    </div>
+  </div>
+
+   <div class="w3-third">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
+      <h3>&phi;</h3><br>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe &phi;</p>
+      <p><b>&phi;</b> = <input type="text" id="&phi;"> in <b>mrad</b></p>
+    </div>
+  </div>
+
+   <div class="w3-third">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
+      <h3>Ausgangsenergie</h3><br>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe Ausgangsenergie</p>
+      <p><b>Q</b> = <input type="text" id="&phi;"> in <b>J</b></p>
+    </div>
+  </div>
+
+   <div class="w3-third">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
+      <h3>Ausgangsleistung</h3><br>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe Ausgangsleistung</p>
+      <p><b>P</b> = <input type="text" id="ausgangsleistung"> in <b>W</b></p>
+    </div>
+  </div>
+
+   <div class="w3-third">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
+      <h3>Daempfungsgrad</h3><br>
+      <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe Ausgangsleistung</p>
+      <p><b>g</b> = <input type="text" id="daempfungsgrad"> in <b>dB</b></p>
+    </div>
+  </div>
 </div>
 
 <!-- <hr>
