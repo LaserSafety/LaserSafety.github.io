@@ -158,16 +158,6 @@ input[type=number]:focus {
   </div>
 </header>
 
-<script>
-function openSettings() {
-  document.getElementById("settingsMenu").style.display = "block";
-}
-
-function closeSettingsMenu() {
-  document.getElementById("settingsMenu").style.display = "none";
-}
-</script>
-
 <!-- Modal -->
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-top">
@@ -183,6 +173,8 @@ function closeSettingsMenu() {
     </footer>
   </div>
 </div>
+
+<script src="main-logic.js"></script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
