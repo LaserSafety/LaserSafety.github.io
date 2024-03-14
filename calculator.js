@@ -157,7 +157,7 @@ function calculate() {
             formula = "E = 10<sup>11</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else {
-            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            document.getElementById('modalContent').innerHTML = "Invalid wavelength value";
             return;
         }
     }
@@ -206,7 +206,7 @@ function calculate() {
             formula = "E = 10<sup>11</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else {
-            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            document.getElementById('modalContent').innerHTML = "Invalid wavelength value";
             return;
         }
     }
@@ -248,7 +248,7 @@ function calculate() {
             result = 100;
             formula = "H = 100";
         } else {
-            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            document.getElementById('modalContent').innerHTML = "Invalid wavelength value";
             return;
         }
     }
@@ -278,7 +278,7 @@ function calculate() {
             result = 5.6 * Math.pow(10, 3) * Math.pow(expositionsdauer, 0.25);
             formula = "H = 5.6E3 * t<sup>0.25</sup>";
         } else {
-            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            document.getElementById('modalContent').innerHTML = "Invalid wavelength value";
             return;
         }
     }
@@ -308,7 +308,7 @@ function calculate() {
             result = 5.6 * Math.pow(10, 3) * Math.pow(expositionsdauer, 0.25);
             formula = "H = 5.6E3 * t<sup>0.25</sup>";
         } else {
-            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            document.getElementById('modalContent').innerHTML = "Invalid wavelength value";
             return;
         }
     }
@@ -338,7 +338,7 @@ function calculate() {
             result = 5.6 * Math.pow(10, 3) * Math.pow(expositionsdauer, 0.25);
             formula = "H = 5.6E3 * t<sup>0.25</sup>";
         } else {
-            document.getElementById('result').innerHTML = "Invalid wavelength value";
+            document.getElementById('modalContent').innerHTML = "Invalid wavelength value";
             return;
         }
     }
@@ -372,7 +372,7 @@ if (formula.includes("E =")) {
     resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
     resultE = resultH / expositionsdauer; // Calculate E if the formula is H = xyz
 } else {
-    document.getElementById('result').innerHTML = "Invalid formula";
+    document.getElementById('modalContent').innerHTML = "Invalid formula";
     return;
 }
 
