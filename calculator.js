@@ -378,4 +378,4 @@ if (formula.includes("E =")) {
 
 // Display result and formula with appropriate units
 document.getElementById('modalContent').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
-    
+}  
