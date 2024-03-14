@@ -162,14 +162,14 @@ input[type=number]:focus {
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-top">
     <header class="w3-container w3-theme-l1"> 
-      <span onclick="closeModal()" class="w3-button w3-display-topright">×</span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
       <h4>Calculation Results</h4>
     </header>
     <div class="w3-padding" id="modalContent">
       <!-- Result content will be added here -->
     </div>
     <footer class="w3-container w3-theme-l1">
-      <button onclick="closeModal()" class="w3-button w3-theme-dark">Close</button>
+      <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-theme-dark">Close</button>
     </footer>
   </div>
 </div>
