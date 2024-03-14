@@ -304,7 +304,7 @@ function calculate() {
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
 
-    // Format result
+// Format result
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
@@ -320,10 +320,10 @@ if (coefficient >= 0.1 && coefficient < 1) {
 
 result = coefficient.toFixed(6) + " * 10^" + exponent; // Format in x * 10^y notation
 
-// Display result and formula
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup>" + "<br>Optischer Bereich: " + optischer_bereich;
-
-
-    // Display result and formula
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + "<br>Optischer Bereich: " + optischer_bereich;
+// Display result and formula with appropriate units
+if (formula.includes("E =")) {
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+} else if (formula.includes("H =")) {
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
 }
+
