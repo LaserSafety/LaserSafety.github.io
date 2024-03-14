@@ -1,7 +1,3 @@
-function closeModal() {
-  document.getElementById('id01').style.display='none'; 
-}
-
 function openSettings() {
   document.getElementById("settingsMenu").style.display = "block";
 }
