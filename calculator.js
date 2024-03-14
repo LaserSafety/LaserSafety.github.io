@@ -318,7 +318,7 @@ if (coefficient >= 0.1 && coefficient < 1) {
     exponent--;
 }
 
-result = coefficient.toFixed(6) + " * 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
+result = coefficient.toFixed(6) + " * 10^" + exponent; // Format in x * 10^y notation
 
 if (formula.includes("E =")) {
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
