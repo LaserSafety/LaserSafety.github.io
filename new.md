@@ -341,6 +341,7 @@ input[type=number]:focus {
   </div>
 </footer>
 <!-- Scripts -->
+<script src="main-logic.js"></script>
 <script src="calculator.js"></script>
 
 </body>
