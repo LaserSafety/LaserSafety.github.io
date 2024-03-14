@@ -11,14 +11,46 @@ function calculate() {
     
     // Calculate C variables based on wellenlaenge
     var C_a, C_b, C_c, C_e;
-
+    // Calculate T vairables basen on wellenlaenge
+    var T_1, T_2, T_min;
     var alphamax, alphamin;
     alphamax=100;
     alphamin=1.5;
 
 // h = (J/m^2) e = (W/m^2)
+    if (wellenlaenge < 450) {
+        T_1 = 10;
+    }  else if (wellenlaenge >= 450 && wellenlaenge <= 500) {
+        T_1 = Math.pow(10, (0.02 * (wellenlaenge - 450));
+    } else if (wellenlaenge > 500) {
+        T_1 = 100;
+    }
 
-    
+    if (alpha <= 1.5) {
+        T_2 = 10;
+    } else if (alpha > 1.5 && alpha <= 100) {
+        T_2 = Math.pow(10, ((alpha - 1.5)/98.5);
+    } else if (alpha > 100) {
+        T_2 = 100;
+    }
+
+    if (wellenlaenge > 315 && wellenlaenge <= 400) {
+        T_min = Math.pow(10, -9);
+    }  else if (wellenlaenge > 400 && wellenlaenge <= 1050) {
+        T_min = 1.8 * Math.pow(10, -5);
+    }  else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
+        T_min = 5 * Math.pow(10, -5);
+    }  else if (wellenlaenge > 1400 && wellenlaenge <= 1500) {
+        T_min = Math.pow(10, -4);
+    }  else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
+        T_min = 10;
+    }  else if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
+        T_min = 0.001;
+    }  else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
+        T_min = Math.pow(10, -7);
+    }
+        
+            
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
     } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
