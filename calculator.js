@@ -113,19 +113,19 @@ function calculate() {
         } else if (wellenlaenge > 1400 && wellenlaenge <= 1500) {
             result = Math.pow(10, 12);
             formula = "E = 10<sup>12</sup>";
-            optischer_bereich = ">IR - B & IR - C";
+            optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
             result = Math.pow(10, 13);
             formula = "E = 10<sup>13</sup>";
-            optischer_bereich = ">IR - B & IR - C";
+            optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
             result = Math.pow(10, 12);
             formula = "E = 10<sup>12</sup>";
-            optischer_bereich = ">IR - B & IR - C";
+            optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
             result = Math.pow(10, 11);
             formula = "E = 10<sup>11</sup>";
-            optischer_bereich = ">IR - B & IR - C";
+            optischer_bereich = "IR - B & IR - C";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
