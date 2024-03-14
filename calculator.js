@@ -381,9 +381,4 @@ document.getElementById('modalContent').innerHTML = "Formula: " + formula + "<br
     
   // Display the modal
     document.getElementById('id01').style.display='block';
-  
-  // Function to close the modal
-  function closeModal() {
-    document.getElementById('id01').style.display='none';
-  }
 }
