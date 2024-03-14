@@ -100,4 +100,4 @@ function move() {
           Pulsdauer.classList.add('fade-in');
         }, 500); // Delay before first element fades in
       }
-    });
+    }
