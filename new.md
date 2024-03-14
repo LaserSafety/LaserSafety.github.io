@@ -157,7 +157,7 @@ input[type=number]:focus {
     </div>
   </div>
 </header>
-<script src="main-logic.js"></script>
+
 <!-- Modal -->
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-top">
@@ -173,7 +173,31 @@ input[type=number]:focus {
     </footer>
   </div>
 </div>
+<script>
+ const Betriebsart = document.getElementById('betriebsart');
+ const Frequenz = document.getElementById('Frequenz');
+ const Pulsdauer = document.getElementById('Pulsdauer');
 
+   betriebsart.addEventListener('change', function() {
+      if (betriebsart.value === 'D') {
+        // Fade out first element, then fade out second element after a delay
+        Pulsdauer.classList.add('fade-out');
+        Pulsdauer.classList.remove('fade-in');
+        setTimeout(() => {
+          Frequenz.classList.add('fade-out');
+          Frequenz.classList.remove('fade-in');
+        }, 500); // Delay after first element fades out
+      } else {
+        // Fade in second element, then fade in first element after a delay
+          Frequenz.classList.remove('fade-out');
+          Frequenz.classList.add('fade-in');
+        setTimeout(() => {
+          Pulsdauer.classList.remove('fade-out');
+          Pulsdauer.classList.add('fade-in');
+        }, 500); // Delay before first element fades in
+      }
+    });
+</script>
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
