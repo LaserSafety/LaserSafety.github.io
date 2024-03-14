@@ -308,7 +308,7 @@ function calculate() {
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
-var parts = resultString.split("e");
+var parts = resultString.split("E");
 var coefficient = parseFloat(parts[0]);
 var exponent = parseInt(parts[1]);
 
