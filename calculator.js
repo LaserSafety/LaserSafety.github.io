@@ -304,7 +304,7 @@ function calculate() {
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
 
-// Format result
+// Format result// Format result
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
@@ -325,4 +325,6 @@ if (formula.includes("E =")) {
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
 } else if (formula.includes("H =")) {
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+} else {
+    document.getElementById('result').innerHTML = "Invalid formula";
 }
