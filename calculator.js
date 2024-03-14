@@ -3,9 +3,11 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
+    var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
+    var frequenz = parseFloat(document.getElementById('frequenz').value);
     
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
-    
+
     var result;
     var formula;
     var optischer_bereich;
@@ -17,7 +19,12 @@ function calculate() {
     var alphamax, alphamin;
     alphamax=100;
     alphamin=1.5;
-
+    
+    var T_H = impulsdauer;
+    var T;
+    var N;
+    var C_p;
+        
 // h = (J/m^2) e = (W/m^2)
     if (wellenlaenge < 450) {
         T_1 = 10;
@@ -50,7 +57,22 @@ function calculate() {
     }  else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
         T_min = Math.pow(10, -7);
     }
-        
+
+    if (wellenlaenge > 315 && wellenlaenge <= 400) {
+        T = 30000;
+    } else if (wellenlaenge > 400 && wellenlaenge <= 1400) {
+        T = T_2;
+    } else if (wellenlaenge > 1400) {
+        T = 10;
+    }
+
+    if (T_H < T_min) {
+        N = T/T_min;
+    } else {
+        N = frequenz * T;
+    }
+
+    C_p = Math.pow(N, -0.25);
             
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
