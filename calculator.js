@@ -308,7 +308,7 @@ function calculate() {
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
-var parts = resultString.split("E");
+var parts = resultString.split("e");
 var coefficient = parseFloat(parts[0]);
 var exponent = parseInt(parts[1]);
 
@@ -326,4 +326,3 @@ if (formula.includes("E =")) {
 } else if (formula.includes("H =")) {
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result + " J/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
 }
-
