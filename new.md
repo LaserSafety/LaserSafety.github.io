@@ -154,7 +154,7 @@ input[type=number]:focus {
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
      <form>
-      <input type="submit" onclick="calculate()" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;" value="calculate">
+      <input type="submit" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" onclick="calculate()" style="font-weight:900;" value="calculate">
      </form>
     </div>
   </div>
@@ -177,7 +177,7 @@ function closeSettingsMenu() {
         <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-button w3-display-topright">×</span>
         <h4>Results</h4>
-        <h5> test <i class="fa fa-smile-o"></i></h5>
+        <h5> test </h5>
       </header>
       <div class="w3-padding" id="result">
       </div>
