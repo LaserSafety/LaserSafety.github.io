@@ -114,11 +114,11 @@ header {
 /* Trapezoid */
 .header-trapezoid {
   width: 20%; /* Adjust width as needed */
-  /*background-color: black; */
+  /*background-color: #6b2443; */
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 102px solid black;
+  border-top: 102px solid #6b2443;
   border-left: 50px solid transparent;
 }
 <!-- #4cbaef -->
