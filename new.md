@@ -470,6 +470,6 @@ function move() {
       }
     });
 </script>
-
+<script src="test.js"></script>
 </body>
 </html>
