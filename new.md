@@ -190,13 +190,12 @@ function closeSettingsMenu() {
 <script>
     function openModal() {
         // Call calculate function and update result element
-     calculate();
         document.getElementById('id01').style.display='block';
     }
-    import { C_a, C_b, C_c, C_e } from './c_n.js';
-    import { resultE, resultH, result, formula, optischer_bereich } from './expositionsdauer.js';
-     function calculate() {
-      document.getElementById('result').innerHTML="Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+    test();
+    function test() {
+     var result = test;
+     document.getElementById('test').innerHTML = "Result: " + result;
     }
 </script>
 
@@ -364,6 +363,7 @@ function closeSettingsMenu() {
     <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
     <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
+    <p id="test"></p>
   </div>
 </footer>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
@@ -440,7 +440,6 @@ function move() {
     }
   }
 }
-
     const Betriebsart = document.getElementById('betriebsart');
     const Frequenz = document.getElementById('Frequenz');
     const Pulsdauer = document.getElementById('Pulsdauer');
@@ -463,7 +462,7 @@ function move() {
           Pulsdauer.classList.add('fade-in');
         }, 500); // Delay before first element fades in
       }
-    });
+    }
 </script>
 <script src="test.js"></script>
 </body>
