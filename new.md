@@ -204,13 +204,10 @@ function closeSettingsMenu() {
     var Q = parseFloat(document.getElementById('ausgangsenergie').value);
     var P = parseFloat(document.getElementById('ausgangsleistung').value);
     var g = parseFloat(document.getElementById('daempfungsgrad').value);
-    
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
-
     var result;
     var formula;
     var optischer_bereich;
-    
     // Calculate C variables based on wellenlaenge
     var C_a, C_b, C_c, C_e;
     // Calculate T vairables basen on wellenlaenge
@@ -218,15 +215,12 @@ function closeSettingsMenu() {
     var alphamax, alphamin;
     alphamax=100;
     alphamin=1.5;
-    
     var Daempfung_G = Math.pow(10, g/10);
     var T_H = impulsdauer;
     var T;
     var N;
     var C_p;
     var tau_lambda = 1/Daempfung_G;
-
-    
 // h = (J/m^2) e = (W/m^2)
     if (wellenlaenge < 450) {
         T_1 = 10;
@@ -235,7 +229,6 @@ function closeSettingsMenu() {
     } else if (wellenlaenge > 500) {
         T_1 = 100;
     }
-
     if (alpha <= 1.5) {
         T_2 = 10;
     } else if (alpha > 1.5 && alpha <= 100) {
@@ -243,7 +236,6 @@ function closeSettingsMenu() {
     } else if (alpha > 100) {
         T_2 = 100;
     }
-
     if (wellenlaenge > 315 && wellenlaenge <= 400) {
         T_min = Math.pow(10, -9);
     }  else if (wellenlaenge > 400 && wellenlaenge <= 1050) {
@@ -259,7 +251,6 @@ function closeSettingsMenu() {
     }  else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
         T_min = Math.pow(10, -7);
     }
-
     if (wellenlaenge > 315 && wellenlaenge <= 400) {
         T = 30000;
     } else if (wellenlaenge > 400 && wellenlaenge <= 1400) {
@@ -267,15 +258,12 @@ function closeSettingsMenu() {
     } else if (wellenlaenge > 1400) {
         T = 10;
     }
-
     if (T_H < T_min) {
         N = T/T_min;
     } else {
         N = frequenz * T;
     }
-
-    C_p = Math.pow(N, -0.25);
-            
+    C_p = Math.pow(N, -0.25);        
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
     } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
@@ -283,13 +271,11 @@ function closeSettingsMenu() {
     } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
         C_a = 5;
     }
-    
     if (wellenlaenge >= 400 && wellenlaenge <= 450) {
         C_b = 1;
     } else if (wellenlaenge > 450 && wellenlaenge <= 600) {
         C_b = Math.pow(10, 0.02 * (wellenlaenge-600));
     }
-    
     if (wellenlaenge >= 700 && wellenlaenge <= 1150) {
         C_c = 1;
     } else if (wellenlaenge > 1150 && wellenlaenge <= 1200) {
@@ -297,7 +283,6 @@ function closeSettingsMenu() {
     } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
         C_c = 8;
     }
-    
     if (alpha >= 0 && alpha <= 1.5) {
         C_e = 1;
     } else if (alpha > 1.5 && alpha <= 100) {
@@ -305,10 +290,8 @@ function closeSettingsMenu() {
     } else if (alpha > 100 && alpha <= 1000) {
         C_e = alphamax / alphamin;
     }
-
-    // 1E-13 TO 1E-11
-    
-    // Choose the appropriate formula based on expositionsdauer and wellenlaenge
+// 1E-13 TO 1E-11
+   // Choose the appropriate formula based on expositionsdauer and wellenlaenge
     if (expositionsdauer >= 1E-13 && expositionsdauer < 1E-11) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
@@ -355,9 +338,7 @@ function closeSettingsMenu() {
             return;
         }
     }
-    
     // 1E-11 TO 1E-9
-    
     if (expositionsdauer >= 1E-11 && expositionsdauer < 1E-9) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
@@ -404,9 +385,7 @@ function closeSettingsMenu() {
             return;
         }
     }
-    
     // 1E-9 TO 1E-7
-    
     if (expositionsdauer >= 1E-9 && expositionsdauer < 1E-7) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
@@ -446,9 +425,7 @@ function closeSettingsMenu() {
             return;
         }
     }
-    
     // 1.8E-5 TO 5E-5
-
     if (expositionsdauer >= 1.8E-5 && expositionsdauer < 5E-5) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
@@ -476,9 +453,7 @@ function closeSettingsMenu() {
             return;
         }
     }
-    
     // 5E-5 TO 1E-3
-
     if (expositionsdauer >= 5E-5 && expositionsdauer < 1E-3) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
@@ -506,9 +481,7 @@ function closeSettingsMenu() {
             return;
         }
     }
-    
     // 1E-3 TO 10
-
     if (expositionsdauer >= 1E-3 && expositionsdauer < 10 ) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
@@ -536,28 +509,21 @@ function closeSettingsMenu() {
             return;
         }
     }
-    
     // Replace asterisks with the dot symbol in the formula
-    formula = formula.replace(/\*/g, "&sdot;"); 
-
-   // Format result
+    formula = formula.replace(/\*/g, "&sdot;");
+     // Format result
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
-
 // Separate the coefficient and exponent parts
 var parts = resultString.split("e");
 var coefficient = parseFloat(parts[0]);
 var exponent = parseInt(parts[1]);
-
 // Check if the coefficient is close to 1
 if (coefficient >= 0.1 && coefficient < 1) {
     coefficient *= 10;
     exponent--;
 }
-
 result = coefficient.toFixed(6) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
-
 var resultH, resultE;
-
 // Calculate result for H or E based on the formula
 if (formula.includes("E =")) {
     resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
@@ -569,10 +535,8 @@ if (formula.includes("E =")) {
     document.getElementById('result').innerHTML = "Invalid formula";
     return;
 }
-
 // Display result and formula with appropriate units
 document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich; 
-
 });
 </script>
 
