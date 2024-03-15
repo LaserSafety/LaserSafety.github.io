@@ -171,33 +171,6 @@ function closeSettingsMenu() {
 </script>
 
 <!-- Modal -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-top">
-        <header class="w3-container w3-theme-l1"> 
-            <span onclick="document.getElementById('id01').style.display='none'"
-                class="w3-button w3-display-topright">×</span>
-            <h4>Results</h4>
-            <h5> test </h5>
-        </header>
-        <div class="w3-padding">
-            <p id="resultstest"></p>
-        </div>
-        <footer class="w3-container w3-theme-l1">
-            <p>Modal footer</p>
-        </footer>
-    </div>
-</div>
-
-<script>
-    function openModal() {
-        // Call calculate function and update result element
-        document.getElementById('id01').style.display='block';
-    }
-    test();
-    function test() {
-     var l = 1;
-    }
-</script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
@@ -368,6 +341,34 @@ function closeSettingsMenu() {
    <input type="submit" value="test">
    <p id="result"></p>
 </footer>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme-l1"> 
+            <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">×</span>
+            <h4>Results</h4>
+            <h5> test </h5>
+        </header>
+        <div class="w3-padding">
+            <p id="resultstest"></p>
+        </div>
+        <footer class="w3-container w3-theme-l1">
+            <p>Modal footer</p>
+        </footer>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        // Call calculate function and update result element
+        document.getElementById('id01').style.display='block';
+    }
+    test();
+    function test() {
+     var l = 1;
+    }
+</script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script src="calculator.js"></script>
 <script>
