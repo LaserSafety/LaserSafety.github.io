@@ -163,6 +163,7 @@ input[type=number]:focus {
 function openSettings() {
   document.getElementById("settingsMenu").style.display = "block";
 }
+ 
 function closeSettingsMenu() {
   document.getElementById("settingsMenu").style.display = "none";
 }
