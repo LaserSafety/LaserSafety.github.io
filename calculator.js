@@ -3,13 +3,13 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
-    var frequenz = parseFloat(document.getElementById('frequenz').value);
-    var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
-    var phi = parseFloat(document.getElementById('&phi;').value);
-    var Q = parseFloat(document.getElementById('ausgangsenergie').value);
-    var P = parseFloat(document.getElementById('ausgangsleistung').value);
-    var g = parseFloat(document.getElementById('daempfungsgrad').value);
+    //var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
+    //var frequenz = parseFloat(document.getElementById('frequenz').value);
+    //var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
+    //var phi = parseFloat(document.getElementById('&phi;').value);
+    //var Q = parseFloat(document.getElementById('ausgangsenergie').value);
+    //var P = parseFloat(document.getElementById('ausgangsleistung').value);
+    //var g = parseFloat(document.getElementById('daempfungsgrad').value);
     
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
@@ -25,12 +25,12 @@ function calculate() {
     alphamax=100;
     alphamin=1.5;
     
-    var Daempfung_G = Math.pow(10, (g/10));
+    //var Daempfung_G = Math.pow(10, (g/10));
     var T_H = impulsdauer;
     var T;
-    var N;
-    var C_p;
-    var tau_lambda = 1/Daempfung_G;
+    //var N;
+    //var C_p;
+    //var tau_lambda = 1/Daempfung_G;
 
     
 // h = (J/m^2) e = (W/m^2)
@@ -45,7 +45,7 @@ function calculate() {
     if (alpha <= 1.5) {
         T_2 = 10;
     } else if (alpha > 1.5 && alpha <= 100) {
-        T_2 = Math.pow(10, (alpha - 1.5)/98.5));
+        T_2 = Math.pow(10, (alpha - 1.5)/98.5);
     } else if (alpha > 100) {
         T_2 = 100;
     }
@@ -74,13 +74,13 @@ function calculate() {
         T = 10;
     }
 
-    if (T_H < T_min) {
-        N = T/T_min;
-    } else {
-        N = frequenz * T;
-    }
+    //if (T_H < T_min) {
+    //   N = T/T_min;
+    //} else {
+    //    N = frequenz * T;
+    //}
 
-    C_p = Math.pow(N, -0.25);
+    //C_p = Math.pow(N, -0.25);
             
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
@@ -379,4 +379,4 @@ if (formula.includes("E =")) {
 // Display result and formula with appropriate units
 document.getElementById('result').innerHTML="Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich; 
 
-});
+}
