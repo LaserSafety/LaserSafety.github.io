@@ -155,7 +155,7 @@ input[type=number]:focus {
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
      <form>
-      <input type="button" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="openModal()" style="font-weight:900;" value="calculate">
+      <input id="calculate" type="button" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="openModal()" style="font-weight:900;" value="calculate">
      </form>
     </div>
   </div>
@@ -361,10 +361,22 @@ function closeSettingsMenu() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
     }
-    test();
-    function test() {
-     var l = 1;
-    }
+        document.getElementById('calculate').addEventListener('click', function() {
+         calculate() {
+    var expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
+    var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
+    var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
+    var alpha = parseFloat(document.getElementById('alpha').value);
+    var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
+    var frequenz = parseFloat(document.getElementById('frequenz').value);
+    var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
+    var phi = parseFloat(document.getElementById('&phi;').value);
+    var Q = parseFloat(document.getElementById('ausgangsenergie').value);
+    var P = parseFloat(document.getElementById('ausgangsleistung').value);
+    var g = parseFloat(document.getElementById('daempfungsgrad').value);
+    var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
+}
+    document.getElementById('result').innerHTML="Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich; 
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
