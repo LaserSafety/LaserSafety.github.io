@@ -8,7 +8,7 @@ function expositionsdauer() {
     var result;
     var formula;
     var optischer_bereich;
-    import { C_a, C_b, C_c, C_e } from './c_n.js'
+    import { C_a, C_b, C_c, C_e } from './c_n.js';
 
         // 1E-13 TO 1E-11
     
