@@ -166,7 +166,7 @@ function openSettings() {
  
 function closeSettingsMenu() {
   document.getElementById("settingsMenu").style.display = "none";
-}
+});
 </script>
 
 <!-- Modal -->
