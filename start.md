@@ -219,7 +219,7 @@ nav ul {
 </section>
 
 <!-- Link to the JavaScript file for calculations -->
-<script src="calculator.js"></script>
+<script src="test.js"></script>
 <!-- Link to the JavaScript file for menu transitions -->
 <script src="menu-logic.js"></script>
 <footer>
