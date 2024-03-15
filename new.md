@@ -192,6 +192,9 @@ function closeSettingsMenu() {
         // Call calculate function and update result element
         derp();
         document.getElementById('id01').style.display='block';
+     function derp();
+     var result = 42;
+        document.getElementById('result').textContent = "Result: " + result;
     });
 </script>
 
