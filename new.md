@@ -172,20 +172,35 @@ function closeSettingsMenu() {
 <!-- Modal -->
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-top">
-      <header class="w3-container w3-theme-l1"> 
-        <span onclick="document.getElementById('id01').style.display='none'"
-        class="w3-button w3-display-topright">×</span>
-        <h4>Results</h4>
-        <h5> test </h5>
-      </header>
-      <div class="w3-padding">
-       <p id="result"></p>
-      </div>
-      <footer class="w3-container w3-theme-l1">
-        <p>Modal footer</p>
-      </footer>
+        <header class="w3-container w3-theme-l1"> 
+            <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">×</span>
+            <h4>Results</h4>
+            <h5> test </h5>
+        </header>
+        <div class="w3-padding">
+            <p id="result"></p>
+        </div>
+        <footer class="w3-container w3-theme-l1">
+            <p>Modal footer</p>
+        </footer>
     </div>
 </div>
+
+<script>
+    function openModal() {
+        // Call calculate function and update result element
+        derp();
+        document.getElementById('id01').style.display='block';
+    }
+    
+    function derp() {
+        // Your calculation logic goes here
+        // For demonstration, let's say result is 42
+        var result = 42;
+        document.getElementById('result').textContent = "Result: " + result;
+    }
+</script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
