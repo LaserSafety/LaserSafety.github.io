@@ -3,13 +3,6 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
-    var frequenz = parseFloat(document.getElementById('frequenz').value);
-    var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
-    var phi = parseFloat(document.getElementById('&phi;').value);
-    var Q = parseFloat(document.getElementById('ausgangsenergie').value);
-    var P = parseFloat(document.getElementById('ausgangsleistung').value);
-    var g = parseFloat(document.getElementById('daempfungsgrad').value);
     
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
@@ -24,14 +17,6 @@ function calculate() {
     var alphamax, alphamin;
     alphamax=100;
     alphamin=1.5;
-    
-    var Daempfung_G = Math.pow(10, g/10);
-    var T_H = impulsdauer;
-    var T;
-    var N;
-    var C_p;
-    var tau_lambda = 1/Daempfung_G;
-
     
 // h = (J/m^2) e = (W/m^2)
     if (wellenlaenge < 450) {
@@ -73,14 +58,6 @@ function calculate() {
     } else if (wellenlaenge > 1400) {
         T = 10;
     }
-
-    if (T_H < T_min) {
-        N = T/T_min;
-    } else {
-        N = frequenz * T;
-    }
-
-    C_p = Math.pow(N, -0.25);
             
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
