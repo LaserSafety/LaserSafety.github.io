@@ -190,11 +190,11 @@ function closeSettingsMenu() {
 <script>
     function openModal() {
         // Call calculate function and update result element
-        calculate();
+        merp();
         document.getElementById('id01').style.display='block';
     }
     
-    function calculate() {
+    function merp() {
         // Your calculation logic goes here
         // For demonstration, let's say result is 42
         var result = 42;
