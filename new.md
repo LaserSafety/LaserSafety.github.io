@@ -338,8 +338,6 @@ function closeSettingsMenu() {
     <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
-   <input type="submit" value="test">
-   <p id="result"></p>
 </footer>
 
 <div id="id01" class="w3-modal">
@@ -351,7 +349,7 @@ function closeSettingsMenu() {
             <h5> test </h5>
         </header>
         <div class="w3-padding">
-            <p id="resultstest"></p>
+            <p id="result"></p>
         </div>
         <footer class="w3-container w3-theme-l1">
             <p>Modal footer</p>
