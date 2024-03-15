@@ -118,7 +118,7 @@ header {
   position: absolute; 
   right: 0px;
   top: 0px;
-  border-top: 102px solid #4cbaef;
+  border-top: 102px solid black;
   border-left: 50px solid transparent;
 }
 <!-- #4cbaef -->
