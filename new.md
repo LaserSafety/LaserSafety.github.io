@@ -9,7 +9,7 @@ permalink: /new.html
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="test.js"></script>
+<script src="calculator.js"></script>
 <style>
  .grad {
   background-image: linear-gradient(black, #6b2443 80%);
