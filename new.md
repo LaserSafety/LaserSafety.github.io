@@ -362,21 +362,9 @@ function closeSettingsMenu() {
         document.getElementById('id01').style.display='block';
     }
         document.getElementById('calculate').addEventListener('click', function() {
-         calculate() {
-    var expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
-    var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
-    var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
-    var alpha = parseFloat(document.getElementById('alpha').value);
-    var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
-    var frequenz = parseFloat(document.getElementById('frequenz').value);
-    var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
-    var phi = parseFloat(document.getElementById('&phi;').value);
-    var Q = parseFloat(document.getElementById('ausgangsenergie').value);
-    var P = parseFloat(document.getElementById('ausgangsleistung').value);
-    var g = parseFloat(document.getElementById('daempfungsgrad').value);
-    var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
-}
-    document.getElementById('result').innerHTML="Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich; 
+    let result = calculate();
+    document.getElementById("result").textContent = result;
+});
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
