@@ -358,10 +358,9 @@ function closeSettingsMenu() {
 <script src="calculator.js"></script>
 <script>
  function myfunction() {
-     function openModal() {
+    openModal();
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
-    }
     calculate();
     }
     
