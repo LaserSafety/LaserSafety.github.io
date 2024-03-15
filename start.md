@@ -114,14 +114,14 @@ header {
 /* Trapezoid */
 .header-trapezoid {
   width: 20%; /* Adjust width as needed */
-  /*background-color: #4cbaef; */
+  /*background-color: black; */
   position: absolute; 
   right: 0px;
   top: 0px;
   border-top: 102px solid #4cbaef;
   border-left: 50px solid transparent;
 }
-
+<!-- #4cbaef -->
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
