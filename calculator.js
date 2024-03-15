@@ -25,7 +25,7 @@ function calculate() {
     alphamax=100;
     alphamin=1.5;
     
-    var Daempfung_G = Math.pow(10, g/10);
+    var Daempfung_G = Math.pow(10, (g/10));
     var T_H = impulsdauer;
     var T;
     var N;
@@ -45,7 +45,7 @@ function calculate() {
     if (alpha <= 1.5) {
         T_2 = 10;
     } else if (alpha > 1.5 && alpha <= 100) {
-        T_2 = Math.pow(10, ((alpha - 1.5)/98.5));
+        T_2 = Math.pow(10, (alpha - 1.5)/98.5));
     } else if (alpha > 100) {
         T_2 = 100;
     }
