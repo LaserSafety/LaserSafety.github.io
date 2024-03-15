@@ -362,7 +362,7 @@ function closeSettingsMenu() {
         document.getElementById('id01').style.display='block';
     }
     var btn = document.getElementById("calculate");
-    btn.addEventListener("click", calculate());
+    btn.addEventListener("click", calculate);
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
