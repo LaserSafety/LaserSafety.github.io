@@ -154,7 +154,7 @@ input[type=number]:focus {
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
      <form>
-      <input type="button" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;" value="calculate">
+      <input type="button" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="calculate(); document.getElementById('id01').style.display='block'" style="font-weight:900;" value="calculate">
      </form>
     </div>
   </div>
