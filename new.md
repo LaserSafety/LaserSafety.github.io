@@ -159,7 +159,7 @@ input[type=number]:focus {
     </div>
   </div>
 </header>
-
+<script>
 function openSettings() {
   document.getElementById("settingsMenu").style.display = "block";
 }
