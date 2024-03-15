@@ -160,7 +160,6 @@ input[type=number]:focus {
   </div>
 </header>
 
-<script src="calculator.js">
 function openSettings() {
   document.getElementById("settingsMenu").style.display = "block";
 }
