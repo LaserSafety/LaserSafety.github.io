@@ -180,7 +180,7 @@ function closeSettingsMenu() {
             <h5> test </h5>
         </header>
         <div class="w3-padding">
-            <p id="result"></p>
+            <p id="resultstest"></p>
         </div>
         <footer class="w3-container w3-theme-l1">
             <p>Modal footer</p>
@@ -195,7 +195,7 @@ function closeSettingsMenu() {
     }
     test();
     function test() {
-     result = document.getElementById('test').innerHTML = "Result: " + result + "test2: " + resultE;
+     var l = 1;
     }
 </script>
 
@@ -363,7 +363,8 @@ function closeSettingsMenu() {
     <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
     <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
-    <p id="test"></p>
+   <input type="submit" value="test">
+   <p id="result"></p>
   </div>
 </footer>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
