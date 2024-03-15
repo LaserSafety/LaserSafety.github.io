@@ -193,6 +193,11 @@ function closeSettingsMenu() {
      calculate();
         document.getElementById('id01').style.display='block';
     }
+    import { C_a, C_b, C_c, C_e } from './c_n.js';
+    import { resultE, resultH, result, formula, optischer_bereich } from './expositionsdauer.js'
+     function calculate() {
+      document.getElementById('result').innerHTML="Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+    }
 </script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
