@@ -187,18 +187,11 @@ function closeSettingsMenu() {
     </div>
 </div>
 
-<script>
+<script src="test.js">
     function openModal() {
         // Call calculate function and update result element
         derp();
         document.getElementById('id01').style.display='block';
-    }
-    
-    function derp() {
-        // Your calculation logic goes here
-        // For demonstration, let's say result is 42
-        var result = 42;
-        document.getElementById('result').textContent = "Result: " + result;
     }
 </script>
 
