@@ -47,4 +47,4 @@ function C_n(){
         return;
     }
 }
-export { C_a, C_b, C_c, C_e };
+export { C_a, C_b, C_c, C_e, alphamax, alphamin, expositionsdauer};
