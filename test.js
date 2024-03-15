@@ -1,8 +1,10 @@
-// calculator.js
 
 function calculate() {
-    // Your calculation logic goes here
-    // For demonstration, let's say result is 42
-    var result = 42;
-    document.getElementById('result').textContent = "Result: " + result;
+  var impulsdauer = parseFloat(document.getElementById("impulsdauer").value);
+  var frequenz = parseFloat(document.getElementById("frequenz").value);
+  
+  // Example calculation
+  var result = impulsdauer * frequenz;
+  
+  document.getElementById("result").textContent = "Result: " + result;
 }
