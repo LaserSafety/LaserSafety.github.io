@@ -199,7 +199,7 @@ function closeSettingsMenu() {
         // For demonstration, let's say result is 42
         var result = 42;
         document.getElementById('result').textContent = "Result: " + result;
-    });
+    }
 </script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
