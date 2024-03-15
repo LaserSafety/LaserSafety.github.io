@@ -1,7 +1,7 @@
 
 function calculate() {
-  var impulsdauer = parseFloat(document.getElementById("impulsdauer").value);
-  var frequenz = parseFloat(document.getElementById("frequenz").value);
+  var impulsdauer = parseFloat(document.getElementById("wellenlaenge").value);
+  var frequenz = parseFloat(document.getElementById("alpha").value);
   
   // Example calculation
   var result = impulsdauer * frequenz;
