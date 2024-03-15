@@ -3,13 +3,13 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    //var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
-    //var frequenz = parseFloat(document.getElementById('frequenz').value);
-    //var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
-    //var phi = parseFloat(document.getElementById('&phi;').value);
-    //var Q = parseFloat(document.getElementById('ausgangsenergie').value);
-    //var P = parseFloat(document.getElementById('ausgangsleistung').value);
-    //var g = parseFloat(document.getElementById('daempfungsgrad').value);
+    var impulsdauer = parseFloat(document.getElementById('pulsdauer').value);
+    var frequenz = parseFloat(document.getElementById('frequenz').value);
+    var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
+    var phi = parseFloat(document.getElementById('&phi;').value);
+    var Q = parseFloat(document.getElementById('ausgangsenergie').value);
+    var P = parseFloat(document.getElementById('ausgangsleistung').value);
+    var g = parseFloat(document.getElementById('daempfungsgrad').value);
     
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
@@ -25,12 +25,12 @@ function calculate() {
     alphamax=100;
     alphamin=1.5;
     
-    //var Daempfung_G = Math.pow(10, (g/10));
+    var Daempfung_G = Math.pow(10, (g/10));
     var T_H = impulsdauer;
     var T;
-    //var N;
-    //var C_p;
-    //var tau_lambda = 1/Daempfung_G;
+    var N;
+    var C_p;
+    var tau_lambda = 1/(Daempfung_G);
 
     
 // h = (J/m^2) e = (W/m^2)
@@ -40,6 +40,8 @@ function calculate() {
         T_1 = Math.pow(10, (0.02 * (wellenlaenge - 450)));
     } else if (wellenlaenge > 500) {
         T_1 = 100;
+    document.getElementById('result').innerHTML = "Invalid T_1 value";
+    return;
     }
 
     if (alpha <= 1.5) {
@@ -48,6 +50,8 @@ function calculate() {
         T_2 = Math.pow(10, (alpha - 1.5)/98.5);
     } else if (alpha > 100) {
         T_2 = 100;
+    document.getElementById('result').innerHTML = "Invalid T_2 value";
+    return;
     }
 
     if (wellenlaenge > 315 && wellenlaenge <= 400) {
@@ -64,6 +68,8 @@ function calculate() {
         T_min = 0.001;
     }  else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
         T_min = Math.pow(10, -7);
+    document.getElementById('result').innerHTML = "Invalid T_min value";
+    return;
     }
 
     if (wellenlaenge > 315 && wellenlaenge <= 400) {
@@ -72,15 +78,19 @@ function calculate() {
         T = T_2;
     } else if (wellenlaenge > 1400) {
         T = 10;
+    document.getElementById('result').innerHTML = "Invalid T value";
+    return;
     }
 
-    //if (T_H < T_min) {
-    //   N = T/T_min;
-    //} else {
-    //    N = frequenz * T;
-    //}
+    if (T_H < T_min) {
+     N = T/T_min;
+    } else {
+     N = frequenz * T;
+    document.getElementById('result').innerHTML = "Invalid N value";
+    return;
+    }
 
-    //C_p = Math.pow(N, -0.25);
+    C_p = Math.pow(N, -0.25);
             
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
@@ -88,12 +98,16 @@ function calculate() {
         C_a = Math.pow(10, 0.002 * (wellenlaenge-700));
     } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
         C_a = 5;
+    document.getElementById('result').innerHTML = "Invalid C_a value";
+    return;
     }
     
     if (wellenlaenge >= 400 && wellenlaenge <= 450) {
         C_b = 1;
     } else if (wellenlaenge > 450 && wellenlaenge <= 600) {
         C_b = Math.pow(10, 0.02 * (wellenlaenge-600));
+    document.getElementById('result').innerHTML = "Invalid C_b value";
+    return;
     }
     
     if (wellenlaenge >= 700 && wellenlaenge <= 1150) {
@@ -102,7 +116,10 @@ function calculate() {
         C_c = Math.pow(10, 0.018 * (wellenlaenge-1150));
     } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
         C_c = 8;
+    document.getElementById('result').innerHTML = "Invalid C_c value";
+    return;
     }
+    
     
     if (alpha >= 0 && alpha <= 1.5) {
         C_e = 1;
@@ -110,6 +127,8 @@ function calculate() {
         C_e = alpha / 1.5;
     } else if (alpha > 100 && alpha <= 1000) {
         C_e = alphamax / alphamin;
+    document.getElementById('result').innerHTML = "Invalid C_e value";
+    return;
     }
 
     // 1E-13 TO 1E-11
