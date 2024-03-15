@@ -279,7 +279,6 @@ function closeSettingsMenu() {
   </div>
 </div>
 
-<script src="calculator.js"></script>
 <!-- <hr>
 
  <h2 class="w3-center">Progress Bars</h2>
@@ -356,7 +355,7 @@ function closeSettingsMenu() {
         </footer>
     </div>
 </div>
-
+<script src="calculator.js"></script>
 <script>
     function openModal() {
         // Call calculate function and update result element
@@ -368,7 +367,6 @@ function closeSettingsMenu() {
     }
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script src="tester.js"></script>
 <script>
   window.onscroll = function() {scrollFunction()};
 
