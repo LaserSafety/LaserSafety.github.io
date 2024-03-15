@@ -192,16 +192,6 @@ function closeSettingsMenu() {
         // Call calculate function and update result element
      calculate();
         document.getElementById('id01').style.display='block';
-     
-function calculate() {
-  var impulsdauer = parseFloat(document.getElementById("wellenlaenge").value);
-  var frequenz = parseFloat(document.getElementById("alpha").value);
-  
-  // Example calculation
-  var result = impulsdauer * frequenz;
-  
-  document.getElementById("result").textContent = "Result: " + result;
-}
     }
 </script>
 
