@@ -368,7 +368,7 @@ function closeSettingsMenu() {
     }
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script src="calculator.js"></script>
+<script src="tester.js"></script>
 <script>
   window.onscroll = function() {scrollFunction()};
 
