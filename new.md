@@ -202,9 +202,6 @@ function closeSettingsMenu() {
     }
 </script>
 
-</script>
-
-
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
   <div class="w3-third">
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
