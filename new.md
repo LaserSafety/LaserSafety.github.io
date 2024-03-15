@@ -196,6 +196,7 @@ function closeSettingsMenu() {
      var result;
      result = 4 * 2;
      document.getElementById('result').textContent = "Result: " + result; 
+    });
 </script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
