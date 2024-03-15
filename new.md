@@ -360,9 +360,9 @@ function closeSettingsMenu() {
  function openModal() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
-    calculate();
     }
-    
+    var btn = document.getElementById("calculate");
+    btn.addEventListener("click", calculate());
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
