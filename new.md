@@ -194,8 +194,9 @@ function closeSettingsMenu() {
     }
     test();
     function test() {
+     import { resultE } from './expositionsdauer.js';
      var result = test;
-     document.getElementById('test').innerHTML = "Result: " + result;
+     document.getElementById('test').innerHTML = "Result: " + result + "test2: " + resultE;
     }
 </script>
 
