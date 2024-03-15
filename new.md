@@ -187,7 +187,8 @@ function closeSettingsMenu() {
     </div>
 </div>
 
-<script src="test.js">
+<script src="test.js"></script>
+<script>
     function openModal() {
         // Call calculate function and update result element
         calculate();
