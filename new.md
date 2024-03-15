@@ -192,7 +192,7 @@ function closeSettingsMenu() {
         // Call calculate function and update result element
         derp();
         document.getElementById('id01').style.display='block';
-    }
+    });
 </script>
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
