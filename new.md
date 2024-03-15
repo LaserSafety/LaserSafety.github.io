@@ -361,10 +361,6 @@ function closeSettingsMenu() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
     }
-    document.getElementById('calculate').addEventListener('click', function() {
-    let result = calculate();
-    document.getElementById("result").textContent = result;
-}
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
