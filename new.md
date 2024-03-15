@@ -363,9 +363,9 @@ function closeSettingsMenu() {
     <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
     <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
    <input type="submit" value="test">
    <p id="result"></p>
-  </div>
 </footer>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
