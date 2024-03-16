@@ -10,7 +10,118 @@ permalink: /new.html
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="new-styles.css">
+<style>
+ .grad {
+  background-image: linear-gradient(black, #6b2443 80%);
+}
+.text {
+ color: white;
+}
+}
+.settings-menu {
+  display: block;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 2; /* Adjusted z-index */
+}
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  padding: 5px 10px;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.settings-menu a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.settings-menu a:hover {
+  background-color: #6b2443;
+}
+
+.settings-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.settings-button {
+  float: right;
+}
+
+.settings-button:hover + .settings-menu {
+  display: block;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+    .fadingElement {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+    .fade-in {
+      opacity: 1;
+    }
+
+input[type=text] {
+  width: 20%;
+  box-sizing: border-box;
+  border: 2px solid #8b3a5d;
+  border-radius: 4px;
+}
+input[type=text]:focus {
+  border: 2px solid #6b2443;
+  border-radius: 4px;
+}
+input[type=number] {
+  width: 50px;
+  box-sizing: border-box;
+  border: 2px solid #8b3a5d;
+  border-radius: 4px;
+}
+input[type=number]:focus {
+  border: 2px solid #6b2443;
+  border-radius: 4px;
+}
+</style>
 </head>
 <body>
 <div id="navbar">
@@ -49,6 +160,15 @@ permalink: /new.html
     </div>
   </div>
 </header>
+<script>
+function openSettings() {
+  document.getElementById("settingsMenu").style.display = "block";
+}
+ 
+function closeSettingsMenu() {
+  document.getElementById("settingsMenu").style.display = "none";
+});
+</script>
 
 <!-- Modal -->
 
@@ -158,7 +278,7 @@ permalink: /new.html
     </div>
   </div>
 </div>
-
+<script src="calculator.js"></script>
 <!-- <hr>
 
  <h2 class="w3-center">Progress Bars</h2>
@@ -235,8 +355,111 @@ permalink: /new.html
         </footer>
     </div>
 </div>
+<script>
+ function openModal() {
+        // Call calculate function and update result element
+        document.getElementById('id01').style.display='block';
+    }
+    var btn = document.getElementById("calculate");
+    btn.addEventListener("click", calculate);
+</script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script src="main-logic.js"></script>
-<script src="calculator.js"></script>
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100%";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Settings
+function w3_open_r() {
+  var x = document.getElementById("settingsMenu");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close_r() {
+  document.getElementById("settingsMenu").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+    const Betriebsart = document.getElementById('betriebsart');
+    const Frequenz = document.getElementById('Frequenz');
+    const Pulsdauer = document.getElementById('Pulsdauer');
+
+    betriebsart.addEventListener('change', function() {
+      if (betriebsart.value === 'D') {
+        // Fade out first element, then fade out second element after a delay
+        Pulsdauer.classList.add('fade-out');
+        Pulsdauer.classList.remove('fade-in');
+        setTimeout(() => {
+          Frequenz.classList.add('fade-out');
+          Frequenz.classList.remove('fade-in');
+        }, 500); // Delay after first element fades out
+      } else {
+        // Fade in second element, then fade in first element after a delay
+          Frequenz.classList.remove('fade-out');
+          Frequenz.classList.add('fade-in');
+        setTimeout(() => {
+          Pulsdauer.classList.remove('fade-out');
+          Pulsdauer.classList.add('fade-in');
+        }, 500); // Delay before first element fades in
+      }
+    }
+</script>
 </body>
 </html>
