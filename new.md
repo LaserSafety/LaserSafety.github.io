@@ -146,15 +146,6 @@ input[type=number]:focus {
   <a href="#" class="w3-bar-item w3-button">Setting 3</a>
   <a href="#" class="w3-bar-item w3-button">Setting 4</a>
 </nav>
-<script>
-function openSettings() {
-  document.getElementById("settingsMenu").style.display = "block";
-}
- 
-function closeSettingsMenu() {
-  document.getElementById("settingsMenu").style.display = "none";
-});
-</script>
 <!-- Header -->
 <header class="w3-container grad w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
@@ -169,7 +160,15 @@ function closeSettingsMenu() {
     </div>
   </div>
 </header>
-
+<script>
+function openSettings() {
+  document.getElementById("settingsMenu").style.display = "block";
+}
+ 
+function closeSettingsMenu() {
+  document.getElementById("settingsMenu").style.display = "none";
+});
+</script>
 <!-- Modal -->
 
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
