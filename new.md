@@ -231,6 +231,34 @@ function closeSettingsMenu() {
     <p><b>t</b> = <input type="text" id="pulsdauer"> in <b>s</b></p>
   </div>
  </div>
+ 
+<script>
+    const Betriebsart = document.getElementById('betriebsart');
+    const Frequenz = document.getElementById('Frequenz');
+    const Pulsdauer = document.getElementById('Pulsdauer');
+
+    betriebsart.addEventListener('change', function() {
+      if (betriebsart.value === 'D') {
+        // Fade out first element, then fade out second element after a delay
+        Pulsdauer.classList.add('fade-out');
+        Pulsdauer.classList.remove('fade-in');
+        setTimeout(() => {
+          Frequenz.classList.add('fade-out');
+          Frequenz.classList.remove('fade-in');
+        }, 500); // Delay after first element fades out
+      } else {
+        // Fade in second element, then fade in first element after a delay
+          Frequenz.classList.remove('fade-out');
+          Frequenz.classList.add('fade-in');
+        setTimeout(() => {
+          Pulsdauer.classList.remove('fade-out');
+          Pulsdauer.classList.add('fade-in');
+        }, 500); // Delay before first element fades in
+      }
+    }
+
+ 
+</script>
 
   <div class="w3-third">
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
@@ -272,13 +300,12 @@ function closeSettingsMenu() {
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
       <h3>Daempfungsgrad</h3><br>
       <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-      <p>Eingabe Ausgangsleistung</p>
+      <p>Eingabe Daempfungsgrad</p>
       <p><b>g</b> = <input type="text" id="daempfungsgrad"> in <b>dB</b></p>
     </div>
   </div>
 </div>
 
-<script src="calculator.js"></script>
 <!-- <hr>
 
  <h2 class="w3-center">Progress Bars</h2>
@@ -370,6 +397,7 @@ function closeSettingsMenu() {
   
   document.getElementById("result").textContent = "Result: " + result;
 }
+ calculate();
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script src="calculator.js"></script>
@@ -446,29 +474,7 @@ function move() {
     }
   }
 }
-    const Betriebsart = document.getElementById('betriebsart');
-    const Frequenz = document.getElementById('Frequenz');
-    const Pulsdauer = document.getElementById('Pulsdauer');
-
-    betriebsart.addEventListener('change', function() {
-      if (betriebsart.value === 'D') {
-        // Fade out first element, then fade out second element after a delay
-        Pulsdauer.classList.add('fade-out');
-        Pulsdauer.classList.remove('fade-in');
-        setTimeout(() => {
-          Frequenz.classList.add('fade-out');
-          Frequenz.classList.remove('fade-in');
-        }, 500); // Delay after first element fades out
-      } else {
-        // Fade in second element, then fade in first element after a delay
-          Frequenz.classList.remove('fade-out');
-          Frequenz.classList.add('fade-in');
-        setTimeout(() => {
-          Pulsdauer.classList.remove('fade-out');
-          Pulsdauer.classList.add('fade-in');
-        }, 500); // Delay before first element fades in
-      }
-    }
+    
 </script>
 </body>
 </html>
