@@ -362,10 +362,15 @@ function closeSettingsMenu() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
     }
-    test();
-    function test() {
-     var l = 1;
-    }
+  function calculate() {
+  var impulsdauer = parseFloat(document.getElementById("wellenlaenge").value);
+  var frequenz = parseFloat(document.getElementById("expositionsdauer").value);
+  
+  // Example calculation
+  var result = impulsdauer * frequenz;
+  
+  document.getElementById("result").textContent = "Result: " + result;
+}
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script src="calculator.js"></script>
