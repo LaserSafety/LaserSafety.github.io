@@ -278,7 +278,7 @@ function closeSettingsMenu() {
     </div>
   </div>
 </div>
-<script src="calculator.js"></script>
+
 <!-- <hr>
 
  <h2 class="w3-center">Progress Bars</h2>
@@ -461,5 +461,6 @@ function move() {
       }
     }
 </script>
+<script src="calculator.js"></script>
 </body>
 </html>
