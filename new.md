@@ -155,7 +155,7 @@ input[type=number]:focus {
     <h1 class="w3-xxxlarge w3-animate-bottom">LASER SAFETY</h1>
     <div class="w3-padding-32">
      <form>
-      <input id="calculate" type="button" onclick="openModal()" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" style="font-weight:900;" value="calculate">
+      <input type="button" class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="openModal()" style="font-weight:900;" value="calculate">
      </form>
     </div>
   </div>
@@ -279,6 +279,7 @@ function closeSettingsMenu() {
   </div>
 </div>
 
+<script src="calculator.js"></script>
 <!-- <hr>
 
  <h2 class="w3-center">Progress Bars</h2>
@@ -355,15 +356,19 @@ function closeSettingsMenu() {
         </footer>
     </div>
 </div>
+
 <script>
- function openModal() {
+    function openModal() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
     }
-    var btn = document.getElementById("calculate");
-    btn.addEventListener("click", calculate);
+    test();
+    function test() {
+     var l = 1;
+    }
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script src="calculator.js"></script>
 <script>
   window.onscroll = function() {scrollFunction()};
 
@@ -461,6 +466,5 @@ function move() {
       }
     }
 </script>
-<script src="calculator.js"></script>
 </body>
 </html>
