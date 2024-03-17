@@ -233,6 +233,7 @@ function closeSettingsMenu() {
  </div>
  
 <script>
+ function fade() {
     const Betriebsart = document.getElementById('betriebsart');
     const Frequenz = document.getElementById('Frequenz');
     const Pulsdauer = document.getElementById('Pulsdauer');
@@ -256,7 +257,7 @@ function closeSettingsMenu() {
         }, 500); // Delay before first element fades in
       }
     }
-
+  }
  
 </script>
 
@@ -444,10 +445,10 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " w3-dark-grey";
-}
 
 var mybtn = document.getElementsByClassName("testbtn")[0];
 mybtn.click();
+}
 
 // Progress Bars
 function move() {
