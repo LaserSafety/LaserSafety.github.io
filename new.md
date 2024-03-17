@@ -382,18 +382,15 @@ function closeSettingsMenu() {
         </footer>
     </div>
 </div>
-
+<script src="calculator.js"></script>
 <script>
     function openModal() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
     }
-var result = document.querySelector("result");
  calculate();
- 
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script src="calculator.js"></script>
 <script>
   window.onscroll = function() {scrollFunction()};
 
