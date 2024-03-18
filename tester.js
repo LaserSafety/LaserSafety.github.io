@@ -324,16 +324,6 @@ function calculate() {
     formula = formula.replace(/\*/g, "&sdot;"); 
 
    // Format result
-var resultString = result.toExponential(2); // Convert to exponential notation with 6 decimal places
-
-// Separate the coefficient and exponent parts
-var parts = resultString.split("e");
-var coefficient = parseFloat(parts[0]);
-var exponent = parseInt(parts[1]);
-
-// Check if the coefficient is close to 1
-
-result = coefficient.toFixed(2) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
 
 var resultH, resultE;
 
@@ -348,8 +338,29 @@ if (formula.includes("E =")) {
     document.getElementById('result').innerHTML = "Invalid formula";
     return;
 }
+    
+var resultStringE = resultE.toExponential(2); // Convert to exponential notation with 6 decimal places
 
+// Separate the coefficient and exponent parts
+var partsE = resultStringE.split("e");
+var coefficientE = parseFloat(parts[0]);
+var exponentE = parseInt(parts[1]);
+
+// Check if the coefficient is close to 1
+
+resultE1 = coefficientE.toFixed(2) + " &sdot; 10<sup>" + exponentE + "</sup>"; // Format in x * 10^y notation
+
+var resultStringH = resultH.toExponential(2); // Convert to exponential notation with 6 decimal places
+
+// Separate the coefficient and exponent parts
+var partsH = resultStringH.split("e");
+var coefficientH = parseFloat(parts[0]);
+var exponentH = parseInt(parts[1]);
+
+// Check if the coefficient is close to 1
+
+resultH1 = coefficientH.toFixed(2) + " &sdot; 10<sup>" + exponentH + "</sup>"; // Format in x * 10^y notation
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(2) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(2) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH1.toFixed(2) + " J/m<sup>2</sup><br>Result (E): " + resultE1.toFixed(2) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
     
 }
