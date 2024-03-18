@@ -358,7 +358,7 @@ var partsH = resultStringH.split("e");
 var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
-var NOHD = 1/phi * (Math.SQRT((4 * Q)/(Math.PI * resultE1)) - a);
+var NOHD = 1/phi * (Math.sqrt((4 * Q)/(Math.PI * resultStringE)) - a);
 
 // Display result and formula with appropriate units
 document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "NOHD: " + NOHD;
