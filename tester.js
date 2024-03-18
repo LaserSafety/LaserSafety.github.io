@@ -324,7 +324,7 @@ function calculate() {
     formula = formula.replace(/\*/g, "&sdot;"); 
 
    // Format result
-var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
+var resultString = result.toExponential(2); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
 var parts = resultString.split("e");
@@ -332,10 +332,6 @@ var coefficient = parseFloat(parts[0]);
 var exponent = parseInt(parts[1]);
 
 // Check if the coefficient is close to 1
-if (coefficient >= 0.1 && coefficient < 1) {
-    coefficient *= 10;
-    exponent--;
-}
 
 result = coefficient.toFixed(2) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
 
