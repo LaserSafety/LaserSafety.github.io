@@ -337,7 +337,7 @@ if (coefficient >= 0.1 && coefficient < 1) {
     exponent--;
 }
 
-result = coefficient.toFixed(6) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
+result = coefficient.toFixed(2) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
 
 var resultH, resultE;
 
@@ -354,6 +354,6 @@ if (formula.includes("E =")) {
 }
 
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(2) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(2) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
     
 }
