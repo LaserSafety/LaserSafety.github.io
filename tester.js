@@ -325,6 +325,7 @@ function calculate() {
 
    // Format result
 // Format result   // Format result
+   // Format result
 var resultString = result.toExponential(6); // Convert to exponential notation with 6 decimal places
 
 // Separate the coefficient and exponent parts
@@ -340,21 +341,21 @@ if (coefficient >= 0.1 && coefficient < 1) {
 
 result = coefficient.toFixed(6) + " &sdot; 10<sup>" + exponent + "</sup>"; // Format in x * 10^y notation
 
-//var resultH, resultE;
+var resultH, resultE;
 
 // Calculate result for H or E based on the formula
-//if (formula.includes("E =")) {
-//    resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
-//    resultH = resultE * expositionsdauer; // Calculate H if the formula is E = xyz
-//} else if (formula.includes("H =")) {
-//    resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
-//    resultE = resultH / expositionsdauer; // Calculate E if the formula is H = xyz
-//} else {
-//    document.getElementById('result').innerHTML = "Invalid formula";
-//    return;
-//}
+if (formula.includes("E =")) {
+    resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
+    resultH = resultE * expositionsdauer; // Calculate H if the formula is E = xyz
+} else if (formula.includes("H =")) {
+    resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
+    resultE = resultH / expositionsdauer; // Calculate E if the formula is H = xyz
+} else {
+    document.getElementById('result').innerHTML = "Invalid formula";
+    return;
+}
 
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result: " + result.toFixed(6) + " J/m<sup>2</sup>" + "<br>Optischer Bereich: " + optischer_bereich;
+document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH.toFixed(6) + " J/m<sup>2</sup><br>Result (E): " + resultE.toFixed(6) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
     
 }
