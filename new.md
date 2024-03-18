@@ -400,6 +400,7 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar").style.top = "-100%";
   }
+  document.getElementById("navbar").style.z-index = "5";
 }
 
 function topFunction() {
