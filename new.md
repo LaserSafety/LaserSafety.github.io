@@ -187,6 +187,30 @@ function openSettings() {
 function closeSettingsMenu() {
   document.getElementById("settingsMenu").style.display = "none";
 });
+
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Settings
+function w3_open_r() {
+  var x = document.getElementById("settingsMenu");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close_r() {
+  document.getElementById("settingsMenu").style.display = "none";
+}
 </script>
 <!-- Modal -->
 
@@ -383,54 +407,29 @@ function closeSettingsMenu() {
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
-    const Betriebsart = document.getElementById('betriebsart');
-    const Frequenz = document.getElementById('Frequenz');
-    const Pulsdauer = document.getElementById('Pulsdauer');
+const betriebsart = document.getElementById('betriebsart');
+const frequenz = document.getElementById('Frequenz');
+const pulsdauer = document.getElementById('Pulsdauer');
 
-    betriebsart.addEventListener('change', function() {
-      if (betriebsart.value === 'D') {
-        // Fade out first element, then fade out second element after a delay
-       Pulsdauer.classList.remove('fade-in');
-       Pulsdauer.classList.add('fade-out');
-        setTimeout(() => {
-          Frequenz.classList.add('fade-out');
-          Frequenz.classList.remove('fade-in');
-        }, 500); // Delay after first element fades out
-      } else {
-        // Fade in second element, then fade in first element after a delay
-          Frequenz.classList.remove('fade-out');
-          Frequenz.classList.add('fade-in');
-        setTimeout(() => {
-          Pulsdauer.classList.remove('fade-out');
-          Pulsdauer.classList.add('fade-in');
-        }, 500); // Delay before first element fades in
-      }
-    }
+betriebsart.addEventListener('change', function() {
+  if (betriebsart.value === 'D') {
+    // Fade out first element, then fade out second element after a delay
+    pulsdauer.classList.remove('fade-in');
+    pulsdauer.classList.add('fade-out');
+    setTimeout(() => {
+      frequenz.classList.add('fade-out');
+      frequenz.classList.remove('fade-in');
+    }, 500); // Delay after first element fades out
+  } else {
+    // Fade in second element, then fade in first element after a delay
+    frequenz.classList.remove('fade-out');
+    frequenz.classList.add('fade-in');
+    setTimeout(() => {
+      pulsdauer.classList.remove('fade-out');
+      pulsdauer.classList.add('fade-in');
+    }, 500); // Delay before first element fades in
   }
-
-// Side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "100%";
-  x.style.fontSize = "40px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Settings
-function w3_open_r() {
-  var x = document.getElementById("settingsMenu");
-  x.style.width = "100%";
-  x.style.fontSize = "40px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-function w3_close_r() {
-  document.getElementById("settingsMenu").style.display = "none";
-}
+});
 
 // Tabs
 function openCity(evt, cityName) {
