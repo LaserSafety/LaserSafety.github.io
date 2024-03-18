@@ -366,10 +366,10 @@ function closeSettingsMenu() {
             <h5> test </h5>
         </header>
         <div class="w3-padding">
-            <p></p>
+            <p id="result" ></p>
         </div>
         <footer class="w3-container w3-theme-l1">
-            <p id="result" ></p>
+            <p></p>
         </footer>
     </div>
 </div>
