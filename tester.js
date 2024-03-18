@@ -348,7 +348,7 @@ var exponentE = parseInt(parts[1]);
 
 // Check if the coefficient is close to 1
 
-resultE1 = coefficientE.toFixed(2) + " &sdot; 10<sup>" + exponentE + "</sup>"; // Format in x * 10^y notation
+var resultE1 = coefficientE.toFixed(2) + " &sdot; 10<sup>" + exponentE + "</sup>"; // Format in x * 10^y notation
 
 var resultStringH = resultH.toExponential(2); // Convert to exponential notation with 6 decimal places
 
@@ -359,7 +359,7 @@ var exponentH = parseInt(parts[1]);
 
 // Check if the coefficient is close to 1
 
-resultH1 = coefficientH.toFixed(2) + " &sdot; 10<sup>" + exponentH + "</sup>"; // Format in x * 10^y notation
+var resultH1 = coefficientH.toFixed(2) + " &sdot; 10<sup>" + exponentH + "</sup>"; // Format in x * 10^y notation
 // Display result and formula with appropriate units
 document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH1.toFixed(2) + " J/m<sup>2</sup><br>Result (E): " + resultE1.toFixed(2) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
     
