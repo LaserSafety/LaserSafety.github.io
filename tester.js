@@ -3,10 +3,6 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    var phi = parseFloat(document.getElementById('phi').value);
-    var P = parseFloat(document.getElementById('ausgangsleistung').value);
-    var Q = parseFloat(document.getElementById('ausgangsenergie').value);
-    var a = parseFloat(document.getElementById('austrittsdurchmesser').value);
     
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
@@ -358,9 +354,7 @@ var partsH = resultStringH.split("e");
 var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
-var NOHD = 1/phi * (Math.sqrt((4 * Q)/(Math.PI * resultE)) - a);
-
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "NOHD: " + NOHD;
+document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
 
 }
