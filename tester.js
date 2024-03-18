@@ -324,7 +324,6 @@ function calculate() {
     formula = formula.replace(/\*/g, "&sdot;"); 
 
    // Format result
-
 var resultH, resultE;
 
 // Calculate result for H or E based on the formula
@@ -338,29 +337,24 @@ if (formula.includes("E =")) {
     document.getElementById('result').innerHTML = "Invalid formula";
     return;
 }
-    
-var resultStringE = resultE.toExponential(2); // Convert to exponential notation with 6 decimal places
 
-// Separate the coefficient and exponent parts
+// Format result for E
+var resultStringE = resultE.toExponential(2); // Convert to exponential notation with 2 decimal places
+
+// Separate the coefficient and exponent parts for E
 var partsE = resultStringE.split("e");
-var coefficientE = parseFloat(parts[0]);
-var exponentE = parseInt(parts[1]);
+var coefficientE = parseFloat(partsE[0]);
+var exponentE = parseInt(partsE[1]);
 
-// Check if the coefficient is close to 1
+// Format result for H
+var resultStringH = resultH.toExponential(2); // Convert to exponential notation with 2 decimal places
 
-var resultE1 = coefficientE.toFixed(2) + " &sdot; 10<sup>" + exponentE + "</sup>"; // Format in x * 10^y notation
-
-var resultStringH = resultH.toExponential(2); // Convert to exponential notation with 6 decimal places
-
-// Separate the coefficient and exponent parts
+// Separate the coefficient and exponent parts for H
 var partsH = resultStringH.split("e");
-var coefficientH = parseFloat(parts[0]);
-var exponentH = parseInt(parts[1]);
+var coefficientH = parseFloat(partsH[0]);
+var exponentH = parseInt(partsH[1]);
 
-// Check if the coefficient is close to 1
-
-var resultH1 = coefficientH.toFixed(2) + " &sdot; 10<sup>" + exponentH + "</sup>"; // Format in x * 10^y notation
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + resultH1.toFixed(2) + " J/m<sup>2</sup><br>Result (E): " + resultE1.toFixed(2) + " W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
-    
+document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
+
 }
