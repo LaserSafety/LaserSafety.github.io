@@ -180,16 +180,7 @@ function topFunction() {
   </div>
 </header>
 <script>
-function openSettings() {
-  document.getElementById("settingsMenu").style.display = "block";
-}
- 
-function closeSettingsMenu() {
-  document.getElementById("settingsMenu").style.display = "none";
-});
-
-// Side navigation
-function w3_open() {
+ function w3_open() {
   var x = document.getElementById("mySidebar");
   x.style.width = "100%";
   x.style.fontSize = "40px";
@@ -199,8 +190,6 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
-
-// Settings
 function w3_open_r() {
   var x = document.getElementById("settingsMenu");
   x.style.width = "100%";
