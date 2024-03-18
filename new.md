@@ -121,12 +121,31 @@ input[type=number]:focus {
   border: 2px solid #6b2443;
   border-radius: 4px;
 }
+.z-index {
+ z-index = "5";
+ }
 </style>
 </head>
 <body>
-<div id="navbar">
+<div id="navbar" class="z-index">
   <img src="wappen.png" width="50" height="50">
 </div>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100%";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
@@ -388,21 +407,6 @@ function closeSettingsMenu() {
       }
     }
   }
-  
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-100%";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 
 // Side navigation
 function w3_open() {
