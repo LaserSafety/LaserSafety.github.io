@@ -372,10 +372,9 @@ var exponentH = parseInt(partsH[1]);
   if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
-        var E_t_H = result / t_H;
         var E_g = result / g;
         // Find the smallest value among the calculated results
-        var resultegw = Math.min(result, E_t_H, E_g);
+        var resultegw = Math.min(result, E_g);
   }
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EGW: " + resultegw;
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + result + "<br>MWK: " + E_g;
 }
