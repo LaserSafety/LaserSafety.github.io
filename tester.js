@@ -12,7 +12,7 @@ function calculate() {
     var formula;
     var optischer_bereich;
 
-    var g = (frequenz * t_H)
+    var g = (frequenz * t_H);
     // Calculate C variables based on wellenlaenge
     var C_a, C_b, C_c, C_e;
     // Calculate T vairables basen on wellenlaenge
@@ -327,9 +327,11 @@ function calculate() {
       if (wellenlaenge >= 100 && wellenlaenge <= 302) {
         result = 30;
         formula = "H = 30";
-      }
+    } else if (wellenlaenge >= 303 && wellenlaenge <= 400) {
+        result = 40;
+        formula = "H = 40";
     }
-    
+    }
     
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
