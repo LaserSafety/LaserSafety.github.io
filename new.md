@@ -418,7 +418,7 @@ betriebsart.addEventListener('change', function() {
       pulsdauer.classList.add('fade-in');
     }, 500); // Delay before first element fades in
   }
-});
+}
 
 // Tabs
 function openCity(evt, cityName) {
