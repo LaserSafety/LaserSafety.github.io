@@ -419,7 +419,8 @@ betriebsart.addEventListener('change', function() {
     }, 500); // Delay before first element fades in
   }
 }
-
+</script>
+<script>
 // Tabs
 function openCity(evt, cityName) {
   var i;
