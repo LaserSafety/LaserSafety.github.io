@@ -221,7 +221,7 @@ function calculate() {
         } else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
             result = Math.pow(10, 4);
             formula = "H = 10<sup>4</sup>";
-        } else if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
+        } else if (wellenlaenge > 1800 && wellenlaenge < 2600) {
             result = Math.pow(10, 3);
             formula = "H = 10<sup>3</sup>";
         } else if (wellenlaenge >= 2600 && wellenlaenge <= 1000000) {
