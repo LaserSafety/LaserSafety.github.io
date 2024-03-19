@@ -327,7 +327,9 @@ function calculate() {
       if (wellenlaenge >= 100 && wellenlaenge <= 302) {
         result = 30;
         formula = "H = 30";
-      }
+    } else if (wellenlaenge >= 303 && wellenlaenge <= 400) {
+        result = 40;
+        formula = "H = 40";
     }
     
     
