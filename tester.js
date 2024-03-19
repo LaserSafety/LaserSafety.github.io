@@ -3,7 +3,10 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    
+    var betriebsart = document.getElementById('betriebsart').value;
+    var g = parseFloat(document.getElementById('frequenz').value);
+    var t_H = parseFloat(document.getElementById('impulsdauer').value);
+
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
     var result;
@@ -355,6 +358,21 @@ var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
 
+    if (betriebsart === 'D') {
+        // Original calculation
+        result = calculateOriginal(expositionsdauer, wellenlaenge, alpha);
+    } else if (['I', 'R', 'M'].includes(betriebsart)) {
+        // Additional calculations based on g and t_H
+        var E = calculateOriginal(expositionsdauer, wellenlaenge, alpha);
+        var E_t_H = E / t_H;
+        var E_g = E / g;
+
+        // Find the smallest value among the calculated results
+        result = Math.min(resultE, E_t_H, E_g);
+    } else {
+        document.getElementById('result').innerHTML = "Invalid betriebsart value";
+        return;
+    }
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "EGW: " + result;
 }
