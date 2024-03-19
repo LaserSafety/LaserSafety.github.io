@@ -4,15 +4,15 @@ function calculate() {
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
     var betriebsart = document.getElementById('betriebsart').value;
-    var g = parseFloat(document.getElementById('frequenz').value);
     var t_H = parseFloat(document.getElementById('pulsdauer').value);
-
+    var frequenz = parseFloat(document.getElementById('frequenz').value);
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
     var result;
     var formula;
     var optischer_bereich;
-    
+
+    var g = (frequenz * t_H)
     // Calculate C variables based on wellenlaenge
     var C_a, C_b, C_c, C_e;
     // Calculate T vairables basen on wellenlaenge
@@ -295,7 +295,7 @@ function calculate() {
     
     // 1E-3 TO 10
 
-    if (expositionsdauer >= 1E-3 && expositionsdauer < 10 ) {
+    if (expositionsdauer >= 1E-3 && expositionsdauer <= 10 ) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -322,6 +322,14 @@ function calculate() {
             return;
         }
     }
+
+    if (expositionsdauer >= 10 && expositionsdauer <= 30000) {
+      if (wellenlaenge >= 100 && wellenlaenge <= 302) {
+        result = 30;
+        formula = "H = 30";
+      }
+    }
+    
     
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
