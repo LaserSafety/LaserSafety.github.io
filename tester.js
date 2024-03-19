@@ -5,7 +5,7 @@ function calculate() {
     var alpha = parseFloat(document.getElementById('alpha').value);
     var betriebsart = document.getElementById('betriebsart').value;
     var g = parseFloat(document.getElementById('frequenz').value);
-    var t_H = parseFloat(document.getElementById('impulsdauer').value);
+    var t_H = parseFloat(document.getElementById('pulsdauer').value);
 
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
