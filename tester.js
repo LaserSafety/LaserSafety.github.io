@@ -369,20 +369,20 @@ var exponentH = parseInt(partsH[1]);
 
 // Display result and formula with appropriate units
 
-    if (betriebsart === 'D') {
-        // Original calculation
-        result = calculateOriginal(expositionsdauer, wellenlaenge, alpha);
-    } else if (['I', 'R', 'M'].includes(betriebsart)) {
+  //  if (betriebsart === 'D') {
+  //      // Original calculation
+  //      result = calculateOriginal(expositionsdauer, wellenlaenge, alpha);
+  //} else if (['I', 'R', 'M'].includes(betriebsart)) {
         // Additional calculations based on g and t_H
-        var E = calculateOriginal(expositionsdauer, wellenlaenge, alpha);
-        var E_t_H = E / t_H;
-        var E_g = E / g;
+        //var E = calculateOriginal(expositionsdauer, wellenlaenge, alpha);
+        //var E_t_H = E / t_H;
+        //var E_g = E / g;
 
         // Find the smallest value among the calculated results
-        result = Math.min(resultE, E_t_H, E_g);
-    } else {
-        document.getElementById('result').innerHTML = "Invalid betriebsart value";
-        return;
-    }
+        //result = Math.min(resultE, E_t_H, E_g);
+    //} else {
+      //  document.getElementById('result').innerHTML = "Invalid betriebsart value";
+        //return;
+    //}
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "EGW: " + result;
 }
