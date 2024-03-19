@@ -386,7 +386,7 @@ function w3_close_r() {
         </footer>
     </div>
 </div>
-<script src="tester.js"></script>
+<script src="calculator.js"></script>
 <script>
     function openModal() {
         // Call calculate function and update result element
