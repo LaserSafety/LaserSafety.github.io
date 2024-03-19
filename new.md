@@ -263,6 +263,32 @@ function w3_close_r() {
     <p><b>t</b> = <input type="text" id="pulsdauer"> in <b>s</b></p>
   </div>
  </div>
+ 
+<script>
+const betriebsart = document.getElementById('betriebsart');
+const frequenz = document.getElementById('Frequenz');
+const pulsdauer = document.getElementById('Pulsdauer');
+
+betriebsart.addEventListener('change', function() {
+  if (betriebsart.value === 'D') {
+    // Fade out first element, then fade out second element after a delay
+    pulsdauer.classList.remove('fade-in');
+    pulsdauer.classList.add('fade-out');
+    setTimeout(() => {
+      frequenz.classList.add('fade-out');
+      frequenz.classList.remove('fade-in');
+    }, 500); // Delay after first element fades out
+  } else {
+    // Fade in second element, then fade in first element after a delay
+    frequenz.classList.remove('fade-out');
+    frequenz.classList.add('fade-in');
+    setTimeout(() => {
+      pulsdauer.classList.remove('fade-out');
+      pulsdauer.classList.add('fade-in');
+    }, 500); // Delay before first element fades in
+  }
+}
+</script>
 
   <div class="w3-third">
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
@@ -395,31 +421,6 @@ function w3_close_r() {
      }
 </script>
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script>
-const betriebsart = document.getElementById('betriebsart');
-const frequenz = document.getElementById('Frequenz');
-const pulsdauer = document.getElementById('Pulsdauer');
-
-betriebsart.addEventListener('change', function() {
-  if (betriebsart.value === 'D') {
-    // Fade out first element, then fade out second element after a delay
-    pulsdauer.classList.remove('fade-in');
-    pulsdauer.classList.add('fade-out');
-    setTimeout(() => {
-      frequenz.classList.add('fade-out');
-      frequenz.classList.remove('fade-in');
-    }, 500); // Delay after first element fades out
-  } else {
-    // Fade in second element, then fade in first element after a delay
-    frequenz.classList.remove('fade-out');
-    frequenz.classList.add('fade-in');
-    setTimeout(() => {
-      pulsdauer.classList.remove('fade-out');
-      pulsdauer.classList.add('fade-in');
-    }, 500); // Delay before first element fades in
-  }
-}
-</script>
 <script>
 // Tabs
 function openCity(evt, cityName) {
