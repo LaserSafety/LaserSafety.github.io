@@ -7,6 +7,7 @@ function calculate() {
     var pulsdauer_y = parseFloat(document.getElementById('pulsdauer_y').value);
     var frequenz = parseFloat(document.getElementById('frequenz').value);
     var t_H = pulsdauer_x * Math.pow(10, -pulsdauer_y);
+    
 
     var result; //Endresultat
     var formula;//Endformel
@@ -23,6 +24,15 @@ function calculate() {
     
 // h = (J/m^2) e = (W/m^2)
 
+    var t;
+        if (betriebsart === "D") {
+        t = expositionsdauer;
+        }
+    
+    var EIK;
+    var MWK;
+    var IFK;
+            
     //Berechnung des Korrekturfaktors T_1
     if (wellenlaenge < 450) {
         T_1 = 10;
@@ -180,7 +190,7 @@ function calculate() {
             formula2 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - A";
         } else if (wellenlaenge >= 400 && wellenlaenge <= 700) {
-            result2 = (2.7E4 * Math.pow(t_H,0.75)) * C_e;
+            result2 = (2.7E4 * Math.pow(t,0.75)) * C_e;
             formula2 = "H = (2.7E4 * t<sup>0.75</sup>) * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
@@ -275,8 +285,13 @@ function calculate() {
             formula = formula3;
         }
     }
+
+
     
     //pulsdauerwerte von 1E-7 bis 1.8E-5
+    //TODO
+
+
     
     // Grenzwert (1e-7) wird hier bestimmt
     if (t_H === 1e-7) {
@@ -470,5 +485,22 @@ var exponentH = parseInt(partsH[1]);
         // Find the smallest value among the calculated results
         var resultegw = Math.min(resultH, E_g);
   }
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g + "<br>Expo result: " + resultX + "<br>formula expo:" + formulaX;
+  
+ var resultfin;
+ var t_IFK;
+ var t_MWK = 100;
+    if (t_H < T_min) {
+       t_IFK = T_min;
+    } else {
+       t_IFK = t_H;
+    }
+
+ if (result.includes("t")) {
+    EIK = result.replace(t, t_H);
+    MWK = result.replace(t, t_MWK);
+    IFK = result.replace(t, t_IFK);
+ }
+ resultfin = Math.min(EIK, MWK, IFK);
+
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g + "<br>Expo result: " + resultX + "<br>formula expo: " + formulaX + "Endresultat: " + resultfin;
 }
