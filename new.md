@@ -259,7 +259,7 @@ function w3_close_r() {
       <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
       <p>Eingabe pulsdauer 
       <br>(<b>x</b>&sdot;10<sup><b>-y</b></sup>)</p>
-      <p><b>t</b> = <input type="text" id="pulsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="pulsdauer_y"> in <b>s</b></p>
+      <p><b>t<sub>H</sub></b> = <input type="text" id="pulsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="pulsdauer_y"> in <b>s</b></p>
     </div>
   </div>
  </div>
