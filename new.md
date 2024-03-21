@@ -262,7 +262,6 @@ function w3_close_r() {
       <p><b>t<sub>H</sub></b> = <input type="text" id="pulsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="pulsdauer_y"> in <b>s</b></p>
     </div>
   </div>
- </div>
  
 <script>
 const betriebsart = document.getElementById('betriebsart');
