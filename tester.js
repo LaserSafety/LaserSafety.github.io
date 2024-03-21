@@ -1,10 +1,10 @@
 function calculate() {
-    var pulsdauer_x = parseFloat(document.getElementById('pulsdauer_x').value);
-    var pulsdauer_y = parseFloat(document.getElementById('pulsdauer_y').value);
+    var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
     var betriebsart = document.getElementById('betriebsart').value;
-    var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
+    var pulsdauer_x = parseFloat(document.getElementById('pulsdauer_x').value);
+    var pulsdauer_y = parseFloat(document.getElementById('pulsdauer_y').value);
     var frequenz = parseFloat(document.getElementById('frequenz').value);
     var t_H = pulsdauer_x * Math.pow(10, -pulsdauer_y);
 
@@ -368,10 +368,10 @@ function calculate() {
         resultX = 10000;
         formulaX = "H = 10000";
     } else {
-            document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
-            return;
+        document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
+        return;
     }
-    
+    }
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
 
