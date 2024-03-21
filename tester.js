@@ -25,9 +25,6 @@ function calculate() {
 // h = (J/m^2) e = (W/m^2)
 
     var t;
-        if (betriebsart === "D") {
-        t = expositionsdauer;
-        }
     
     var EIK;
     var MWK;
@@ -392,6 +389,7 @@ function calculate() {
             return;
         }
     }
+    
     var resultX;
     var formulaX;
     if (expositionsdauer >= 10 && expositionsdauer <= 100) {
