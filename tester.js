@@ -8,20 +8,22 @@ function calculate() {
     var frequenz = parseFloat(document.getElementById('frequenz').value);
     var t_H = pulsdauer_x * Math.pow(10, -pulsdauer_y);
 
-    var result;
-    var formula;
+    var result; //Endresultat
+    var formula;//Endformel
     var optischer_bereich;
 
     var g = (frequenz * t_H);
-    // Calculate C variables based on wellenlaenge
+    
     var C_a, C_b, C_c, C_e;
-    // Calculate T vairables basen on wellenlaenge
+    
     var T_1, T_2, T_min;
     var alphamax, alphamin;
     alphamax=100;
     alphamin=1.5;
     
 // h = (J/m^2) e = (W/m^2)
+
+    //Berechnung des Korrekturfaktors T_1
     if (wellenlaenge < 450) {
         T_1 = 10;
     }  else if (wellenlaenge >= 450 && wellenlaenge <= 500) {
@@ -30,6 +32,7 @@ function calculate() {
         T_1 = 100;
     }
 
+    //Berechnung des Korrekturfaktors T_2
     if (alpha <= 1.5) {
         T_2 = 10;
     } else if (alpha > 1.5 && alpha <= 100) {
@@ -38,6 +41,7 @@ function calculate() {
         T_2 = 100;
     }
 
+    //Berechnung des Korrekturfaktors T_min
     if (wellenlaenge > 315 && wellenlaenge <= 400) {
         T_min = Math.pow(10, -9);
     }  else if (wellenlaenge > 400 && wellenlaenge <= 1050) {
@@ -53,7 +57,8 @@ function calculate() {
     }  else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
         T_min = Math.pow(10, -7);
     }
-
+    
+    //Berechnung des Korrekturfaktors T
     if (wellenlaenge > 315 && wellenlaenge <= 400) {
         T = 30000;
     } else if (wellenlaenge > 400 && wellenlaenge <= 1400) {
@@ -61,7 +66,8 @@ function calculate() {
     } else if (wellenlaenge > 1400) {
         T = 10;
     }
-            
+    
+    //Berechnung des Korrekturfaktors C_a        
     if (wellenlaenge >= 400 && wellenlaenge <= 700) {
         C_a = 1;
     } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
@@ -70,12 +76,14 @@ function calculate() {
         C_a = 5;
     }
     
+    //Berechnung des Korrekturfaktors C_b
     if (wellenlaenge >= 400 && wellenlaenge <= 450) {
         C_b = 1;
     } else if (wellenlaenge > 450 && wellenlaenge <= 600) {
         C_b = Math.pow(10, 0.02 * (wellenlaenge-600));
     }
     
+    //Berechnung des Korrekturfaktors C_c
     if (wellenlaenge >= 700 && wellenlaenge <= 1150) {
         C_c = 1;
     } else if (wellenlaenge > 1150 && wellenlaenge <= 1200) {
@@ -83,7 +91,8 @@ function calculate() {
     } else if (wellenlaenge > 1200 && wellenlaenge <= 1400) {
         C_c = 8;
     }
-    
+
+    //Berechnung des Korrekturfaktors C_e
     if (alpha >= 0 && alpha <= 1.5) {
         C_e = 1;
     } else if (alpha > 1.5 && alpha <= 100) {
@@ -92,49 +101,62 @@ function calculate() {
         C_e = alphamax / alphamin;
     }
 
-    // 1E-13 TO 1E-11
+    //Grund für diese Variablen wird später eindeutig gemacht
+    var result1; 
+    var result2;
+    var result3;
+    var result4;
+    var result5;
+    var result6;
+    var formula1;
+    var formula2;
+    var formula3;
+    var formula4;
+    var formula5;
+    var formula6;
     
-    // Choose the appropriate formula based on expositionsdauer and wellenlaenge
+    //Pulsdauerwerte von 1E-13 bis 1E-11
+    
     if (t_H >= 1E-13 && t_H < 1E-11) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result1 = (3E10);
+            formula1 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - C";
         } else if (wellenlaenge >= 303 && wellenlaenge <= 314) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result1 = (3E10);
+            formula1 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - B";
         } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result1 = (3E10);
+            formula1 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - A";
         } else if (wellenlaenge >= 400 && wellenlaenge <= 700) {
-            result = (1.5E-4) * C_e;
-            formula = "H = (1.5E-4) * C<sub>e</sub>";
+            result1 = (1.5E-4) * C_e;
+            formula1 = "H = (1.5E-4) * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
-            result = (1.5E-4) * C_a * C_e;
-            formula = "H = (1.5E-4) * C<sub>a</sub> * C<sub>e</sub>";
+            result1 = (1.5E-4) * C_a * C_e;
+            formula1 = "H = (1.5E-4) * C<sub>a</sub> * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
-            result = (1.5E-3) * C_c * C_e;
-            formula = "H = (1.5E-3) * C<sub>c</sub> * C<sub>e</sub>";
+            result1 = (1.5E-3) * C_c * C_e;
+            formula1 = "H = (1.5E-3) * C<sub>c</sub> * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 1400 && wellenlaenge <= 1500) {
-            result = Math.pow(10, 12);
-            formula = "E = 10<sup>12</sup>";
+            result1 = Math.pow(10, 12);
+            formula1 = "E = 10<sup>12</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
-            result = Math.pow(10, 13);
-            formula = "E = 10<sup>13</sup>";
+            result1 = Math.pow(10, 13);
+            formula1 = "E = 10<sup>13</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
-            result = Math.pow(10, 12);
-            formula = "E = 10<sup>12</sup>";
+            result1 = Math.pow(10, 12);
+            formula1 = "E = 10<sup>12</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
-            result = Math.pow(10, 11);
-            formula = "E = 10<sup>11</sup>";
+            result1 = Math.pow(10, 11);
+            formula1 = "E = 10<sup>11</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
@@ -144,96 +166,129 @@ function calculate() {
     
     // 1E-11 TO 1E-9
     
-    if (t_H >= 1E-11 && t_H < 1E-9) {
+    if (t_H > 1E-11 && t_H < 1E-9) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result2 = (3E10);
+            formula2 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - C";
         } else if (wellenlaenge >= 303 && wellenlaenge <= 314) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result2 = (3E10);
+            formula2 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - B";
         } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result2 = (3E10);
+            formula2 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - A";
         } else if (wellenlaenge >= 400 && wellenlaenge <= 700) {
-            result = (2.7E4 * Math.pow(t_H,0.75)) * C_e;
-            formula = "H = (2.7E4 * t<sup>0.75</sup>) * C<sub>e</sub>";
+            result2 = (2.7E4 * Math.pow(t_H,0.75)) * C_e;
+            formula2 = "H = (2.7E4 * t<sup>0.75</sup>) * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
-            result = (2.7E4 * Math.pow(t_H,0.75)) * C_a * C_e;
-            formula = "H = (2.7E4 * t<sup>0.75</sup>) * C<sub>a</sub> * C<sub>e</sub>";
+            result2 = (2.7E4 * Math.pow(t_H,0.75)) * C_a * C_e;
+            formula2 = "H = (2.7E4 * t<sup>0.75</sup>) * C<sub>a</sub> * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
-            result = (2.7E4 * Math.pow(t_H,0.75)) * C_c * C_e;
-            formula = "H = (2.7E5 * t<sup>0.75</sup>) * C<sub>c</sub> * C<sub>e</sub>";
+            result2 = (2.7E4 * Math.pow(t_H,0.75)) * C_c * C_e;
+            formula2 = "H = (2.7E5 * t<sup>0.75</sup>) * C<sub>c</sub> * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 1400 && wellenlaenge <= 1500) {
-            result = Math.pow(10, 12);
-            formula = "E = 10<sup>12</sup>";
+            result2 = Math.pow(10, 12);
+            formula2 = "E = 10<sup>12</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
-            result = Math.pow(10, 13);
-            formula = "E = 10<sup>13</sup>";
+            result2 = Math.pow(10, 13);
+            formula2 = "E = 10<sup>13</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
-            result = Math.pow(10, 12);
-            formula = "E = 10<sup>12</sup>";
+            result2 = Math.pow(10, 12);
+            formula2 = "E = 10<sup>12</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
-            result = Math.pow(10, 11);
-            formula = "E = 10<sup>11</sup>";
+            result2 = Math.pow(10, 11);
+            formula2 = "E = 10<sup>11</sup>";
             optischer_bereich = "IR - B & IR - C";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
     }
+    //Grenzwert (1e-11) wird hier bestimmt
+    if (t_H === 1e-11) {
+        if (result1 < result2) { //Werte werden verglichen
+        result = result1;
+        formula = formula1;
+    } else {                     //kleinerer Wert wird genommen
+        result = result2;        //Endresultat wird festgelegt
+        formula = formula2;
+        }
+    }
     
-    // 1E-9 TO 1E-7
+    //Pulsdauerwerte von 1E-9 bis 1E-7
     
-    if (t_H >= 1E-9 && t_H < 1E-7) {
+    if (t_H > 1E-9 && t_H < 1E-7) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result3 = (3E10);
+            formula3 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - C";
         } else if (wellenlaenge >= 303 && wellenlaenge <= 314) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result3 = (3E10);
+            formula3 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - B";
         } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result3 = (3E10);
+            formula3 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - A";
         } else if (wellenlaenge > 400 && wellenlaenge <= 700) {
-            result = (5E-3) * C_e;
-            formula = "H = (5E-3) * C<sub>e</sub>";
+            result3 = (5E-3) * C_e;
+            formula3 = "H = (5E-3) * C<sub>e</sub>";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
-            result = (5E-3) * C_a * C_e;
-            formula = "H = (5E-3) * C<sub>a</sub> * C<sub>e</sub>";
+            result3 = (5E-3) * C_a * C_e;
+            formula3 = "H = (5E-3) * C<sub>a</sub> * C<sub>e</sub>";
         } else if (wellenlaenge > 1050 && wellenlaenge <= 1400) {
-            result = (5E-2) * C_c * C_e;
-            formula = "H = (5E-2) * C<sub>c</sub> * C<sub>e</sub>";
+            result3 = (5E-2) * C_c * C_e;
+            formula3 = "H = (5E-2) * C<sub>c</sub> * C<sub>e</sub>";
         } else if (wellenlaenge > 1400 && wellenlaenge <= 1500) {
-            result = Math.pow(10, 3);
-            formula = "H = 10<sup>3</sup>";
+            result3 = Math.pow(10, 3);
+            formula3 = "H = 10<sup>3</sup>";
         } else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
-            result = Math.pow(10, 4);
-            formula = "H = 10<sup>4</sup>";
+            result3 = Math.pow(10, 4);
+            formula3 = "H = 10<sup>4</sup>";
         } else if (wellenlaenge > 1800 && wellenlaenge < 2600) {
-            result = Math.pow(10, 3);
-            formula = "H = 10<sup>3</sup>";
+            result3 = Math.pow(10, 3);
+            formula3 = "H = 10<sup>3</sup>";
         } else if (wellenlaenge >= 2600 && wellenlaenge <= 1000000) {
-            result = 100;
-            formula = "H = 100";
+            result3 = 100;
+            formula3 = "H = 100";
         } else {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
     }
+
+    // Grenzwert (1e-9) wird hier bestimmt
+    if (t_H === 1e-9) {
+        if (result2 < result3) { //Werte werden verglichen
+            result = result2;
+            formula = formula2;
+        } else {                 //kleinerer Wert wird genommen
+            result = result3;    //Endresultat wird festgelegt
+            formula = formula3;
+        }
+    }
     
-    // 1.8E-5 TO 5E-5
+    //pulsdauerwerte von 1E-7 bis 1.8E-5
+    
+    // Grenzwert (1e-7) wird hier bestimmt
+    if (t_H === 1e-7) {
+        if (result3 < result4) { //Werte werden verglichen
+            result = result3;
+            formula = formula3;
+        } else {                 //kleinerer Wert wird genommen
+            result = result4;    //Endresultat wird festgelegt
+            formula = formula4;
+        }
+    }
+    //Pulsdauerwerte von 1.8E-5 bis 5E-5
 
     if (t_H >= 1.8E-5 && t_H < 5E-5) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
