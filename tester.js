@@ -95,7 +95,7 @@ function calculate() {
     // 1E-13 TO 1E-11
     
     // Choose the appropriate formula based on expositionsdauer and wellenlaenge
-    if (expositionsdauer >= 1E-13 && expositionsdauer < 1E-11) {
+    if (t_H >= 1E-13 && t_H < 1E-11) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
             formula = "E = 3 * 10<sup>10</sup>";
@@ -144,7 +144,7 @@ function calculate() {
     
     // 1E-11 TO 1E-9
     
-    if (expositionsdauer >= 1E-11 && expositionsdauer < 1E-9) {
+    if (t_H >= 1E-11 && t_H < 1E-9) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
             formula = "E = 3 * 10<sup>10</sup>";
@@ -193,7 +193,7 @@ function calculate() {
     
     // 1E-9 TO 1E-7
     
-    if (expositionsdauer >= 1E-9 && expositionsdauer < 1E-7) {
+    if (t_H >= 1E-9 && t_H < 1E-7) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
             formula = "E = 3 * 10<sup>10</sup>";
@@ -235,7 +235,7 @@ function calculate() {
     
     // 1.8E-5 TO 5E-5
 
-    if (expositionsdauer >= 1.8E-5 && expositionsdauer < 5E-5) {
+    if (t_H >= 1.8E-5 && t_H < 5E-5) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -265,7 +265,7 @@ function calculate() {
     
     // 5E-5 TO 1E-3
 
-    if (expositionsdauer >= 5E-5 && expositionsdauer < 1E-3) {
+    if (t_H >= 5E-5 && t_H < 1E-3) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -295,7 +295,7 @@ function calculate() {
     
     // 1E-3 TO 10
 
-    if (expositionsdauer >= 1E-3 && expositionsdauer <= 10 ) {
+    if (t_H >= 1E-3 && t_H <= 10 ) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -380,7 +380,7 @@ if (formula.includes("E =")) {
     resultH = resultE * expositionsdauer; // Calculate H if the formula is E = xyz
 } else if (formula.includes("H =")) {
     resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
-    resultE = resultH / expositionsdauer; // Calculate E if the formula is H = xyz
+    resultE = resultH / t_H; // Calculate E if the formula is H = xyz
 } else {
     document.getElementById('result').innerHTML = "Invalid formula";
     return;
