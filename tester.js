@@ -1,12 +1,12 @@
 function calculate() {
-    var expositionsdauer_x = parseFloat(document.getElementById('expositionsdauer_x').value);
-    var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
+    var pulsdauer_x = parseFloat(document.getElementById('pulsdauer_x').value);
+    var pulsdauer_y = parseFloat(document.getElementById('pulsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
     var betriebsart = document.getElementById('betriebsart').value;
-    var t_H = parseFloat(document.getElementById('pulsdauer').value);
+    var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
     var frequenz = parseFloat(document.getElementById('frequenz').value);
-    var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
+    var t_H = pulsdauer_x * Math.pow(10, -pulsdauer_y);
 
     var result;
     var formula;
@@ -323,14 +323,49 @@ function calculate() {
         }
     }
 
-    if (expositionsdauer >= 10 && expositionsdauer <= 30000) {
+    if (expositionsdauer >= 10 && expositionsdauer <= 100) {
       if (wellenlaenge >= 100 && wellenlaenge <= 302) {
         result = 30;
         formula = "H = 30";
-    } else if (wellenlaenge >= 303 && wellenlaenge <= 400) {
+    } else if (wellenlaenge = 303) {
         result = 40;
         formula = "H = 40";
-    }
+    } else if (wellenlaenge = 304) {
+        result = 60;
+        formula = "H = 60";
+    } else if (wellenlaenge = 305) {
+        result = 100;
+        formula = "H = 100";
+    } else if (wellenlaenge = 306) {
+        result = 160;
+        formula = "H = 160";
+    } else if (wellenlaenge = 307) {
+        result = 250;
+        formula = "H = 250";
+    } else if (wellenlaenge = 308) {
+        result = 400;
+        formula = "H = 400";
+    } else if (wellelaenge = 309) {
+        result = 630;
+        formula = "H = 630";
+    } else if (wellenlaenge = 310) {
+        result = 1000;
+        formula = "H = 1000";
+    } else if (wellenlaenge = 311) {
+        result = 1600;
+        formula = "H = 1600";
+    } else if (wellenlaenge = 312) {
+        result = 2500;
+        formula = "H = 2500";
+    } else if (wellenlaenge = 313) {
+        result = 4000;
+        formula = "H = 4000";
+    } else if (wellenlaenge = 314) {
+        result = 6300;
+        formula = "H = 6300";
+    } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
+        result = 10000;
+        formula = "H = 10000";
     }
     
     // Replace asterisks with the dot symbol in the formula
