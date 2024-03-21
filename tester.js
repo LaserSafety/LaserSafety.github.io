@@ -187,7 +187,7 @@ function calculate() {
             formula2 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - A";
         } else if (wellenlaenge >= 400 && wellenlaenge <= 700) {
-            result2 = (2.7E4 * Math.pow(t,0.75)) * C_e;
+            result = (2.7E4 * Math.pow(t,0.75)) * C_e;
             formula2 = "H = (2.7E4 * t<sup>0.75</sup>) * C<sub>e</sub>";
             optischer_bereich = "VIS & IR - A";
         } else if (wellenlaenge > 700 && wellenlaenge <= 1050) {
