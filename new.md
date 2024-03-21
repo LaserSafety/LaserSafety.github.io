@@ -202,17 +202,15 @@ function w3_close_r() {
 }
 </script>
 <!-- Modal -->
-
 <div class="w3-row-padding w3-column-padding w3-center w3-margin-top">
-  <div class="w3-third">
-    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
-      <h3>Expositionsdauer</h3><br>
-      <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-      <p>Eingabe Expositionsdauer 
-      <br>(<b>x</b>&sdot;10<sup><b>-y</b></sup>)</p>
-      <p><b>t</b> = <input type="text" id="expositionsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="expositionsdauer_y"> in <b>s</b></p>
-    </div>
+<div class="w3-third">
+  <div class="w3-card w3-container fadingElement w3-animate-bottom" style="min-height:460px">
+    <h3>Expositionsdauer</h3><br>
+    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>Eingabe Expositionsdauer</p>
+    <p><b>t</b> = <input type="text" id="expositionsdauer"> in <b>s</b></p>
   </div>
+ </div>
 
   <div class="w3-third">
     <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px">
@@ -255,12 +253,14 @@ function w3_close_r() {
   </div>
 </div>
 
-<div class="w3-third">
-  <div class="w3-card w3-container fadingElement w3-animate-bottom" style="min-height:460px" id="Pulsdauer">
-    <h3>Pulsdauer</h3><br>
-    <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-    <p>Eingabe Pulsdauer</p>
-    <p><b>t</b> = <input type="text" id="pulsdauer"> in <b>s</b></p>
+  <div class="w3-third">
+    <div class="w3-card w3-container w3-animate-bottom" style="min-height:460px" id="Pulsdauer">
+      <h3>Pulsdauer</h3><br>
+      <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <p>Eingabe pulsdauer 
+      <br>(<b>x</b>&sdot;10<sup><b>-y</b></sup>)</p>
+      <p><b>t</b> = <input type="text" id="pulsdauer_x"> &sdot;10<sup><bold>-</bold></sup> <input type="number" id="pulsdauer_y"> in <b>s</b></p>
+    </div>
   </div>
  </div>
  
