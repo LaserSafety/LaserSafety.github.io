@@ -366,6 +366,9 @@ function calculate() {
     } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
         result = 10000;
         formula = "H = 10000";
+    } else {
+            document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
+            return;
     }
     
     // Replace asterisks with the dot symbol in the formula
@@ -377,7 +380,7 @@ var resultH, resultE;
 // Calculate result for H or E based on the formula
 if (formula.includes("E =")) {
     resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
-    resultH = resultE * expositionsdauer; // Calculate H if the formula is E = xyz
+    resultH = resultE * t_H; // Calculate H if the formula is E = xyz
 } else if (formula.includes("H =")) {
     resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
     resultE = resultH / t_H; // Calculate E if the formula is H = xyz
