@@ -3,13 +3,16 @@ function calculate() {
     var expositionsdauer_y = parseFloat(document.getElementById('expositionsdauer_y').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    
+    var betriebsart = document.getElementById('betriebsart').value;
+    var t_H = parseFloat(document.getElementById('pulsdauer').value);
+    var frequenz = parseFloat(document.getElementById('frequenz').value);
     var expositionsdauer = expositionsdauer_x * Math.pow(10, -expositionsdauer_y);
 
     var result;
     var formula;
     var optischer_bereich;
-    
+
+    var g = (frequenz * t_H);
     // Calculate C variables based on wellenlaenge
     var C_a, C_b, C_c, C_e;
     // Calculate T vairables basen on wellenlaenge
@@ -218,10 +221,10 @@ function calculate() {
         } else if (wellenlaenge > 1500 && wellenlaenge <= 1800) {
             result = Math.pow(10, 4);
             formula = "H = 10<sup>4</sup>";
-        } else if (wellenlaenge > 1800 && wellenlaenge <= 2600) {
+        } else if (wellenlaenge > 1800 && wellenlaenge < 2600) {
             result = Math.pow(10, 3);
             formula = "H = 10<sup>3</sup>";
-        } else if (wellenlaenge > 2600 && wellenlaenge <= 1000000) {
+        } else if (wellenlaenge >= 2600 && wellenlaenge <= 1000000) {
             result = 100;
             formula = "H = 100";
         } else {
@@ -292,7 +295,7 @@ function calculate() {
     
     // 1E-3 TO 10
 
-    if (expositionsdauer >= 1E-3 && expositionsdauer < 10 ) {
+    if (expositionsdauer >= 1E-3 && expositionsdauer <= 10 ) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(expositionsdauer, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -318,6 +321,16 @@ function calculate() {
             document.getElementById('result').innerHTML = "Invalid wavelength value";
             return;
         }
+    }
+
+    if (expositionsdauer >= 10 && expositionsdauer <= 30000) {
+      if (wellenlaenge >= 100 && wellenlaenge <= 302) {
+        result = 30;
+        formula = "H = 30";
+    } else if (wellenlaenge >= 303 && wellenlaenge <= 400) {
+        result = 40;
+        formula = "H = 40";
+    }
     }
     
     // Replace asterisks with the dot symbol in the formula
@@ -355,6 +368,13 @@ var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
 // Display result and formula with appropriate units
-document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich;
 
+  if (betriebsart === 'I') {
+       // Original calculation
+         // Additional calculations based on g and t_H
+        var E_g = resultE / g;
+        // Find the smallest value among the calculated results
+        var resultegw = Math.min(resultE, E_g);
+  }
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g;
 }
