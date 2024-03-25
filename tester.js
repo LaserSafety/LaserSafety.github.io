@@ -233,6 +233,8 @@ function calculate() {
     //Pulsdauerwerte von 1E-9 bis 1E-7
     
     if (t_H > 1E-9 && t_H < 1E-7) {
+        result = result3;
+        formula = formula3;
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result3 = (3E10);
             formula3 = "E = 3 * 10<sup>10</sup>";
@@ -436,7 +438,7 @@ function calculate() {
         resultX = 10000;
         formulaX = "H = 10000";
     } else {
-        document.getElementById('result').innerHTML = "Invalid expositionsdauer value";
+        document.getElementById('result2').innerHTML = "Invalid expositionsdauer value";
         return;
     }
     }
