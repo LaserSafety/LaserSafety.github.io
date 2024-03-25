@@ -238,8 +238,8 @@ function calculate() {
             formula3 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - C";
         } else if (wellenlaenge >= 303 && wellenlaenge <= 314) {
-            result3 = (3E10);
-            formula3 = "E = 3 * 10<sup>10</sup>";
+            result = (3E10);
+            formula = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - B";
         } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
             result3 = (3E10);
