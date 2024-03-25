@@ -448,10 +448,10 @@ var resultH, resultE;
 
 // Calculate result for H or E based on the formula
 if (formula.includes("E =")) {
-    resultE = parseFloat(result3); // Convert result to a floating-point number for further calculations
+    resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
     resultH = resultE * t_H; // Calculate H if the formula is E = xyz
 } else if (formula.includes("H =")) {
-    resultH = parseFloat(result3); // Convert result to a floating-point number for further calculations
+    resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
     resultE = resultH / t_H; // Calculate E if the formula is H = xyz
 } else {
     document.getElementById('result').innerHTML = "Invalid formula";
