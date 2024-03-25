@@ -238,8 +238,8 @@ function calculate() {
             formula3 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - C";
         } else if (wellenlaenge >= 303 && wellenlaenge <= 314) {
-            result = (3E10);
-            formula = "E = 3 * 10<sup>10</sup>";
+            result3 = (3E10);
+            formula3 = "E = 3 * 10<sup>10</sup>";
             optischer_bereich = "UV - B";
         } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
             result3 = (3E10);
@@ -442,16 +442,16 @@ function calculate() {
     }
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
-
+    
    // Format result
 var resultH, resultE;
 
 // Calculate result for H or E based on the formula
 if (formula.includes("E =")) {
-    resultE = parseFloat(result); // Convert result to a floating-point number for further calculations
+    resultE = parseFloat(result3); // Convert result to a floating-point number for further calculations
     resultH = resultE * t_H; // Calculate H if the formula is E = xyz
 } else if (formula.includes("H =")) {
-    resultH = parseFloat(result); // Convert result to a floating-point number for further calculations
+    resultH = parseFloat(result3); // Convert result to a floating-point number for further calculations
     resultE = resultH / t_H; // Calculate E if the formula is H = xyz
 } else {
     document.getElementById('result').innerHTML = "Invalid formula";
