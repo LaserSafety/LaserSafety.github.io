@@ -411,7 +411,7 @@ betriebsart.addEventListener('change', function() {
         </footer>
     </div>
 </div>
-<script src="calculator.js"></script>
+<script src="tester.js"></script>
 <script>
     function openModal() {
         // Call calculate function and update result element
