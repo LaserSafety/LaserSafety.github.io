@@ -494,9 +494,9 @@ var exponentH = parseInt(partsH[1]);
     }
 
  if (result.includes("t")) {
-    EIK = parseFloat(result.replace('t', t_H));
-    MWK = parseFloat(result.replace('t', t_MWK));
-    IFK = parseFloat(result.replace('t', t_IFK));
+    EIK = parseFloat(result.replace('t', "t_H"));
+    MWK = parseFloat(result.replace('t', "t_MWK"));
+    IFK = parseFloat(result.replace('t', "t_IFK"));
     resultfin = Math.min(EIK, MWK, IFK);
 } else {
     // Handle the case when 't' is not found in the result
