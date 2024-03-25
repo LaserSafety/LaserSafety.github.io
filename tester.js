@@ -396,40 +396,40 @@ function calculate() {
       if (wellenlaenge >= 100 && wellenlaenge <= 302) {
         resultX = 30;
         formulaX = "H = 30";
-    } else if (wellenlaenge = 303) {
+    } else if (wellenlaenge === 303) {
         resultX = 40;
         formulaX = "H = 40";
-    } else if (wellenlaenge = 304) {
+    } else if (wellenlaenge === 304) {
         resultX = 60;
         formulaX = "H = 60";
-    } else if (wellenlaenge = 305) {
+    } else if (wellenlaenge === 305) {
         resultX = 100;
         formulaX = "H = 100";
-    } else if (wellenlaenge = 306) {
+    } else if (wellenlaenge === 306) {
         resultX = 160;
         formulaX = "H = 160";
-    } else if (wellenlaenge = 307) {
+    } else if (wellenlaenge === 307) {
         resultX = 250;
         formulaX = "H = 250";
-    } else if (wellenlaenge = 308) {
+    } else if (wellenlaenge === 308) {
         resultX = 400;
         formulaX = "H = 400";
-    } else if (wellelaenge = 309) {
+    } else if (wellenlaenge === 309) {
         resultX = 630;
         formulaX = "H = 630";
-    } else if (wellenlaenge = 310) {
+    } else if (wellenlaenge === 310) {
         resultX = 1000;
         formulaX = "H = 1000";
-    } else if (wellenlaenge = 311) {
+    } else if (wellenlaenge === 311) {
         resultX = 1600;
         formulaX = "H = 1600";
-    } else if (wellenlaenge = 312) {
+    } else if (wellenlaenge === 312) {
         resultX = 2500;
         formulaX = "H = 2500";
-    } else if (wellenlaenge = 313) {
+    } else if (wellenlaenge === 313) {
         resultX = 4000;
         formulaX = "H = 4000";
-    } else if (wellenlaenge = 314) {
+    } else if (wellenlaenge === 314) {
         resultX = 6300;
         formulaX = "H = 6300";
     } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
@@ -494,11 +494,15 @@ var exponentH = parseInt(partsH[1]);
     }
 
  if (result.includes("t")) {
-    EIK = result.replace(t, t_H);
-    MWK = result.replace(t, t_MWK);
-    IFK = result.replace(t, t_IFK);
- }
- resultfin = Math.min(EIK, MWK, IFK);
+    EIK = parseFloat(result.replace('t', t_H));
+    MWK = parseFloat(result.replace('t', t_MWK));
+    IFK = parseFloat(result.replace('t', t_IFK));
+    resultfin = Math.min(EIK, MWK, IFK);
+} else {
+    // Handle the case when 't' is not found in the result
+    resultfin = undefined;
+}
 
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g + "<br>Expo result: " + resultX + "<br>formula expo: " + formulaX + "Endresultat: " + resultfin;
+
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g + "<br>Expo result: " + resultX + "<br>formula expo: " + formulaX + "<br>Endresultat: " + resultfin;
 }
