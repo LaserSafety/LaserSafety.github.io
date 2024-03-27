@@ -235,7 +235,7 @@ function w3_close_r() {
     <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
     <p>Select an option:</p>
     <select id="betriebsart">
-      <option value="D">Dauerstrahl</option>
+      <option value="D">Dauerstrich</option>
       <option value="I">Impuls</option>
       <option value="R">Riesenimpuls</option>
       <option value="M">Modengekoppelt</option>
