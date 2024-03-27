@@ -387,13 +387,20 @@ var exponentH = parseInt(partsH[1]);
   }
   
 // var resultfin;
-// var t_IFK;
-// var t_MWK = 100;
-//    if (t_H < T_min) {
-//       t_IFK = T_min;
-//    } else {
-//       t_IFK = t_H;
-//    }
+var IFK;
+    if (t_H < T_min) {
+        IFK = T_min;
+    } else { 
+        IFK = t_H;
+    }
+var MWK;
+    if (10 < x && x <= 100) {
+       MWK = 100;
+   } else if (100 < x && x <= 10000) {
+       MWK = 10000;
+   } else if (10000 < x && x <= 30000) {
+       MWK = 30000;
+   }
 
  //if (result.includes("t")) {
    // EIK = parseFloat(result.replace('t', "t_H"));
@@ -406,5 +413,5 @@ var exponentH = parseInt(partsH[1]);
 //}
 
 
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g;
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + MWK + "IFK: " + IFK + "<br>g: " + g;
 }
