@@ -394,11 +394,11 @@ var IFK;
         IFK = t_H;
     }
 var MWK;
-    if (10 < x && x <= 100) {
+    if (10 < resultH && resultH <= 100) {
        MWK = 100;
-   } else if (100 < x && x <= 10000) {
+   } else if (100 < resultH && resultH <= 10000) {
        MWK = 10000;
-   } else if (10000 < x && x <= 30000) {
+   } else if (10000 < resultH && resultH <= 30000) {
        MWK = 30000;
    }
 
