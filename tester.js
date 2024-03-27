@@ -207,10 +207,7 @@ function calculate() {
     }
     
     //Pulsdauerwerte von 1E-9 bis 1E-7
-    
-    if (t_H > 1E-9 && t_H < 1E-7) {
-        result = result3;
-        formula = formula3;
+    if (t_H < 1e-9 && t_H > 1e-7) {
         if (wellenlaenge >= 100 && wellenlaenge <= 302) {
             result = (3E10);
             formula = "E = 3 * 10<sup>10</sup>";
