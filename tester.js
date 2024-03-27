@@ -392,56 +392,6 @@ function calculate() {
         }
     }
     
-    var resultX;
-    var formulaX;
-    if (expositionsdauer >= 10 && expositionsdauer <= 100) {
-      if (wellenlaenge >= 100 && wellenlaenge <= 302) {
-        resultX = 30;
-        formulaX = "H = 30";
-    } else if (wellenlaenge === 303) {
-        resultX = 40;
-        formulaX = "H = 40";
-    } else if (wellenlaenge === 304) {
-        resultX = 60;
-        formulaX = "H = 60";
-    } else if (wellenlaenge === 305) {
-        resultX = 100;
-        formulaX = "H = 100";
-    } else if (wellenlaenge === 306) {
-        resultX = 160;
-        formulaX = "H = 160";
-    } else if (wellenlaenge === 307) {
-        resultX = 250;
-        formulaX = "H = 250";
-    } else if (wellenlaenge === 308) {
-        resultX = 400;
-        formulaX = "H = 400";
-    } else if (wellenlaenge === 309) {
-        resultX = 630;
-        formulaX = "H = 630";
-    } else if (wellenlaenge === 310) {
-        resultX = 1000;
-        formulaX = "H = 1000";
-    } else if (wellenlaenge === 311) {
-        resultX = 1600;
-        formulaX = "H = 1600";
-    } else if (wellenlaenge === 312) {
-        resultX = 2500;
-        formulaX = "H = 2500";
-    } else if (wellenlaenge === 313) {
-        resultX = 4000;
-        formulaX = "H = 4000";
-    } else if (wellenlaenge === 314) {
-        resultX = 6300;
-        formulaX = "H = 6300";
-    } else if (wellenlaenge >= 315 && wellenlaenge <= 400) {
-        resultX = 10000;
-        formulaX = "H = 10000";
-    } else {
-        document.getElementById('result2').innerHTML = "Invalid expositionsdauer value";
-        return;
-    }
-    }
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
     
