@@ -342,6 +342,17 @@ function calculate() {
         }
     }
     
+    var MWK_formula;
+    var MWK_result;
+    
+    if (expositionsdauer < 1e-9) {
+        if (wellenlaenge >= 100 && wellenlaenge <= 400) {
+            MWK_formula = "E = 3*10<sup>10</sup>";
+            MWK_result = 3 * Math.pow(10, 10);
+        } else if { (wellenlaenge > 400 && wellenlaenge <= 700) {
+            MWK_formula = "E = 2*10<sup>10</sup>";
+            MWK_result = 2*Math.pow(10, 10);
+        }
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
     
@@ -413,5 +424,5 @@ var MWK;
 //}
 
 
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + MWK + "IFK: " + IFK + "<br>g: " + g;
+    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + MWK_result + "IFK: " + IFK + "<br>g: " + g;
 }
