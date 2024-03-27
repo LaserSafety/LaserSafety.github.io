@@ -386,24 +386,24 @@ var exponentH = parseInt(partsH[1]);
         var resultegw = Math.min(resultH, E_g);
   }
   
- var resultfin;
- var t_IFK;
- var t_MWK = 100;
-    if (t_H < T_min) {
-       t_IFK = T_min;
-    } else {
-       t_IFK = t_H;
-    }
+// var resultfin;
+// var t_IFK;
+// var t_MWK = 100;
+//    if (t_H < T_min) {
+//       t_IFK = T_min;
+//    } else {
+//       t_IFK = t_H;
+//    }
 
- if (result.includes("t")) {
-    EIK = parseFloat(result.replace('t', "t_H"));
-    MWK = parseFloat(result.replace('t', "t_MWK"));
-    IFK = parseFloat(result.replace('t', "t_IFK"));
-    resultfin = Math.min(EIK, MWK, IFK);
-} else {
+ //if (result.includes("t")) {
+   // EIK = parseFloat(result.replace('t', "t_H"));
+   // MWK = parseFloat(result.replace('t', "t_MWK"));
+   // IFK = parseFloat(result.replace('t', "t_IFK"));
+   // resultfin = Math.min(EIK, MWK, IFK);
+//} else {
     // Handle the case when 't' is not found in the result
-    resultfin = undefined;
-}
+    //resultfin = undefined;
+//}
 
 
     document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK: " + E_g + "<br>g: " + g + "<br>Expo result: "  + "<br>formula expo: "  + "<br>Endresultat: " + resultfin;
