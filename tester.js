@@ -349,7 +349,7 @@ function calculate() {
         if (wellenlaenge >= 100 && wellenlaenge <= 400) {
             MWK_formula = "E = 3*10<sup>10</sup>";
             MWK_result = 3 * Math.pow(10, 10);
-        } else if { (wellenlaenge > 400 && wellenlaenge <= 700) {
+        } else if (wellenlaenge > 400 && wellenlaenge <= 700) {
             MWK_formula = "E = 2*10<sup>10</sup>";
             MWK_result = 2*Math.pow(10, 10);
         }
