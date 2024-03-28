@@ -353,6 +353,7 @@ function calculate() {
             MWK_formula = "E = 2*10<sup>10</sup>";
             MWK_result = 2*Math.pow(10, 10);
         }
+    }
     // Replace asterisks with the dot symbol in the formula
     formula = formula.replace(/\*/g, "&sdot;"); 
     
