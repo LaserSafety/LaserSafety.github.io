@@ -345,7 +345,7 @@ function calculate() {
     var MWK_formula;
     var MWK_result;
     
-    if (expositionsdauer < 1e-9) {
+    if (expositionsdauer = 10) {
         if (wellenlaenge >= 100 && wellenlaenge <= 400) {
             MWK_formula = "E = 3*10<sup>10</sup>";
             MWK_result = 3 * Math.pow(10, 10);
