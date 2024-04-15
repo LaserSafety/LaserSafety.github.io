@@ -254,7 +254,7 @@ function calculate() {
 
     //Pulsdauerwerte von 1.8E-5 bis 5E-5
 
-    if (t_H >= 1.8E-5 && t_H < 5E-5) {
+    if (t_H > 1.8E-5 && t_H < 5E-5) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(t_H, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -284,7 +284,7 @@ function calculate() {
     
     // 5E-5 TO 1E-3
 
-    if (t_H >= 5E-5 && t_H < 1E-3) {
+    if (t_H > 5E-5 && t_H < 1E-3) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(t_H, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
@@ -314,7 +314,7 @@ function calculate() {
     
     // 1E-3 TO 10
 
-    if (t_H >= 1E-3 && t_H <= 10 ) {
+    if (t_H > 1E-3 && t_H < 10 ) {
         if (wellenlaenge >= 400 && wellenlaenge <= 700) {
             result = (18 * Math.pow(t_H, 0.75)) * C_e;
             formula = "H = (18 * t<sup>0.75</sup>) * C<sub>e</sub>";
