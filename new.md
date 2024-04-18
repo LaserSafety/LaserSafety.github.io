@@ -417,9 +417,9 @@ betriebsart.addEventListener('change', function() {
         document.getElementById('id01').style.display='block';
  calculate();
      }
-</script>
+
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script>
+
 // Tabs
 function openCity(evt, cityName) {
   var i;
