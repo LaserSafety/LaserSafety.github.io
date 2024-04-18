@@ -26,9 +26,6 @@ function calculate() {
 
     var t;
     
-    var EIK;
-    var MWK;
-    var IFK;
             
     //Berechnung des Korrekturfaktors T_1
     if (wellenlaenge < 450) {
@@ -351,7 +348,7 @@ function calculate() {
             MWK_result = 3 * Math.pow(10, 10);
         } else if (wellenlaenge > 400 && wellenlaenge <= 700) {
             MWK_formula = "E = 2*10<sup>10</sup>";
-            MWK_result = 2*Math.pow(10, 10);
+            MWK_result = 2 * Math.pow(10, 10);
         }
     }
     // Replace asterisks with the dot symbol in the formula
@@ -393,7 +390,7 @@ var exponentH = parseInt(partsH[1]);
   if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
-        var E_g = resultH / g;
+        var MWK = coefficientH * Math.pow(exponentH)/ g;
         // Find the smallest value among the calculated results
         var resultegw = Math.min(resultH, E_g);
   }
@@ -405,14 +402,14 @@ var IFK;
     } else { 
         IFK = t_H;
     }
-var MWK;
-    if (10 < resultH && resultH <= 100) {
-       MWK = 100;
-   } else if (100 < resultH && resultH <= 10000) {
-       MWK = 10000;
-   } else if (10000 < resultH && resultH <= 30000) {
-       MWK = 30000;
-   }
+// var MWK;
+//    if (10 < resultH && resultH <= 100) {
+//       MWK = 100;
+//   } else if (100 < resultH && resultH <= 10000) {
+//       MWK = 10000;
+//   } else if (10000 < resultH && resultH <= 30000) {
+//       MWK = 30000;
+//   }
 
  //if (result.includes("t")) {
    // EIK = parseFloat(result.replace('t', "t_H"));
@@ -425,5 +422,5 @@ var MWK;
 //}
 
 
-    document.getElementById('result').innerHTML = "Formula: " + formula + "<br>Result (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>IFK: " + IFK + "<br>g: " + g;
+    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>EIK: " + resultE + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "MWK(test): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g;
 }
