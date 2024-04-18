@@ -11,8 +11,6 @@ function calculate() {
     var result; //Endresultat
     var formula;//Endformel
     var optischer_bereich;
-
-    var g = (frequenz * t_H);
     
     var C_a, C_b, C_c, C_e;
     
@@ -389,8 +387,10 @@ var partsH = resultStringH.split("e");
 var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
+    
+var g = (frequenz * t_H);
 // Display result and formula with appropriate units
-  if (betriebsart === 'I') {
+if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
          MWK = (coefficientH * Math.pow(exponentH))/g;
