@@ -25,7 +25,10 @@ function calculate() {
 // h = (J/m^2) e = (W/m^2)
 
     var t;
-    
+
+    var EIK;
+    var MWK;
+    var IFK;
             
     //Berechnung des Korrekturfaktors T_1
     if (wellenlaenge < 450) {
@@ -386,17 +389,15 @@ var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
 // Display result and formula with appropriate units
-
   if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
-        var MWK = coefficientH * Math.pow(exponentH)/ g;
+         MWK = coefficientH * Math.pow(exponentH)/ g;
         // Find the smallest value among the calculated results
-        var resultegw = Math.min(resultH, E_g);
+        var resultegw = Math.min(resultH, MWK);
   }
   
 // var resultfin;
-var IFK;
     if (t_H < T_min) {
         IFK = T_min;
     } else { 
