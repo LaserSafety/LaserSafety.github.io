@@ -439,5 +439,5 @@ if (betriebsart === 'I') {
 //}
 
 
-    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>EIK - Resultat (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test)(J/m*m): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g;
+    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>EIK - Resultat (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test)(J/m*m): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g + "<br>T_min: " + T_min + "<br>T: " + T + "<br>T_2: " + T_2 + "<br>N: " + N + "<br>C_p: " + C_p;
 }
