@@ -341,6 +341,14 @@ function calculate() {
         }
     }
     
+    var a;
+    var b;
+    
+    if (expositionsdauer = 100 && wellenlaenge = 500) {
+    a = 10;
+    b = "E = 10";
+    }
+    
     var MWK_formula;
     var MWK_result;
     
@@ -389,15 +397,16 @@ var partsH = resultStringH.split("e");
 var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
+    
 // Display result and formula with appropriate units
 if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
-         MWK = (coefficientH * Math.pow(10, exponentH))/g;
+         MWK = a/g;
         // Find the smallest value among the calculated results
         var resultegw = Math.min(resultH, MWK);
   } else {
-      MWK = (coefficientH * Math.pow(10, exponentH))/g;
+      MWK = a/g;
   }
   
 // var resultfin;
