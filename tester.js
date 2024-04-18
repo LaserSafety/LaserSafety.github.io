@@ -344,7 +344,7 @@ function calculate() {
     var a;
     var b;
     
-    if (expositionsdauer = 100 && wellenlaenge = 500) {
+    if (expositionsdauer = 100) {
     a = 10;
     b = "E = 10";
     }
