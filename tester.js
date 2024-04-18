@@ -9,7 +9,7 @@ function calculate() {
     var t_H = pulsdauer_x * Math.pow(10, -pulsdauer_y);
     
     var betriebsart;
-    betriebsartwert.addEventListener("change", function betriebsartänderung() {
+    betriebsartwert.addEventListener("change", function() {
      betriebsart = betriebsartwert.value;
     });
     var result; //Endresultat
