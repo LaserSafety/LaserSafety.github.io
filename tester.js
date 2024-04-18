@@ -408,7 +408,7 @@ if (betriebsart === 'I') {
   } else {
       MWK = (a/g)/t_H;
   }
-  var N
+  var N;
 // var resultfin;
     if (t_H < T_min) {
         N = 10/T_min;
