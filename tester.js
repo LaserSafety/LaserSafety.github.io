@@ -38,6 +38,8 @@ function calculate() {
         T_1 = 100;
     }
 
+    print.ln(T_1);
+    
     //Berechnung des Korrekturfaktors T_2
     if (alpha <= 1.5) {
         T_2 = 10;
