@@ -352,6 +352,8 @@ function calculate() {
         } else if (wellenlaenge > 400 && wellenlaenge <= 700) {
             MWK_formula = "E = 2*10<sup>10</sup>";
             MWK_result = 2 * Math.pow(10, 10);
+        } else {
+            MWK_formula = "Out of range";
         }
     }
     // Replace asterisks with the dot symbol in the formula
@@ -395,6 +397,8 @@ var exponentH = parseInt(partsH[1]);
          MWK = (coefficientH * Math.pow(exponentH))/g;
         // Find the smallest value among the calculated results
         var resultegw = Math.min(resultH, MWK);
+  } else {
+      MWK = (coefficientH * Math.pow(exponentH))/g;
   }
   
 // var resultfin;
@@ -423,5 +427,5 @@ var exponentH = parseInt(partsH[1]);
 //}
 
 
-    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "MWK(test): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g;
+    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g;
 }
