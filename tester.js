@@ -402,19 +402,23 @@ var exponentH = parseInt(partsH[1]);
 if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
-         MWK = a/g;
+         MWK = (a/g)/t_H;
         // Find the smallest value among the calculated results
         var resultegw = Math.min(resultH, MWK);
   } else {
-      MWK = a/g;
+      MWK = (a/g)/t_H;
   }
-  
+  var N
 // var resultfin;
     if (t_H < T_min) {
-        IFK = T_min;
+        N = 10/T_min;
     } else { 
-        IFK = t_H;
+        N = frequenz * 10;
     }
+
+    var C_p = Math.pow(N, -0.25);
+    IFK = C_p * Math.pow(coefficientH, exponentH);
+    
 // var MWK;
 //    if (10 < resultH && resultH <= 100) {
 //       MWK = 100;
@@ -435,5 +439,5 @@ if (betriebsart === 'I') {
 //}
 
 
-    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>Result (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g;
+    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>EIK - Resultat (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test)(J/m*m): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g;
 }
