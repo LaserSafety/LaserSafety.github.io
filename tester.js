@@ -11,6 +11,8 @@ function calculate() {
     var result; //Endresultat
     var formula;//Endformel
     var optischer_bereich;
+
+    var g = (frequenz * t_H);
     
     var C_a, C_b, C_c, C_e;
     
@@ -387,17 +389,15 @@ var partsH = resultStringH.split("e");
 var coefficientH = parseFloat(partsH[0]);
 var exponentH = parseInt(partsH[1]);
 
-    
-var g = (frequenz * t_H);
 // Display result and formula with appropriate units
 if (betriebsart === 'I') {
        // Original calculation
          // Additional calculations based on g and t_H
-         MWK = (coefficientH * Math.pow(exponentH))/g;
+         MWK = (coefficientH * Math.pow(10, exponentH))/g;
         // Find the smallest value among the calculated results
         var resultegw = Math.min(resultH, MWK);
   } else {
-      MWK = (coefficientH * Math.pow(exponentH))/g;
+      MWK = (coefficientH * Math.pow(10, exponentH))/g;
   }
   
 // var resultfin;
