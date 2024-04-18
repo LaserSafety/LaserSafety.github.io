@@ -37,8 +37,6 @@ function calculate() {
     } else if (wellenlaenge > 500) {
         T_1 = 100;
     }
-
-    print.ln(T_1);
     
     //Berechnung des Korrekturfaktors T_2
     if (alpha <= 1.5) {
