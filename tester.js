@@ -2,13 +2,16 @@ function calculate() {
     var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
-    var betriebsart = document.getElementById('betriebsart').value;
+    var betriebsartwert = document.getElementById('betriebsart').value;
     var pulsdauer_x = parseFloat(document.getElementById('pulsdauer_x').value);
     var pulsdauer_y = parseFloat(document.getElementById('pulsdauer_y').value);
     var frequenz = parseFloat(document.getElementById('frequenz').value);
     var t_H = pulsdauer_x * Math.pow(10, -pulsdauer_y);
     
-
+    var betriebsart;
+    betriebsartwert.addEventListener("change", function betriebsartänderung() {
+     betriebsart = betriebsartwert.value;
+    });
     var result; //Endresultat
     var formula;//Endformel
     var optischer_bereich;
