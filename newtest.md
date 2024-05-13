@@ -429,8 +429,7 @@ betriebsart.addEventListener('change', function() {
             <p id="result" ></p>
         </div>
 <button class="collapsible">+</button>
-<div class="content">
-  <p id="info+"></p>
+<div class="content" id="info+">
 </div>
         <footer class="w3-container w3-theme-l1">
             <p></p>
@@ -444,7 +443,7 @@ betriebsart.addEventListener('change', function() {
         document.getElementById('id01').style.display='block';
  calculate();
     }
-/*  var coll = document.getElementsByClassName("collapsible");
+  var coll = document.getElementsByClassName("collapsible");
 var i;
 ​
 for (i = 0; i < coll.length; i++) {
@@ -458,7 +457,7 @@ for (i = 0; i < coll.length; i++) {
     } 
   }
 }
-*/
+
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 
 // Tabs
