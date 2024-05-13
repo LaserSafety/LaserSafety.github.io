@@ -1,4 +1,3 @@
-function calculate() {
     var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
@@ -28,7 +27,7 @@ function calculate() {
     var EIK;
     var MWK;
     var IFK;
-            
+    function calculate() {      
     //Berechnung des Korrekturfaktors T_1
     if (wellenlaenge < 450) {
         T_1 = 10;
