@@ -442,8 +442,6 @@ betriebsart.addEventListener('change', function() {
         // Call calculate function and update result element
         document.getElementById('id01').style.display='block';
  calculate();
-    }
-  function coll() {
   var coll = document.getElementsByClassName("collapsible");
 var i;
 ​
@@ -459,7 +457,6 @@ for (i = 0; i < coll.length; i++) {
   }
 }
 }
-  coll();
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 
 // Tabs
