@@ -439,12 +439,7 @@ betriebsart.addEventListener('change', function() {
 </div>
 <script src="tester2.js"></script>
 <script>
-    function openModal() {
-        // Call calculate function and update result element
-        document.getElementById('id01').style.display='block';
- calculate();
-     }
-var coll = document.getElementsByClassName("collapsible");
+  var coll = document.getElementsByClassName("collapsible");
 var i;
 ​
 for (i = 0; i < coll.length; i++) {
@@ -458,6 +453,12 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+    function openModal() {
+        // Call calculate function and update result element
+        document.getElementById('id01').style.display='block';
+ calculate();
+     }
+
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 
 // Tabs
