@@ -1,3 +1,4 @@
+function calculate() {
     var expositionsdauer = parseFloat(document.getElementById('expositionsdauer').value);
     var wellenlaenge = parseFloat(document.getElementById('wellenlaenge').value);
     var alpha = parseFloat(document.getElementById('alpha').value);
@@ -27,7 +28,7 @@
     var EIK;
     var MWK;
     var IFK;
-    function calculate() {      
+ 
     //Berechnung des Korrekturfaktors T_1
     if (wellenlaenge < 450) {
         T_1 = 10;
@@ -437,6 +438,6 @@ if (betriebsart === 'I') {
     //resultfin = undefined;
 //}
 
-}
-    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>EIK - Resultat (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test)(J/m*m): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g + "<br>T_min: " + T_min + "<br>T: " + T + "<br>T_2: " + T_2 + "<br>N: " + N + "<br>C_p: " + C_p;
 
+    document.getElementById('result').innerHTML = "EIK - formel: " + formula + "<br>EIK - Resultat (H): " + coefficientH + " &sdot; 10<sup>" + exponentH + "</sup> J/m<sup>2</sup><br>EIK - Resultat (E): " + coefficientE + " &sdot; 10<sup>" + exponentE + "</sup> W/m<sup>2</sup><br>Optischer Bereich: " + optischer_bereich + "<br>MWK - Formel:" + MWK_formula + "<br>MWK: " + MWK_result + "<br>MWK(test)(J/m*m): " + MWK + "<br>IFK: " + IFK + "<br>g: " + g + "<br>T_min: " + T_min + "<br>T: " + T + "<br>T_2: " + T_2 + "<br>N: " + N + "<br>C_p: " + C_p;
+}
