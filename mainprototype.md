@@ -1,5 +1,5 @@
 ---
-permalink: /prototype.html
+permalink: /prototype2.html
 ---
 <html lang="en">
 
