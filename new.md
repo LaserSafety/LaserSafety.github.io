@@ -1,5 +1,5 @@
 ---
-permalink: /new.html
+permalink: /new
 ---
 <html>
 <head>
