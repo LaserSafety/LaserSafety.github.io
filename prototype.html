@@ -21,6 +21,20 @@ permalink: /Home
   margin: 4px 2px;
   cursor: pointer;
 }
+<--- flex sidebar --->
+  .flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+​
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: auto;
+  flex-direction: column;
+}
 </style>
 <head>
 <title>Home</title>
@@ -30,5 +44,11 @@ permalink: /Home
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 ​<button>Default Button</button>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+</div>
 </body>
 </html>
